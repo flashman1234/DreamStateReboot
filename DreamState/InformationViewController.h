@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  InformationViewController.h
 //  DreamState
 //
 //  Created by Michal Thompson on 17/11/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface InformationViewController : UIViewController
 
 @end
-

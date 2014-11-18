@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  HomeViewController.h
 //  DreamState
 //
 //  Created by Michal Thompson on 17/11/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface HomeViewController : UIViewController
 
 @end
-

@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		05116DC41A1A77C400C6052D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DC31A1A77C400C6052D /* main.m */; };
 		05116DC71A1A77C400C6052D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DC61A1A77C400C6052D /* AppDelegate.m */; };
-		05116DCA1A1A77C400C6052D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DC91A1A77C400C6052D /* FirstViewController.m */; };
-		05116DCD1A1A77C400C6052D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DCC1A1A77C400C6052D /* SecondViewController.m */; };
 		05116DD01A1A77C400C6052D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05116DCE1A1A77C400C6052D /* Main.storyboard */; };
 		05116DD21A1A77C500C6052D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05116DD11A1A77C500C6052D /* Images.xcassets */; };
 		05116DD51A1A77C500C6052D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05116DD31A1A77C500C6052D /* LaunchScreen.xib */; };
 		05116DE11A1A77C500C6052D /* DreamStateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DE01A1A77C500C6052D /* DreamStateTests.m */; };
+		05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DEB1A1A7ABF00C6052D /* HomeViewController.m */; };
+		05116DF01A1A7AFB00C6052D /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DEF1A1A7AFB00C6052D /* RecordViewController.m */; };
+		05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF51A1A7B1E00C6052D /* InformationViewController.m */; };
+		05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */; };
+		0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */; };
+		0594EB671A1A871A009879D2 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB661A1A871A009879D2 /* AlarmViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +37,23 @@
 		05116DC31A1A77C400C6052D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05116DC51A1A77C400C6052D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		05116DC61A1A77C400C6052D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		05116DC81A1A77C400C6052D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		05116DC91A1A77C400C6052D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		05116DCB1A1A77C400C6052D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		05116DCC1A1A77C400C6052D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		05116DCF1A1A77C400C6052D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05116DD11A1A77C500C6052D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		05116DD41A1A77C500C6052D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		05116DDA1A1A77C500C6052D /* DreamStateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamStateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05116DDF1A1A77C500C6052D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05116DE01A1A77C500C6052D /* DreamStateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamStateTests.m; sourceTree = "<group>"; };
+		05116DEA1A1A7ABF00C6052D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		05116DEB1A1A7ABF00C6052D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		05116DEE1A1A7AFB00C6052D /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		05116DEF1A1A7AFB00C6052D /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		05116DF41A1A7B1E00C6052D /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		05116DF51A1A7B1E00C6052D /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		05116DF71A1A7E4A00C6052D /* ArchiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewController.h; sourceTree = "<group>"; };
+		05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
+		0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamState.xcdatamodel; sourceTree = "<group>"; };
+		0594EB651A1A871A009879D2 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		0594EB661A1A871A009879D2 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +95,10 @@
 		05116DC01A1A77C400C6052D /* DreamState */ = {
 			isa = PBXGroup;
 			children = (
+				05116DED1A1A7AD900C6052D /* ViewController */,
 				05116DC51A1A77C400C6052D /* AppDelegate.h */,
 				05116DC61A1A77C400C6052D /* AppDelegate.m */,
-				05116DC81A1A77C400C6052D /* FirstViewController.h */,
-				05116DC91A1A77C400C6052D /* FirstViewController.m */,
-				05116DCB1A1A77C400C6052D /* SecondViewController.h */,
-				05116DCC1A1A77C400C6052D /* SecondViewController.m */,
+				0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */,
 				05116DCE1A1A77C400C6052D /* Main.storyboard */,
 				05116DD11A1A77C500C6052D /* Images.xcassets */,
 				05116DD31A1A77C500C6052D /* LaunchScreen.xib */,
@@ -122,6 +131,23 @@
 				05116DDF1A1A77C500C6052D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05116DED1A1A7AD900C6052D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05116DEA1A1A7ABF00C6052D /* HomeViewController.h */,
+				05116DEB1A1A7ABF00C6052D /* HomeViewController.m */,
+				05116DEE1A1A7AFB00C6052D /* RecordViewController.h */,
+				05116DEF1A1A7AFB00C6052D /* RecordViewController.m */,
+				05116DF41A1A7B1E00C6052D /* InformationViewController.h */,
+				05116DF51A1A7B1E00C6052D /* InformationViewController.m */,
+				05116DF71A1A7E4A00C6052D /* ArchiveTableViewController.h */,
+				05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */,
+				0594EB651A1A871A009879D2 /* AlarmViewController.h */,
+				0594EB661A1A871A009879D2 /* AlarmViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,9 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05116DCD1A1A77C400C6052D /* SecondViewController.m in Sources */,
 				05116DC71A1A77C400C6052D /* AppDelegate.m in Sources */,
-				05116DCA1A1A77C400C6052D /* FirstViewController.m in Sources */,
+				05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */,
+				05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */,
+				0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */,
+				0594EB671A1A871A009879D2 /* AlarmViewController.m in Sources */,
+				05116DF01A1A7AFB00C6052D /* RecordViewController.m in Sources */,
+				05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */,
 				05116DC41A1A77C400C6052D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +450,7 @@
 				05116DE61A1A77C500C6052D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05116DE71A1A77C500C6052D /* Build configuration list for PBXNativeTarget "DreamStateTests" */ = {
 			isa = XCConfigurationList;
@@ -428,8 +459,22 @@
 				05116DE91A1A77C500C6052D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */,
+			);
+			currentVersion = 0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */;
+			path = DreamState.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 05116DB61A1A77C400C6052D /* Project object */;
 }
