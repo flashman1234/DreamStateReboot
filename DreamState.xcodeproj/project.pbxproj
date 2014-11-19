@@ -19,6 +19,22 @@
 		05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */; };
 		0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */; };
 		0594EB671A1A871A009879D2 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB661A1A871A009879D2 /* AlarmViewController.m */; };
+		2CE495891A1D0C7F00A8EAB6 /* AlarmListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE495881A1D0C7F00A8EAB6 /* AlarmListTableViewController.m */; };
+		2CE4958D1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */; };
+		2CE495901A1D110A00A8EAB6 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4958F1A1D110A00A8EAB6 /* Settings.m */; };
+		2CE495931A1D110B00A8EAB6 /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE495921A1D110B00A8EAB6 /* Alarm.m */; };
+		2CE495961A1D110B00A8EAB6 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE495951A1D110B00A8EAB6 /* Day.m */; };
+		2CE495991A1D110B00A8EAB6 /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE495981A1D110B00A8EAB6 /* Dream.m */; };
+		2CF767811A1BC8A7000D909A /* Solari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CF767801A1BC8A7000D909A /* Solari.ttf */; };
+		2CF7678A1A1BD509000D909A /* AlarmDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767891A1BD509000D909A /* AlarmDaysViewController.m */; };
+		2CF7678D1A1BD515000D909A /* AlarmSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7678C1A1BD515000D909A /* AlarmSoundsViewController.m */; };
+		3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 934B92D3E7C78278CEAC0108 /* libPods.a */; };
+		E5A9C27D793352CFFAF24F6B /* Alarm bell 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */; };
+		E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */; };
+		E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C376691449BF26ECCD32 /* DayManager.m */; };
+		E5A9C8FFDA692F42AFBC3235 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C91FE7DA6EB7F9560395 /* Podfile */; };
+		E5A9C9370AF5CF83290C8A75 /* Alarm bell 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */; };
+		E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +70,35 @@
 		0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamState.xcdatamodel; sourceTree = "<group>"; };
 		0594EB651A1A871A009879D2 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
 		0594EB661A1A871A009879D2 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		2CE495871A1D0C7F00A8EAB6 /* AlarmListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListTableViewController.h; sourceTree = "<group>"; };
+		2CE495881A1D0C7F00A8EAB6 /* AlarmListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableViewController.m; sourceTree = "<group>"; };
+		2CE4958B1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataContextProvider.h; sourceTree = "<group>"; };
+		2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCoreDataContextProvider.m; sourceTree = "<group>"; };
+		2CE4958E1A1D110A00A8EAB6 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		2CE4958F1A1D110A00A8EAB6 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		2CE495911A1D110B00A8EAB6 /* Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarm.h; sourceTree = "<group>"; };
+		2CE495921A1D110B00A8EAB6 /* Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarm.m; sourceTree = "<group>"; };
+		2CE495941A1D110B00A8EAB6 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		2CE495951A1D110B00A8EAB6 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
+		2CE495971A1D110B00A8EAB6 /* Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dream.h; sourceTree = "<group>"; };
+		2CE495981A1D110B00A8EAB6 /* Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dream.m; sourceTree = "<group>"; };
+		2CF767801A1BC8A7000D909A /* Solari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Solari.ttf; sourceTree = "<group>"; };
+		2CF767881A1BD509000D909A /* AlarmDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDaysViewController.h; sourceTree = "<group>"; };
+		2CF767891A1BD509000D909A /* AlarmDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDaysViewController.m; sourceTree = "<group>"; };
+		2CF7678B1A1BD515000D909A /* AlarmSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSoundsViewController.h; sourceTree = "<group>"; };
+		2CF7678C1A1BD515000D909A /* AlarmSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSoundsViewController.m; sourceTree = "<group>"; };
+		934B92D3E7C78278CEAC0108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3078A9231159C00E5982042 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmHelper.m; sourceTree = "<group>"; };
+		E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 2.m4a"; sourceTree = "<group>"; };
+		E5A9C376691449BF26ECCD32 /* DayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayManager.m; sourceTree = "<group>"; };
+		E5A9C66AA6956B82AA884D2A /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmManager.h; sourceTree = "<group>"; };
+		E5A9C899DF004D07A1D539B2 /* DayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayManager.h; sourceTree = "<group>"; };
+		E5A9C91FE7DA6EB7F9560395 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 1.m4a"; sourceTree = "<group>"; };
+		E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmHelper.h; sourceTree = "<group>"; };
+		E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +126,9 @@
 				05116DC01A1A77C400C6052D /* DreamState */,
 				05116DDD1A1A77C500C6052D /* DreamStateTests */,
 				05116DBF1A1A77C400C6052D /* Products */,
+				E5A9C91FE7DA6EB7F9560395 /* Podfile */,
+				7ACF1C94F7A1C6DEEB8F2293 /* Pods */,
+				4708B8F512FAF2528CE46B46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,14 +144,18 @@
 		05116DC01A1A77C400C6052D /* DreamState */ = {
 			isa = PBXGroup;
 			children = (
+				E5A9C944910DC32684E270D5 /* Managers */,
+				2CE4958A1A1D0F7300A8EAB6 /* Model */,
 				05116DED1A1A7AD900C6052D /* ViewController */,
 				05116DC51A1A77C400C6052D /* AppDelegate.h */,
 				05116DC61A1A77C400C6052D /* AppDelegate.m */,
-				0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */,
 				05116DCE1A1A77C400C6052D /* Main.storyboard */,
 				05116DD11A1A77C500C6052D /* Images.xcassets */,
 				05116DD31A1A77C500C6052D /* LaunchScreen.xib */,
 				05116DC11A1A77C400C6052D /* Supporting Files */,
+				E5A9C2D1EBF16D21AB30614F /* Sounds */,
+				E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */,
+				E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */,
 			);
 			path = DreamState;
 			sourceTree = "<group>";
@@ -110,6 +163,7 @@
 		05116DC11A1A77C400C6052D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CF767801A1BC8A7000D909A /* Solari.ttf */,
 				05116DC21A1A77C400C6052D /* Info.plist */,
 				05116DC31A1A77C400C6052D /* main.m */,
 			);
@@ -146,8 +200,69 @@
 				05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */,
 				0594EB651A1A871A009879D2 /* AlarmViewController.h */,
 				0594EB661A1A871A009879D2 /* AlarmViewController.m */,
+				2CF767881A1BD509000D909A /* AlarmDaysViewController.h */,
+				2CF767891A1BD509000D909A /* AlarmDaysViewController.m */,
+				2CF7678B1A1BD515000D909A /* AlarmSoundsViewController.h */,
+				2CF7678C1A1BD515000D909A /* AlarmSoundsViewController.m */,
+				2CE495871A1D0C7F00A8EAB6 /* AlarmListTableViewController.h */,
+				2CE495881A1D0C7F00A8EAB6 /* AlarmListTableViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2CE4958A1A1D0F7300A8EAB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CE495971A1D110B00A8EAB6 /* Dream.h */,
+				2CE495981A1D110B00A8EAB6 /* Dream.m */,
+				2CE495941A1D110B00A8EAB6 /* Day.h */,
+				2CE495951A1D110B00A8EAB6 /* Day.m */,
+				2CE495911A1D110B00A8EAB6 /* Alarm.h */,
+				2CE495921A1D110B00A8EAB6 /* Alarm.m */,
+				2CE4958E1A1D110A00A8EAB6 /* Settings.h */,
+				2CE4958F1A1D110A00A8EAB6 /* Settings.m */,
+				0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */,
+				2CE4958B1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.h */,
+				2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4708B8F512FAF2528CE46B46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934B92D3E7C78278CEAC0108 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ACF1C94F7A1C6DEEB8F2293 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3078A9231159C00E5982042 /* Pods.debug.xcconfig */,
+				E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5A9C2D1EBF16D21AB30614F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */,
+				E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		E5A9C944910DC32684E270D5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */,
+				E5A9C66AA6956B82AA884D2A /* AlarmManager.h */,
+				E5A9C376691449BF26ECCD32 /* DayManager.m */,
+				E5A9C899DF004D07A1D539B2 /* DayManager.h */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05116DE41A1A77C500C6052D /* Build configuration list for PBXNativeTarget "DreamState" */;
 			buildPhases = (
+				5EC8AE5AEC5211AAE0D4A828 /* Check Pods Manifest.lock */,
 				05116DBA1A1A77C400C6052D /* Sources */,
 				05116DBB1A1A77C400C6052D /* Frameworks */,
 				05116DBC1A1A77C400C6052D /* Resources */,
+				FFB79E9961AB14833EA733DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,9 +347,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF767811A1BC8A7000D909A /* Solari.ttf in Resources */,
 				05116DD01A1A77C400C6052D /* Main.storyboard in Resources */,
 				05116DD51A1A77C500C6052D /* LaunchScreen.xib in Resources */,
 				05116DD21A1A77C500C6052D /* Images.xcassets in Resources */,
+				E5A9C27D793352CFFAF24F6B /* Alarm bell 1.m4a in Resources */,
+				E5A9C9370AF5CF83290C8A75 /* Alarm bell 2.m4a in Resources */,
+				E5A9C8FFDA692F42AFBC3235 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,19 +366,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EC8AE5AEC5211AAE0D4A828 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFB79E9961AB14833EA733DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05116DBA1A1A77C400C6052D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				05116DC71A1A77C400C6052D /* AppDelegate.m in Sources */,
+				2CE495891A1D0C7F00A8EAB6 /* AlarmListTableViewController.m in Sources */,
+				2CF7678A1A1BD509000D909A /* AlarmDaysViewController.m in Sources */,
+				2CE495931A1D110B00A8EAB6 /* Alarm.m in Sources */,
 				05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */,
 				05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */,
 				0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */,
+				2CE495901A1D110A00A8EAB6 /* Settings.m in Sources */,
 				0594EB671A1A871A009879D2 /* AlarmViewController.m in Sources */,
+				2CF7678D1A1BD515000D909A /* AlarmSoundsViewController.m in Sources */,
 				05116DF01A1A7AFB00C6052D /* RecordViewController.m in Sources */,
 				05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */,
 				05116DC41A1A77C400C6052D /* main.m in Sources */,
+				2CE495991A1D110B00A8EAB6 /* Dream.m in Sources */,
+				E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */,
+				2CE495961A1D110B00A8EAB6 /* Day.m in Sources */,
+				2CE4958D1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m in Sources */,
+				E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */,
+				E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,21 +544,25 @@
 		};
 		05116DE51A1A77C500C6052D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3078A9231159C00E5982042 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DreamState/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		05116DE61A1A77C500C6052D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DreamState/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};

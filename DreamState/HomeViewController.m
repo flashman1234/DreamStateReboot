@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "DSCoreDataContextProvider.h"
+#import "Day.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *alarmButton;
@@ -15,18 +17,10 @@
 
 @implementation HomeViewController
 
-- (IBAction)alarmButtonTouched:(id)sender {
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation
