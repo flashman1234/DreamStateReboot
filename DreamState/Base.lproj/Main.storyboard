@@ -4,6 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Solari.ttf">
+            <string>Solari</string>
+            <string>Solari</string>
+            <string>Solari</string>
+            <string>Solari</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
@@ -17,9 +25,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cx-TE-D46">
-                                <rect key="frame" x="257" y="126" width="86" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cx-TE-D46">
+                                <rect key="frame" x="26" y="50" width="548" height="44"/>
+                                <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="30"/>
                                 <state key="normal" title="Dream State">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -29,9 +39,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2Cx-TE-D46" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="10" id="9J4-RV-5o8"/>
                             <constraint firstAttribute="centerX" secondItem="2Cx-TE-D46" secondAttribute="centerX" id="EbA-oF-cMp"/>
-                            <constraint firstItem="2Cx-TE-D46" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="106" id="cBy-h3-P7A"/>
+                            <constraint firstItem="2Cx-TE-D46" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="50" id="cBy-h3-P7A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Cx-TE-D46" secondAttribute="trailing" constant="241" id="gso-tB-pGJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gso-tB-pGJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="bO8-O1-vvS"/>
@@ -44,83 +61,105 @@
             <point key="canvasLocation" x="606" y="168"/>
         </scene>
         <!--Alarm View Controller-->
-        <scene sceneID="CBT-z0-xJu">
+        <scene sceneID="QC7-o6-urV">
             <objects>
-                <viewController id="iUt-dk-9e4" customClass="AlarmViewController" sceneMemberID="viewController">
+                <viewController id="64h-zD-UXr" customClass="AlarmViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xet-JX-YnN"/>
-                        <viewControllerLayoutGuide type="bottom" id="K0p-80-Pyy"/>
+                        <viewControllerLayoutGuide type="top" id="plW-nY-Z1B"/>
+                        <viewControllerLayoutGuide type="bottom" id="4R1-yb-vJz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uZC-0Q-a8T">
+                    <view key="view" contentMode="scaleToFill" id="Aoy-b9-Jhy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzn-wk-9fs">
-                                <rect key="frame" x="298" y="542" width="45" height="30"/>
-                                <state key="normal" title="cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButtonTouched:" destination="iUt-dk-9e4" eventType="touchUpInside" id="jKG-hX-Dlt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo7-Vi-f99">
-                                <rect key="frame" x="89" y="542" width="30" height="30"/>
-                                <state key="normal" title="ok">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="okButtonTouched:" destination="iUt-dk-9e4" eventType="touchUpInside" id="fPq-Ek-jlY"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-qZ-Bs0">
-                                <rect key="frame" x="119" y="0.0" width="346" height="162"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="iUt-dk-9e4" id="Dkl-u3-3V4"/>
-                                    <outlet property="delegate" destination="iUt-dk-9e4" id="NGR-tP-crZ"/>
-                                </connections>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32e-LE-Cge">
-                                <rect key="frame" x="81" y="345" width="35" height="30"/>
-                                <state key="normal" title="Days">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="G9l-cb-g5c" kind="show" id="l1e-UQ-2HM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-Ed-IIx">
-                                <rect key="frame" x="266" y="359" width="53" height="30"/>
-                                <state key="normal" title="Sounds">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="SmB-pV-2Pe" kind="show" id="pHu-lN-soW"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-Xk-MmP" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38u-Kx-ThO">
+                                        <rect key="frame" x="50" y="0.0" width="501" height="162"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="64h-zD-UXr" id="Vbc-3m-5en"/>
+                                            <outlet property="delegate" destination="64h-zD-UXr" id="5E5-aY-xWg"/>
+                                        </connections>
+                                    </pickerView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Alarm name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-aQ-XBZ">
+                                        <rect key="frame" x="30" y="192" width="541" height="40"/>
+                                        <color key="backgroundColor" red="0.61868686868686873" green="0.61868686868686873" blue="0.61868686868686873" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="m5I-XL-uda"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOA-zF-cgx">
+                                        <rect key="frame" x="260" y="315" width="81" height="30"/>
+                                        <state key="normal" title="Alarm Tone:">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="SmB-pV-2Pe" kind="show" id="k1g-pW-Mtp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-8D-mx5">
+                                        <rect key="frame" x="0.0" y="277" width="601" height="30"/>
+                                        <state key="normal" title="Days:">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="G9l-cb-g5c" kind="show" id="Y1n-Ff-sVf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="bOA-zF-cgx" secondAttribute="centerX" id="2Hx-s0-yeF"/>
+                                    <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" constant="30" id="2Ry-8v-jRD"/>
+                                    <constraint firstItem="hXR-8D-mx5" firstAttribute="top" secondItem="Vgh-aQ-XBZ" secondAttribute="bottom" constant="45" id="7tr-lR-Z3u"/>
+                                    <constraint firstItem="38u-Kx-ThO" firstAttribute="centerX" secondItem="PFP-Xk-MmP" secondAttribute="centerX" id="GrV-hC-hxh"/>
+                                    <constraint firstItem="hXR-8D-mx5" firstAttribute="centerX" secondItem="bOA-zF-cgx" secondAttribute="centerX" id="NUW-k9-vR0"/>
+                                    <constraint firstAttribute="centerX" secondItem="hXR-8D-mx5" secondAttribute="centerX" id="QLm-RH-Y07"/>
+                                    <constraint firstItem="hXR-8D-mx5" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" id="RVD-fB-Lmv"/>
+                                    <constraint firstItem="bOA-zF-cgx" firstAttribute="top" secondItem="hXR-8D-mx5" secondAttribute="bottom" constant="8" id="azw-aG-URc"/>
+                                    <constraint firstItem="38u-Kx-ThO" firstAttribute="top" secondItem="PFP-Xk-MmP" secondAttribute="top" id="bUl-uF-9If"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXR-8D-mx5" secondAttribute="trailing" id="kKk-YN-BsR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vgh-aQ-XBZ" secondAttribute="trailing" constant="30" id="oP9-O5-0pu"/>
+                                    <constraint firstItem="38u-Kx-ThO" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" constant="50" id="oXx-d9-Tyr"/>
+                                    <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="top" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="30" id="ofg-sL-7om"/>
+                                    <constraint firstAttribute="bottom" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="374" id="rCr-3A-hO5"/>
+                                    <constraint firstAttribute="trailing" secondItem="38u-Kx-ThO" secondAttribute="trailing" constant="50" id="rd9-aL-fcS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NUW-k9-vR0"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g04-qZ-Bs0" firstAttribute="top" secondItem="uZC-0Q-a8T" secondAttribute="top" id="d6s-Mn-b41"/>
-                            <constraint firstItem="g04-qZ-Bs0" firstAttribute="leading" secondItem="uZC-0Q-a8T" secondAttribute="leading" constant="119" id="gsn-wt-6wA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g04-qZ-Bs0" secondAttribute="trailing" constant="119" id="r6P-mi-Gqn"/>
+                            <constraint firstAttribute="trailing" secondItem="PFP-Xk-MmP" secondAttribute="trailing" id="26s-5R-x1w"/>
+                            <constraint firstAttribute="bottom" secondItem="PFP-Xk-MmP" secondAttribute="bottom" id="OdF-jb-yoP"/>
+                            <constraint firstItem="PFP-Xk-MmP" firstAttribute="leading" secondItem="Aoy-b9-Jhy" secondAttribute="leading" id="WNS-aA-QfM"/>
+                            <constraint firstItem="PFP-Xk-MmP" firstAttribute="top" secondItem="plW-nY-Z1B" secondAttribute="bottom" id="iw4-5P-Xjx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sKc-r6-9JH">
-                        <barButtonItem key="rightBarButtonItem" title="OK" id="LU4-i3-1iy">
+                    <navigationItem key="navigationItem" id="c10-Kx-isr">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="bfL-4u-Uiz">
                             <connections>
-                                <action selector="saveAlarmButtonTouched:" destination="iUt-dk-9e4" id="Ki9-Vk-ijP"/>
+                                <action selector="saveAlarmButtonTouched:" destination="64h-zD-UXr" id="sI9-Rx-Q9T"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButton" destination="Tzn-wk-9fs" id="zSk-AD-fhR"/>
-                        <outlet property="timePicker" destination="g04-qZ-Bs0" id="Bn7-kO-8sW"/>
+                        <outlet property="alarmDaysButton" destination="hXR-8D-mx5" id="rdx-kp-bMq"/>
+                        <outlet property="alarmNameTextField" destination="Vgh-aQ-XBZ" id="7v9-Us-qqq"/>
+                        <outlet property="alarmSoundButton" destination="bOA-zF-cgx" id="ZjY-PW-tu3"/>
+                        <outlet property="timePicker" destination="38u-Kx-ThO" id="qxw-R0-yTl"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mwk-bX-ZsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbX-oT-QJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="212"/>
+            <point key="canvasLocation" x="2026" y="176"/>
         </scene>
         <!--Alarm Days View Controller-->
         <scene sceneID="6nz-1c-p1G">
@@ -152,6 +191,13 @@
                             <constraint firstItem="F7K-gk-Tnr" firstAttribute="bottom" secondItem="SV1-lj-eYz" secondAttribute="top" id="orn-5w-vBP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ngR-Y6-RFi">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="5nU-CL-mLu">
+                            <connections>
+                                <action selector="addDaysButtonTouched:" destination="G9l-cb-g5c" id="72t-B8-Pjj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dayTableView" destination="F7K-gk-Tnr" id="tlp-x7-86B"/>
                     </connections>
@@ -328,19 +374,55 @@
             </objects>
             <point key="canvasLocation" x="-182" y="146"/>
         </scene>
-        <!--Title-->
+        <!--Alarm List Table View Controller-->
         <scene sceneID="jKZ-5g-ln9">
             <objects>
                 <tableViewController id="37r-2K-tjd" customClass="AlarmListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uhv-jR-LfN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uhv-jR-LfN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QAL-Oe-8r6">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmDetailsCell" rowHeight="150" id="QAL-Oe-8r6">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QAL-Oe-8r6" id="y4d-cL-DxX">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubk-in-W8m">
+                                            <rect key="frame" x="18" y="34" width="112" height="31.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="112" id="N2b-Bm-wUU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="30"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAg-Wf-SIu">
+                                            <rect key="frame" x="531" y="29" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHZ-Ri-Mkx">
+                                            <rect key="frame" x="18" y="73" width="45" height="18"/>
+                                            <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn2-Hi-K1Q">
+                                            <rect key="frame" x="18" y="99" width="45" height="18"/>
+                                            <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wHZ-Ri-Mkx" firstAttribute="leading" secondItem="ubk-in-W8m" secondAttribute="trailing" constant="-112" id="6fL-S7-zr6"/>
+                                        <constraint firstItem="Wn2-Hi-K1Q" firstAttribute="leading" secondItem="ubk-in-W8m" secondAttribute="trailing" constant="-112" id="6zK-sR-pyE"/>
+                                        <constraint firstItem="gAg-Wf-SIu" firstAttribute="top" secondItem="y4d-cL-DxX" secondAttribute="topMargin" constant="21" id="Acg-GU-onR"/>
+                                        <constraint firstItem="ubk-in-W8m" firstAttribute="top" secondItem="y4d-cL-DxX" secondAttribute="topMargin" constant="26" id="Fx7-K7-fTI"/>
+                                        <constraint firstItem="wHZ-Ri-Mkx" firstAttribute="top" secondItem="y4d-cL-DxX" secondAttribute="topMargin" constant="65" id="Hnc-9U-yS2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gAg-Wf-SIu" secondAttribute="trailing" constant="12" id="LTn-bi-fIF"/>
+                                        <constraint firstItem="Wn2-Hi-K1Q" firstAttribute="top" secondItem="wHZ-Ri-Mkx" secondAttribute="bottom" constant="8" id="hwZ-4l-FGH"/>
+                                        <constraint firstItem="ubk-in-W8m" firstAttribute="leading" secondItem="y4d-cL-DxX" secondAttribute="leadingMargin" constant="10" id="xDL-gk-xgV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -349,10 +431,10 @@
                             <outlet property="delegate" destination="37r-2K-tjd" id="gfX-o8-2WV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="VV8-2C-ADD">
+                    <navigationItem key="navigationItem" id="VV8-2C-ADD">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="V2D-k4-2cw">
                             <connections>
-                                <segue destination="iUt-dk-9e4" kind="show" id="ENT-if-rTl"/>
+                                <segue destination="64h-zD-UXr" kind="show" identifier="showAlarmView" id="uCu-FC-qfA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -1,5 +1,5 @@
 #include "Pods-SimpleAudioPlayer.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/SimpleAudioPlayer" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SimpleAudioPlayer"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/SimpleAudioPlayer" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/JVFloatLabeledTextField" "${PODS_ROOT}/Headers/Public/SimpleAudioPlayer" "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding"
 OTHER_LDFLAGS = ${PODS_SIMPLEAUDIOPLAYER_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}

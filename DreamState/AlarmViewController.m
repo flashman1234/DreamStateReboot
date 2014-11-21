@@ -9,146 +9,172 @@
 #import "AlarmViewController.h"
 #import "AlarmDaysViewController.h"
 #import "AlarmManager.h"
+#import "AlarmSoundsViewController.h"
+#import "Alarm.h"
+#import "AlarmHelper.h"
+
+#define kRowsInPicker 100
+
 
 @interface AlarmViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UIPickerView *timePicker;
+@property(weak, nonatomic) IBOutlet UIButton *alarmDaysButton;
+@property(weak, nonatomic) IBOutlet UIPickerView *timePicker;
+@property(weak, nonatomic) IBOutlet UIButton *alarmSoundButton;
+@property(weak, nonatomic) IBOutlet UITextField *alarmNameTextField;
+
+@property(nonatomic) NSMutableArray *alarmDaysNamesArray;
+@property(nonatomic) NSString *alarmSound;
+@property(nonatomic) NSString *alarmName;
 
 @end
 
 @implementation AlarmViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+
+    if (self.existingAlarm) {
+        [self loadExistingAlarm];
+    }
+    else {
+        [self loadInitialAlarm];
+    }
 }
+
+- (void)loadInitialAlarm {
+    self.alarmName = @"Alarm name";
+    self.alarmNameTextField.text = self.alarmName;
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    self.alarmDaysNamesArray = [[dateFormatter weekdaySymbols] mutableCopy];
+    [self.alarmDaysButton setTitle:@"Everyday" forState:UIControlStateNormal];
+
+    self.alarmSound = @"Alarm bell 1";
+    [self.alarmSoundButton setTitle:@"Alarm bell 1" forState:UIControlStateNormal];
+}
+
+- (void)loadExistingAlarm {
+    self.alarmName = self.existingAlarm.name;
+    self.alarmSound = self.existingAlarm.sound;
+
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm"];
+    NSDate *alarmTime = [dateFormat dateFromString:self.existingAlarm.time];
+
+    self.alarmDaysNamesArray = [[AlarmHelper dayNameArrayFromDayArray:[self.existingAlarm.day allObjects]] mutableCopy];
+
+    //ui
+    self.alarmNameTextField.text = self.alarmName;
+
+    [self.alarmSoundButton setTitle:self.existingAlarm.sound forState:UIControlStateNormal];
+
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:alarmTime];
+    NSInteger currentHour = components.hour;
+    NSInteger currentMinutes = components.minute;
+    [self.timePicker selectRow:currentHour inComponent:0 animated:YES];
+    [self.timePicker selectRow:currentMinutes inComponent:1 animated:YES];
+
+    [self.alarmDaysButton setTitle:[AlarmHelper tidyDaysFromArrayOfDayNames:self.alarmDaysNamesArray] forState:UIControlStateNormal];
+}
+
 - (IBAction)saveAlarmButtonTouched:(id)sender {
 
-    NSDateComponents* components = [[NSDateComponents alloc] init];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
     components.hour = [self.timePicker selectedRowInComponent:0];
     components.minute = [self.timePicker selectedRowInComponent:1];
     NSDate *pickerDate = [[NSCalendar currentCalendar] dateFromComponents:components];
 
     AlarmManager *alarmManager = [[AlarmManager alloc] init];
-    [alarmManager saveAlarmWithDate:pickerDate];
 
-//
-//    CATransition* transition = [CATransition animation];
-//    transition.duration = 0.5;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    transition.type = kCATransitionMoveIn; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-//    transition.subtype = kCATransitionFromRight;
-//    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    if (self.existingAlarm)
+    {
+        [alarmManager updateAlarm:self.existingAlarm
+                             name:self.alarmNameTextField.text
+                             date:pickerDate
+                 fullNameDayArray:self.alarmDaysNamesArray
+                            sound:self.alarmSound];
+    }
+    else
+    {
+        [alarmManager saveAlarmWithName:self.alarmNameTextField.text
+                                   date:pickerDate
+                       fullNameDayArray:self.alarmDaysNamesArray
+                                  sound:self.alarmSound];
+    }
 
     [self.navigationController popViewControllerAnimated:NO];
-
 }
-
-
-
--(void)storeAlarmInStore:(NSDate *)fireDate{
-
-//    NSManagedObjectContext *context = [self managedObjectContext];
-//
-//    Alarm *alarm;
-//
-//    if (existingAlarm) {
-//        alarm = existingAlarm;
-//    }
-//    else {
-//        alarm = [NSEntityDescription
-//                insertNewObjectForEntityForName:@"Alarm"
-//                         inManagedObjectContext:context];
-//
-//    }
-//
-//    [alarm setValue:alarmName forKey:@"name"];
-//    [alarm setValue:alarmSound forKey:@"sound"];
-//    [alarm setValue:[NSNumber numberWithBool:YES] forKey:@"enabled"];
-//
-//    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-//    [outputFormatter setDateFormat:@"HH:mm"]; //24hr time format
-//    NSString *timeString = [outputFormatter stringFromDate:fireDate];
-//
-//    [alarm setValue:timeString forKey:@"time"];
-//
-//    for (NSManagedObject *aDay in alarm.day) {
-//        [context deleteObject:aDay];
-//    }
-//    NSError *saveError = nil;
-//    [context save:&saveError];
-//
-//    for (NSString *myArrayElement in alarmRepeatDays) {
-//
-//        Day *day = [NSEntityDescription
-//                insertNewObjectForEntityForName:@"Day"
-//                         inManagedObjectContext:context];
-//
-//        [day setValue:myArrayElement forKey:@"day"];
-//
-//        [day setValue:alarm forKey:@"alarm"];
-//    }
-//
-//
-//    NSError *error;
-//    if (![context save:&error]) {
-//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-//    }
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    if ([[segue destinationViewController] isKindOfClass:[AlarmDaysViewController class]]){
-//        ((AlarmDaysViewController *)[segue destinationViewController])
-
+    if ([[segue destinationViewController] isKindOfClass:[AlarmDaysViewController class]]) {
+        ((AlarmDaysViewController *) [segue destinationViewController]).delegate = self;
+        ((AlarmDaysViewController *) [segue destinationViewController]).selectedDayArray = self.alarmDaysNamesArray;
     }
-
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    else if ([[segue destinationViewController] isKindOfClass:[AlarmSoundsViewController class]]) {
+        ((AlarmSoundsViewController *) [segue destinationViewController]).delegate = self;
+    }
 }
 
+- (void)setAlarmDaysWithDayNameArray:(NSArray *)dayNameArray {
+    self.alarmDaysNamesArray = [dayNameArray mutableCopy];
+
+    NSString *string = [AlarmHelper tidyDaysFromArrayOfDayNames:dayNameArray];
+    [self.alarmDaysButton setTitle:string forState:UIControlStateNormal];
+    [self.alarmDaysButton.titleLabel layoutIfNeeded];
+}
+
+- (void)setAlarmSoundWithSoundName:(NSString *)soundName {
+    self.alarmSound = soundName;
+    self.alarmSoundButton.titleLabel.text = soundName;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 75;
+}
 
 #pragma mark - picker view
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 2;
+    return kRowsInPicker;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    switch (component)
-    {
-        case 0: return 24;
-        case 1: return 60;
-        default: return -1;
+    switch (component) {
+        case 0:
+            return 24;
+        case 1:
+            return 60;
+        default:
+            return -1;
     }
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
-    
-    UILabel *label= [[UILabel alloc] initWithFrame:CGRectMake(30.0, 0.0, 50.0, 50.0)];
-    [label setTextAlignment:NSTextAlignmentCenter];
-    [label setFont:[UIFont fontWithName:@"Solari" size:30]];
-    label.textColor = [UIColor whiteColor];
-    label.backgroundColor = [UIColor blackColor];
-    label.alpha = 1.0;
+
+    UILabel *tView = (UILabel *) view;
+    if (!tView) {
+        tView = [[UILabel alloc] init];
+
+        [tView setTextAlignment:NSTextAlignmentCenter];
+        [tView setFont:[UIFont fontWithName:@"Solari" size:50]];
+        tView.textColor = [UIColor whiteColor];
+        tView.backgroundColor = [UIColor blackColor];
+    }
+
     if (row < 10) {
-        [label setText:[NSString stringWithFormat:@"0%ld",(long)row]];
+        [tView setText:[NSString stringWithFormat:@"0%ld", (long) row]];
     }
     else {
-        [label setText:[NSString stringWithFormat:@"%ld",(long)row]];
+        [tView setText:[NSString stringWithFormat:@"%ld", (long) row]];
     }
-    
-    return label;
+    return tView;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    return self.timePicker.frame.size.width / 2;
 }
 
 @end

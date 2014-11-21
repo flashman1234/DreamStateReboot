@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AlarmDelegate;
+@class AlarmViewController;
+
 @interface AlarmDaysViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) NSMutableArray *selectedDayArray;
+@property(nonatomic) NSMutableArray *selectedDayArray;
+
+@property(nonatomic, weak) id <AlarmDelegate> delegate;
 
 @end

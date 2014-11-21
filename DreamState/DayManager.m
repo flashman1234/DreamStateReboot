@@ -22,20 +22,4 @@
     return results;
 }
 
-//- (void)loadInitialDays {
-//    DSCoreDataContextProvider *provider = [DSCoreDataContextProvider sharedInstance];
-//    NSManagedObjectContext *context = provider.managedObjectContext;
-//
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    NSArray *dayArray = [[dateFormatter weekdaySymbols] mutableCopy];
-//
-//    for (NSString *dayString in dayArray) {
-//        Day *theDay = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Day class])
-//                                                    inManagedObjectContext:context];
-//        theDay.day = dayString;
-//    }
-//        [context save:nil];
-//
-//
-//}
 @end

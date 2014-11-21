@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-JVFloatLabeledTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SimpleAudioPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5AC6BD2001AE17BEEA205D78</key>
+		<key>0EF0754DDAF149F8EF5EA00D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79B8720CF6B056B2DF0AF5D6</key>
+		<key>6AB2B6AA8A7B518215B137C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70A4AA3F726E5359D0049020</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D294C86EB672C652B509E776</key>
 		<dict>
 			<key>primary</key>
 			<true/>

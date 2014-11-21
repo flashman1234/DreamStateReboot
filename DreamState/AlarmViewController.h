@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlarmDelegate.h"
 
-@interface AlarmViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@class Alarm;
+
+@interface AlarmViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, AlarmDelegate>
+
+@property(nonatomic) Alarm *existingAlarm;
 
 @end
+
+

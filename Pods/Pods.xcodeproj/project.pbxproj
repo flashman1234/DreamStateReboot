@@ -7,179 +7,336 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		089BB124303046C222B03F66 /* Pods-SimpleAudioPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1C46EB27F263B22FC8BD7 /* Pods-SimpleAudioPlayer-dummy.m */; };
-		41709117AB89E1C89B5E2BBD /* SimpleAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 867BC968F753A2DC7DA91638 /* SimpleAudioPlayer.h */; };
-		5FDD01BC9638B520134062CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A76B7C57674C3DED53EBCF4 /* AVFoundation.framework */; };
-		61135110657B5EEA475D6F2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C75A1A15682D0F4B0422713 /* Foundation.framework */; };
-		9F1C1B55E1D5C36B02777415 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA00B48D5AE2C6A89ADBB0 /* Pods-dummy.m */; };
-		DC359A1BE9421DD5EE029C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C75A1A15682D0F4B0422713 /* Foundation.framework */; };
-		E9724D1235A4520B509539B6 /* SimpleAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF24B35CB1FF601CB113286 /* SimpleAudioPlayer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		065C564DB66C4764B6A76EEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C4480C96D8737F716FE95 /* Foundation.framework */; };
+		15F3453D69191FBCED50C78B /* TPKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9C9F74892DBA150C9E03CD /* TPKeyboardAvoidingScrollView.h */; };
+		1C8E3B2324ABAB06C29535CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DAE5E48A8DF9443D437F75A /* UIKit.framework */; };
+		3039EDF3B24C32CBBA6B6CE0 /* Pods-JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1739FA4E36F04DB06A0238E0 /* Pods-JVFloatLabeledTextField-dummy.m */; };
+		4360AD8920D60BACCA0DF694 /* Pods-SimpleAudioPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF45D673CA5144D9EF6ACCB /* Pods-SimpleAudioPlayer-dummy.m */; };
+		48C3D654B19E16C0A70C8816 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB4D5603131E3F44CF0FAE /* AVFoundation.framework */; };
+		587F47BFC0408406839DB7A5 /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = BE7349582E34F25DF5260822 /* JVFloatLabeledTextField.h */; };
+		5C44F437F394B3ECFCBF5E04 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960300C6F6E7E56EB8A453DB /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		631B00927F17C220BFC56286 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D47FD53E7CCD4644D1D9AA25 /* Pods-dummy.m */; };
+		67251A9F0E7651F984E613F1 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C2FCF58DE3B0B076CF57D8 /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		6815028D8F63D36D6966AB01 /* TPKeyboardAvoidingCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11247152AADDBE0A213D17A7 /* TPKeyboardAvoidingCollectionView.h */; };
+		764B0D4C0011DFC66391DED5 /* SimpleAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 518596A63C86AD9DF5A9D578 /* SimpleAudioPlayer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		86EC6A9CF5738354647120DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C4480C96D8737F716FE95 /* Foundation.framework */; };
+		8C82CEBFFCCB36ED65D0C6A7 /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E6314E79000520171F627D9 /* NSString+TextDirectionality.h */; };
+		98754E202DC9F58201A133B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C4480C96D8737F716FE95 /* Foundation.framework */; };
+		A1FDD6F5E4555C9F282526E5 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCBC9CE019AC7B3BDFE5DA4 /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		B526FAABAA312C20AA2D3DE0 /* Pods-TPKeyboardAvoiding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702616C52754E4A31E21F20 /* Pods-TPKeyboardAvoiding-dummy.m */; };
+		B573FE545C46EC16FD590C61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45C4480C96D8737F716FE95 /* Foundation.framework */; };
+		BF2C3818D3A3314841C0DE31 /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 31705B50086F08293FE61613 /* JVFloatLabeledTextView.h */; };
+		C6328E85B125D7B284C56281 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE444C5B0A8887DD9A46C0A /* TPKeyboardAvoidingTableView.m */; };
+		CCCFC7CB956991FA9BCEF99F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5493C75B6C87266C5A89EBD5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		DAABEDAF50C8872E1F5F5CA0 /* TPKeyboardAvoidingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEC09D9193C4CAF694717EE /* TPKeyboardAvoidingTableView.h */; };
+		DB6477DA5B8BEB02DA898B90 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF166197325D3F7A01310974 /* TPKeyboardAvoidingCollectionView.m */; };
+		EF6F563470D8315A4340A3F4 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5F58EC4883534518EFEE56 /* TPKeyboardAvoidingScrollView.m */; };
+		F27E4D0FF381958BC4CD95C1 /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9960ADDE95D439286E186E91 /* UIScrollView+TPKeyboardAvoidingAdditions.h */; };
+		FD55C01B7C0E71CF3C56449F /* SimpleAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = EF9E4E9B2AD0558A51208DF5 /* SimpleAudioPlayer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8535CA760C71C29454DBA776 /* PBXContainerItemProxy */ = {
+		811B76EACFADBAF65F6553EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4D5361CB72A2DCDF0209C1D4 /* Project object */;
+			containerPortal = 086979B89A74442B6A6F89CD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5AC6BD2001AE17BEEA205D78;
+			remoteGlobalIDString = 0EF0754DDAF149F8EF5EA00D;
 			remoteInfo = "Pods-SimpleAudioPlayer";
+		};
+		CAF9D3E4E967EE8F6D6214F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 086979B89A74442B6A6F89CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AB2B6AA8A7B518215B137C7;
+			remoteInfo = "Pods-JVFloatLabeledTextField";
+		};
+		D03336BBF4DA691A669014E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 086979B89A74442B6A6F89CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70A4AA3F726E5359D0049020;
+			remoteInfo = "Pods-TPKeyboardAvoiding";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0943793E87D8E27A14EC16C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		09D6D9FE209DEF678ED98527 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		1331F0E4D22646C8FA66AC76 /* Pods-SimpleAudioPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAudioPlayer.xcconfig"; sourceTree = "<group>"; };
-		1A6C87EEE4D2B565A390E638 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		2BB1C46EB27F263B22FC8BD7 /* Pods-SimpleAudioPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleAudioPlayer-dummy.m"; sourceTree = "<group>"; };
-		2FEA00B48D5AE2C6A89ADBB0 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		4A9864D1BF1269E49A5874A6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A76B7C57674C3DED53EBCF4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		867BC968F753A2DC7DA91638 /* SimpleAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimpleAudioPlayer.h; sourceTree = "<group>"; };
-		8D92E7CA07DA8E8FEE82EDB7 /* Pods-SimpleAudioPlayer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAudioPlayer-Private.xcconfig"; sourceTree = "<group>"; };
-		924646BC07631EE4AEE37E67 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		9C75A1A15682D0F4B0422713 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A3C4AEF317FD0C5AA7FF79DD /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC5A232840D0551C4FCDDBA3 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BDF24B35CB1FF601CB113286 /* SimpleAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioPlayer.m; sourceTree = "<group>"; };
-		D0519E46BDF7E833887B2C25 /* libPods-SimpleAudioPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleAudioPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2FCBB55080AC87711D91232 /* Pods-SimpleAudioPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleAudioPlayer-prefix.pch"; sourceTree = "<group>"; };
-		F37B6D0F3A9EE16B223DE2E6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		10C2FCF58DE3B0B076CF57D8 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		11247152AADDBE0A213D17A7 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingCollectionView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		1739FA4E36F04DB06A0238E0 /* Pods-JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
+		213DFFA3BC9DD517A17738DE /* libPods-SimpleAudioPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleAudioPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2702616C52754E4A31E21F20 /* Pods-TPKeyboardAvoiding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TPKeyboardAvoiding-dummy.m"; sourceTree = "<group>"; };
+		31705B50086F08293FE61613 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		334FA745E09D2303B5A4488F /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		3DEC09D9193C4CAF694717EE /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingTableView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		479CABCEA58602E5954B5677 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		518596A63C86AD9DF5A9D578 /* SimpleAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioPlayer.m; sourceTree = "<group>"; };
+		5493C75B6C87266C5A89EBD5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+TPKeyboardAvoidingAdditions.m"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		5AE444C5B0A8887DD9A46C0A /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingTableView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		603A5A171FB58A0FDC37BA03 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		62B2EEB457BA163EBAC3A63E /* libPods-JVFloatLabeledTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JVFloatLabeledTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D0B423EB084F4CEF718E43 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6DAE5E48A8DF9443D437F75A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6E6314E79000520171F627D9 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		71B642FA29CB96B024114709 /* Pods-SimpleAudioPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAudioPlayer.xcconfig"; sourceTree = "<group>"; };
+		8E9C9F74892DBA150C9E03CD /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPKeyboardAvoidingScrollView.h; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		960300C6F6E7E56EB8A453DB /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		9960ADDE95D439286E186E91 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+TPKeyboardAvoidingAdditions.h"; path = "TPKeyboardAvoiding/UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		9A55A259A36B715C3DA956ED /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		9C57E09AA84CF22DD89CF394 /* Pods-JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
+		9E3700EE9D27E3079522FEFD /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AC5F58EC4883534518EFEE56 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingScrollView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		BE7349582E34F25DF5260822 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		BF166197325D3F7A01310974 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPKeyboardAvoidingCollectionView.m; path = TPKeyboardAvoiding/TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		C00243F9395EAB2D408BB47A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C029955650964A8349B88072 /* Pods-TPKeyboardAvoiding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPKeyboardAvoiding.xcconfig"; sourceTree = "<group>"; };
+		C18871AC231656D90D68223C /* Pods-SimpleAudioPlayer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAudioPlayer-Private.xcconfig"; sourceTree = "<group>"; };
+		C1ABBDA2738C562F5EFDD605 /* Pods-TPKeyboardAvoiding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TPKeyboardAvoiding-prefix.pch"; sourceTree = "<group>"; };
+		CB8905A1BFBB08B68BB33B31 /* Pods-SimpleAudioPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleAudioPlayer-prefix.pch"; sourceTree = "<group>"; };
+		CC80BCA5D6E716057FAC0759 /* Pods-JVFloatLabeledTextField-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JVFloatLabeledTextField-Private.xcconfig"; sourceTree = "<group>"; };
+		CCF45D673CA5144D9EF6ACCB /* Pods-SimpleAudioPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleAudioPlayer-dummy.m"; sourceTree = "<group>"; };
+		D47FD53E7CCD4644D1D9AA25 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		D4BB4D5603131E3F44CF0FAE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D8DDCA36F35E0E5A0AF408F7 /* Pods-TPKeyboardAvoiding-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TPKeyboardAvoiding-Private.xcconfig"; sourceTree = "<group>"; };
+		DB857441447F32EA910D3931 /* Pods-JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JVFloatLabeledTextField.xcconfig"; sourceTree = "<group>"; };
+		DB8D7279117F9DE2B48DE60C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		DBCBC9CE019AC7B3BDFE5DA4 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		EF9E4E9B2AD0558A51208DF5 /* SimpleAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimpleAudioPlayer.h; sourceTree = "<group>"; };
+		F45C4480C96D8737F716FE95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F6B512D085F5F59B2194C137 /* libPods-TPKeyboardAvoiding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPKeyboardAvoiding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		74802BB55ACC5A2BBD85E914 /* Frameworks */ = {
+		400785922253BDF81C24A4D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDD01BC9638B520134062CE /* AVFoundation.framework in Frameworks */,
-				61135110657B5EEA475D6F2D /* Foundation.framework in Frameworks */,
+				86EC6A9CF5738354647120DC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB5652F43005A7B58520491B /* Frameworks */ = {
+		636821C5100548C3EDDCE18A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC359A1BE9421DD5EE029C2C /* Foundation.framework in Frameworks */,
+				B573FE545C46EC16FD590C61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8096FEB345BE6A6F2D003A5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C3D654B19E16C0A70C8816 /* AVFoundation.framework in Frameworks */,
+				98754E202DC9F58201A133B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9DE842178AEB2C1CD29DC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065C564DB66C4764B6A76EEC /* Foundation.framework in Frameworks */,
+				1C8E3B2324ABAB06C29535CB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02850A9E54F3B7EF9A3B5905 /* iOS */ = {
+		05B19362A02122669F18B314 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6A76B7C57674C3DED53EBCF4 /* AVFoundation.framework */,
-				9C75A1A15682D0F4B0422713 /* Foundation.framework */,
+				1E3E74A599C6FECE60B6D621 /* JVFloatLabeledTextField */,
+				2530AF29429B13CB89A8C21F /* SimpleAudioPlayer */,
+				EBA54F858F0FCC4AC1D49275 /* TPKeyboardAvoiding */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		10C7001B39E7180E41EB2730 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D4BB4D5603131E3F44CF0FAE /* AVFoundation.framework */,
+				F45C4480C96D8737F716FE95 /* Foundation.framework */,
+				6DAE5E48A8DF9443D437F75A /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5266547DF1CD848BEE030D77 /* Pods */ = {
+		1E3E74A599C6FECE60B6D621 /* JVFloatLabeledTextField */ = {
 			isa = PBXGroup;
 			children = (
-				A9CAACAEBA4C3498AD47AC68 /* SimpleAudioPlayer */,
+				BE7349582E34F25DF5260822 /* JVFloatLabeledTextField.h */,
+				10C2FCF58DE3B0B076CF57D8 /* JVFloatLabeledTextField.m */,
+				31705B50086F08293FE61613 /* JVFloatLabeledTextView.h */,
+				960300C6F6E7E56EB8A453DB /* JVFloatLabeledTextView.m */,
+				6E6314E79000520171F627D9 /* NSString+TextDirectionality.h */,
+				DBCBC9CE019AC7B3BDFE5DA4 /* NSString+TextDirectionality.m */,
+				1FFFA26ED1DB74DFE6242ECE /* Support Files */,
 			);
-			name = Pods;
+			name = JVFloatLabeledTextField;
+			path = JVFloatLabeledTextField;
 			sourceTree = "<group>";
 		};
-		67637F657EEEE75F6B28284B = {
+		1FFFA26ED1DB74DFE6242ECE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AC5A232840D0551C4FCDDBA3 /* Podfile */,
-				B565DBA82D5B5AAA35B06926 /* Frameworks */,
-				5266547DF1CD848BEE030D77 /* Pods */,
-				81F9436E67C82593456E99D3 /* Products */,
-				7E13AB0B4C1648499FD6CF9A /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		68DC80D5F68CB30BD01F7956 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A3C4AEF317FD0C5AA7FF79DD /* Pods-acknowledgements.markdown */,
-				09D6D9FE209DEF678ED98527 /* Pods-acknowledgements.plist */,
-				2FEA00B48D5AE2C6A89ADBB0 /* Pods-dummy.m */,
-				924646BC07631EE4AEE37E67 /* Pods-environment.h */,
-				1A6C87EEE4D2B565A390E638 /* Pods-resources.sh */,
-				F37B6D0F3A9EE16B223DE2E6 /* Pods.debug.xcconfig */,
-				0943793E87D8E27A14EC16C5 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			path = "Target Support Files/Pods";
-			sourceTree = "<group>";
-		};
-		7151355A34B8540CF35BBDE5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1331F0E4D22646C8FA66AC76 /* Pods-SimpleAudioPlayer.xcconfig */,
-				8D92E7CA07DA8E8FEE82EDB7 /* Pods-SimpleAudioPlayer-Private.xcconfig */,
-				2BB1C46EB27F263B22FC8BD7 /* Pods-SimpleAudioPlayer-dummy.m */,
-				E2FCBB55080AC87711D91232 /* Pods-SimpleAudioPlayer-prefix.pch */,
+				DB857441447F32EA910D3931 /* Pods-JVFloatLabeledTextField.xcconfig */,
+				CC80BCA5D6E716057FAC0759 /* Pods-JVFloatLabeledTextField-Private.xcconfig */,
+				1739FA4E36F04DB06A0238E0 /* Pods-JVFloatLabeledTextField-dummy.m */,
+				9C57E09AA84CF22DD89CF394 /* Pods-JVFloatLabeledTextField-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Pods-SimpleAudioPlayer";
+			path = "../Target Support Files/Pods-JVFloatLabeledTextField";
 			sourceTree = "<group>";
 		};
-		7E13AB0B4C1648499FD6CF9A /* Targets Support Files */ = {
+		2530AF29429B13CB89A8C21F /* SimpleAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				68DC80D5F68CB30BD01F7956 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		81F9436E67C82593456E99D3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4A9864D1BF1269E49A5874A6 /* libPods.a */,
-				D0519E46BDF7E833887B2C25 /* libPods-SimpleAudioPlayer.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A9CAACAEBA4C3498AD47AC68 /* SimpleAudioPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				867BC968F753A2DC7DA91638 /* SimpleAudioPlayer.h */,
-				BDF24B35CB1FF601CB113286 /* SimpleAudioPlayer.m */,
-				7151355A34B8540CF35BBDE5 /* Support Files */,
+				EF9E4E9B2AD0558A51208DF5 /* SimpleAudioPlayer.h */,
+				518596A63C86AD9DF5A9D578 /* SimpleAudioPlayer.m */,
+				A097CCAF9DBCD850435F4BCE /* Support Files */,
 			);
 			name = SimpleAudioPlayer;
 			path = SimpleAudioPlayer;
 			sourceTree = "<group>";
 		};
-		B565DBA82D5B5AAA35B06926 /* Frameworks */ = {
+		3058F6D9575C451E18258E8E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				02850A9E54F3B7EF9A3B5905 /* iOS */,
+				9E3700EE9D27E3079522FEFD /* Pods-acknowledgements.markdown */,
+				DB8D7279117F9DE2B48DE60C /* Pods-acknowledgements.plist */,
+				D47FD53E7CCD4644D1D9AA25 /* Pods-dummy.m */,
+				334FA745E09D2303B5A4488F /* Pods-environment.h */,
+				9A55A259A36B715C3DA956ED /* Pods-resources.sh */,
+				603A5A171FB58A0FDC37BA03 /* Pods.debug.xcconfig */,
+				479CABCEA58602E5954B5677 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		416F29A29295846D49D8C7D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10C7001B39E7180E41EB2730 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56CC5B90695F1E5AC98D65CA = {
+			isa = PBXGroup;
+			children = (
+				65D0B423EB084F4CEF718E43 /* Podfile */,
+				416F29A29295846D49D8C7D5 /* Frameworks */,
+				05B19362A02122669F18B314 /* Pods */,
+				AD72C188274AB9A7E5A0E281 /* Products */,
+				A478B45EA1897CBC03694567 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		85F4E8D7138A6E26ED0E8F38 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C029955650964A8349B88072 /* Pods-TPKeyboardAvoiding.xcconfig */,
+				D8DDCA36F35E0E5A0AF408F7 /* Pods-TPKeyboardAvoiding-Private.xcconfig */,
+				2702616C52754E4A31E21F20 /* Pods-TPKeyboardAvoiding-dummy.m */,
+				C1ABBDA2738C562F5EFDD605 /* Pods-TPKeyboardAvoiding-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TPKeyboardAvoiding";
+			sourceTree = "<group>";
+		};
+		A097CCAF9DBCD850435F4BCE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				71B642FA29CB96B024114709 /* Pods-SimpleAudioPlayer.xcconfig */,
+				C18871AC231656D90D68223C /* Pods-SimpleAudioPlayer-Private.xcconfig */,
+				CCF45D673CA5144D9EF6ACCB /* Pods-SimpleAudioPlayer-dummy.m */,
+				CB8905A1BFBB08B68BB33B31 /* Pods-SimpleAudioPlayer-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SimpleAudioPlayer";
+			sourceTree = "<group>";
+		};
+		A478B45EA1897CBC03694567 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3058F6D9575C451E18258E8E /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AD72C188274AB9A7E5A0E281 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C00243F9395EAB2D408BB47A /* libPods.a */,
+				62B2EEB457BA163EBAC3A63E /* libPods-JVFloatLabeledTextField.a */,
+				213DFFA3BC9DD517A17738DE /* libPods-SimpleAudioPlayer.a */,
+				F6B512D085F5F59B2194C137 /* libPods-TPKeyboardAvoiding.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBA54F858F0FCC4AC1D49275 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				11247152AADDBE0A213D17A7 /* TPKeyboardAvoidingCollectionView.h */,
+				BF166197325D3F7A01310974 /* TPKeyboardAvoidingCollectionView.m */,
+				8E9C9F74892DBA150C9E03CD /* TPKeyboardAvoidingScrollView.h */,
+				AC5F58EC4883534518EFEE56 /* TPKeyboardAvoidingScrollView.m */,
+				3DEC09D9193C4CAF694717EE /* TPKeyboardAvoidingTableView.h */,
+				5AE444C5B0A8887DD9A46C0A /* TPKeyboardAvoidingTableView.m */,
+				9960ADDE95D439286E186E91 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				5493C75B6C87266C5A89EBD5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				85F4E8D7138A6E26ED0E8F38 /* Support Files */,
+			);
+			name = TPKeyboardAvoiding;
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2050CDCC5332BEF85A56A81F /* Headers */ = {
+		066DE541D087CA1F0F2E10DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41709117AB89E1C89B5E2BBD /* SimpleAudioPlayer.h in Headers */,
+				FD55C01B7C0E71CF3C56449F /* SimpleAudioPlayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60B0F589A8456D562AAA5899 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6815028D8F63D36D6966AB01 /* TPKeyboardAvoidingCollectionView.h in Headers */,
+				15F3453D69191FBCED50C78B /* TPKeyboardAvoidingScrollView.h in Headers */,
+				DAABEDAF50C8872E1F5F5CA0 /* TPKeyboardAvoidingTableView.h in Headers */,
+				F27E4D0FF381958BC4CD95C1 /* UIScrollView+TPKeyboardAvoidingAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C591D1BA122EE925E274D988 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587F47BFC0408406839DB7A5 /* JVFloatLabeledTextField.h in Headers */,
+				BF2C3818D3A3314841C0DE31 /* JVFloatLabeledTextView.h in Headers */,
+				8C82CEBFFCCB36ED65D0C6A7 /* NSString+TextDirectionality.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5AC6BD2001AE17BEEA205D78 /* Pods-SimpleAudioPlayer */ = {
+		0EF0754DDAF149F8EF5EA00D /* Pods-SimpleAudioPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 771F7524F1C7F77019E154B6 /* Build configuration list for PBXNativeTarget "Pods-SimpleAudioPlayer" */;
+			buildConfigurationList = B86336A6E1C92F7098D234FA /* Build configuration list for PBXNativeTarget "Pods-SimpleAudioPlayer" */;
 			buildPhases = (
-				6122BABAC4F0E404A8DE899B /* Sources */,
-				74802BB55ACC5A2BBD85E914 /* Frameworks */,
-				2050CDCC5332BEF85A56A81F /* Headers */,
+				99F9E6B6B247C34EBD20F5CE /* Sources */,
+				8096FEB345BE6A6F2D003A5D /* Frameworks */,
+				066DE541D087CA1F0F2E10DA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -187,141 +344,157 @@
 			);
 			name = "Pods-SimpleAudioPlayer";
 			productName = "Pods-SimpleAudioPlayer";
-			productReference = D0519E46BDF7E833887B2C25 /* libPods-SimpleAudioPlayer.a */;
+			productReference = 213DFFA3BC9DD517A17738DE /* libPods-SimpleAudioPlayer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		79B8720CF6B056B2DF0AF5D6 /* Pods */ = {
+		6AB2B6AA8A7B518215B137C7 /* Pods-JVFloatLabeledTextField */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7C222797EC5928875FF59EA /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = E4672033FD71D592789190F0 /* Build configuration list for PBXNativeTarget "Pods-JVFloatLabeledTextField" */;
 			buildPhases = (
-				4DA6012BE050FFF6E30AA92C /* Sources */,
-				EB5652F43005A7B58520491B /* Frameworks */,
+				1BA18DAC15B9DCC1B527DBAF /* Sources */,
+				BC9DE842178AEB2C1CD29DC9 /* Frameworks */,
+				C591D1BA122EE925E274D988 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3CA03E28D866CB31846C8C97 /* PBXTargetDependency */,
+			);
+			name = "Pods-JVFloatLabeledTextField";
+			productName = "Pods-JVFloatLabeledTextField";
+			productReference = 62B2EEB457BA163EBAC3A63E /* libPods-JVFloatLabeledTextField.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		70A4AA3F726E5359D0049020 /* Pods-TPKeyboardAvoiding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B08476CBF641CB9097CC5D5A /* Build configuration list for PBXNativeTarget "Pods-TPKeyboardAvoiding" */;
+			buildPhases = (
+				51027AB3FB2D6E008DFC81C9 /* Sources */,
+				400785922253BDF81C24A4D7 /* Frameworks */,
+				60B0F589A8456D562AAA5899 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TPKeyboardAvoiding";
+			productName = "Pods-TPKeyboardAvoiding";
+			productReference = F6B512D085F5F59B2194C137 /* libPods-TPKeyboardAvoiding.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D294C86EB672C652B509E776 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5FB52B6BE07D4DA5191FBF /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				169AB55E60C6420BC3CA839F /* Sources */,
+				636821C5100548C3EDDCE18A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A21A0DCDF49C9C1031950F8B /* PBXTargetDependency */,
+				C26046F3EB7A9A704A61C53D /* PBXTargetDependency */,
+				C1CAA5B0F871FB63DCAEB830 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 4A9864D1BF1269E49A5874A6 /* libPods.a */;
+			productReference = C00243F9395EAB2D408BB47A /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4D5361CB72A2DCDF0209C1D4 /* Project object */ = {
+		086979B89A74442B6A6F89CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 13A6E5BFE24C701D19C92CC4 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 5B661B3DB525DFDC67F9E2E3 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 67637F657EEEE75F6B28284B;
-			productRefGroup = 81F9436E67C82593456E99D3 /* Products */;
+			mainGroup = 56CC5B90695F1E5AC98D65CA;
+			productRefGroup = AD72C188274AB9A7E5A0E281 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 			);
 			projectRoot = "";
 			targets = (
-				79B8720CF6B056B2DF0AF5D6 /* Pods */,
-				5AC6BD2001AE17BEEA205D78 /* Pods-SimpleAudioPlayer */,
+				D294C86EB672C652B509E776 /* Pods */,
+				6AB2B6AA8A7B518215B137C7 /* Pods-JVFloatLabeledTextField */,
+				0EF0754DDAF149F8EF5EA00D /* Pods-SimpleAudioPlayer */,
+				70A4AA3F726E5359D0049020 /* Pods-TPKeyboardAvoiding */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4DA6012BE050FFF6E30AA92C /* Sources */ = {
+		169AB55E60C6420BC3CA839F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1C1B55E1D5C36B02777415 /* Pods-dummy.m in Sources */,
+				631B00927F17C220BFC56286 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6122BABAC4F0E404A8DE899B /* Sources */ = {
+		1BA18DAC15B9DCC1B527DBAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089BB124303046C222B03F66 /* Pods-SimpleAudioPlayer-dummy.m in Sources */,
-				E9724D1235A4520B509539B6 /* SimpleAudioPlayer.m in Sources */,
+				67251A9F0E7651F984E613F1 /* JVFloatLabeledTextField.m in Sources */,
+				5C44F437F394B3ECFCBF5E04 /* JVFloatLabeledTextView.m in Sources */,
+				A1FDD6F5E4555C9F282526E5 /* NSString+TextDirectionality.m in Sources */,
+				3039EDF3B24C32CBBA6B6CE0 /* Pods-JVFloatLabeledTextField-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51027AB3FB2D6E008DFC81C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B526FAABAA312C20AA2D3DE0 /* Pods-TPKeyboardAvoiding-dummy.m in Sources */,
+				DB6477DA5B8BEB02DA898B90 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				EF6F563470D8315A4340A3F4 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				C6328E85B125D7B284C56281 /* TPKeyboardAvoidingTableView.m in Sources */,
+				CCCFC7CB956991FA9BCEF99F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F9E6B6B247C34EBD20F5CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4360AD8920D60BACCA0DF694 /* Pods-SimpleAudioPlayer-dummy.m in Sources */,
+				764B0D4C0011DFC66391DED5 /* SimpleAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CA03E28D866CB31846C8C97 /* PBXTargetDependency */ = {
+		A21A0DCDF49C9C1031950F8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5AC6BD2001AE17BEEA205D78 /* Pods-SimpleAudioPlayer */;
-			targetProxy = 8535CA760C71C29454DBA776 /* PBXContainerItemProxy */;
+			target = 6AB2B6AA8A7B518215B137C7 /* Pods-JVFloatLabeledTextField */;
+			targetProxy = CAF9D3E4E967EE8F6D6214F2 /* PBXContainerItemProxy */;
+		};
+		C1CAA5B0F871FB63DCAEB830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70A4AA3F726E5359D0049020 /* Pods-TPKeyboardAvoiding */;
+			targetProxy = D03336BBF4DA691A669014E6 /* PBXContainerItemProxy */;
+		};
+		C26046F3EB7A9A704A61C53D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EF0754DDAF149F8EF5EA00D /* Pods-SimpleAudioPlayer */;
+			targetProxy = 811B76EACFADBAF65F6553EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1D0DFA610CA7B3A20EB7B96B /* Release */ = {
+		0DDD3C201893CF91AF85F01B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0943793E87D8E27A14EC16C5 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		424EDBFF47AF2D65A5514A8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D92E7CA07DA8E8FEE82EDB7 /* Pods-SimpleAudioPlayer-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SimpleAudioPlayer/Pods-SimpleAudioPlayer-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		5419D10E57E9367B5B5F0876 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D92E7CA07DA8E8FEE82EDB7 /* Pods-SimpleAudioPlayer-Private.xcconfig */;
+			baseConfigurationReference = C18871AC231656D90D68223C /* Pods-SimpleAudioPlayer-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -348,9 +521,63 @@
 			};
 			name = Release;
 		};
-		8618FFB7CE65B873695A8CA7 /* Debug */ = {
+		19B996465A939B8D376DB493 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F37B6D0F3A9EE16B223DE2E6 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = CC80BCA5D6E716057FAC0759 /* Pods-JVFloatLabeledTextField-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JVFloatLabeledTextField/Pods-JVFloatLabeledTextField-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		39684E7481FD24B71AF4D807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18871AC231656D90D68223C /* Pods-SimpleAudioPlayer-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SimpleAudioPlayer/Pods-SimpleAudioPlayer-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5837D6F33E4B18AA835DB065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603A5A171FB58A0FDC37BA03 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -374,7 +601,7 @@
 			};
 			name = Debug;
 		};
-		8F5FE9F9A0CBB31129771B15 /* Debug */ = {
+		6DD595725B83242280FCB808 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -410,7 +637,35 @@
 			};
 			name = Debug;
 		};
-		A9A14398771CA69B1733F93E /* Release */ = {
+		73024BBB66CB3A3D1452689F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 479CABCEA58602E5954B5677 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CA9CC12E4C4EA05ECB9550A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -443,37 +698,140 @@
 			};
 			name = Release;
 		};
+		8018143ED7EBCBDE3F97ADF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC80BCA5D6E716057FAC0759 /* Pods-JVFloatLabeledTextField-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JVFloatLabeledTextField/Pods-JVFloatLabeledTextField-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8791A9385BF82B9389F10FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8DDCA36F35E0E5A0AF408F7 /* Pods-TPKeyboardAvoiding-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TPKeyboardAvoiding/Pods-TPKeyboardAvoiding-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F59C9E1D0C8015B49E40BFB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8DDCA36F35E0E5A0AF408F7 /* Pods-TPKeyboardAvoiding-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TPKeyboardAvoiding/Pods-TPKeyboardAvoiding-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13A6E5BFE24C701D19C92CC4 /* Build configuration list for PBXProject "Pods" */ = {
+		0A5FB52B6BE07D4DA5191FBF /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F5FE9F9A0CBB31129771B15 /* Debug */,
-				A9A14398771CA69B1733F93E /* Release */,
+				5837D6F33E4B18AA835DB065 /* Debug */,
+				73024BBB66CB3A3D1452689F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		771F7524F1C7F77019E154B6 /* Build configuration list for PBXNativeTarget "Pods-SimpleAudioPlayer" */ = {
+		5B661B3DB525DFDC67F9E2E3 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				424EDBFF47AF2D65A5514A8C /* Debug */,
-				5419D10E57E9367B5B5F0876 /* Release */,
+				6DD595725B83242280FCB808 /* Debug */,
+				7CA9CC12E4C4EA05ECB9550A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7C222797EC5928875FF59EA /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		B08476CBF641CB9097CC5D5A /* Build configuration list for PBXNativeTarget "Pods-TPKeyboardAvoiding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8618FFB7CE65B873695A8CA7 /* Debug */,
-				1D0DFA610CA7B3A20EB7B96B /* Release */,
+				8791A9385BF82B9389F10FC2 /* Debug */,
+				F59C9E1D0C8015B49E40BFB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B86336A6E1C92F7098D234FA /* Build configuration list for PBXNativeTarget "Pods-SimpleAudioPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39684E7481FD24B71AF4D807 /* Debug */,
+				0DDD3C201893CF91AF85F01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4672033FD71D592789190F0 /* Build configuration list for PBXNativeTarget "Pods-JVFloatLabeledTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B996465A939B8D376DB493 /* Debug */,
+				8018143ED7EBCBDE3F97ADF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4D5361CB72A2DCDF0209C1D4 /* Project object */;
+	rootObject = 086979B89A74442B6A6F89CD /* Project object */;
 }

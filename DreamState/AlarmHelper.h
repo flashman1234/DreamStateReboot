@@ -8,4 +8,12 @@
 
 @interface AlarmHelper : NSObject
 + (void)searchForAlarmSounds;
+
++ (NSString *)tidyDaysFromDayArray:(NSArray *)dayArray;
+
++ (NSArray *)dayNameArrayFromDayArray:(NSArray *)dayArray;
+
++ (NSString *)tidyDaysFromArrayOfDayNames:(NSArray *)dayNameArray;
+
++ (NSArray *)dayArrayFromString:(NSString *)dayString;
 @end

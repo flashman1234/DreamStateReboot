@@ -7,16 +7,13 @@
 //
 
 #import "AlarmDaysViewController.h"
-#import "AlarmHelper.h"
-#import "DayManager.h"
-#import "Day.h"
+#import "AlarmDelegate.h"
 
 NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
-
 @interface AlarmDaysViewController ()
 
-@property(nonatomic) NSMutableArray *dayArray;
+@property(nonatomic) NSMutableArray *weekDayArray;
 @property(weak, nonatomic) IBOutlet UITableView *dayTableView;
 
 @end
@@ -26,14 +23,27 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    if (!self.selectedDayArray) {
+        self.selectedDayArray = [[NSMutableArray alloc] init];
+    }
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    self.dayArray = [[dateFormatter weekdaySymbols] mutableCopy];
+    self.weekDayArray = [[dateFormatter weekdaySymbols] mutableCopy];
+}
+
+- (IBAction)addDaysButtonTouched:(id)sender {
+
+    if ([self.delegate respondsToSelector:@selector(setAlarmDaysWithDayNameArray:)]) {
+        [self.delegate setAlarmDaysWithDayNameArray:self.selectedDayArray];
+    }
+
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 #pragma mark table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dayArray count];
+    return [self.weekDayArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,11 +54,17 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
 
-    cell.textLabel.text = (self.dayArray)[(NSUInteger) indexPath.row];
+    cell.textLabel.text = (self.weekDayArray)[(NSUInteger) indexPath.row];
 
     cell.backgroundColor = [UIColor blackColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     [cell.textLabel setFont:[UIFont fontWithName:@"Solari" size:24]];
+
+    for (NSString *selectedDay in self.selectedDayArray) {
+        if ([selectedDay isEqualToString:(self.weekDayArray)[(NSUInteger) indexPath.row]]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
 
     return cell;
 }
@@ -60,23 +76,14 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-
     NSString *dayAsString = thisCell.textLabel.text;
-
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    NSString *stringFromDay = [NSString stringWithFormat:@"%d", [[df weekdaySymbols] indexOfObject:dayAsString]];
 
     if (thisCell.accessoryType == UITableViewCellAccessoryNone) {
         thisCell.accessoryType = UITableViewCellAccessoryCheckmark;
-
-        //[selectedDayArray addObject:thisCell.textLabel.text];
-//        [selectedDayArray addObject:stringFromDay];
-
+        [self.selectedDayArray addObject:dayAsString];
     } else {
         thisCell.accessoryType = UITableViewCellAccessoryNone;
-
-        //[selectedDayArray removeObject:thisCell.textLabel.text];
-//        [selectedDayArray removeObject:stringFromDay];
+        [self.selectedDayArray removeObject:dayAsString];
     }
 }
 

@@ -8,9 +8,9 @@
 
 #import "AlarmSoundsViewController.h"
 #import "SimpleAudioPlayer.h"
+#import "AlarmDelegate.h"
 
 NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
-
 
 @interface AlarmSoundsViewController ()
 @property(weak, nonatomic) IBOutlet UITableView *soundTableView;
@@ -48,17 +48,20 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *thisCell = [tableView cellForRowAtIndexPath:indexPath];
-
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    NSString *sound = thisCell.textLabel.text;
+    if ([self.delegate respondsToSelector:@selector(setAlarmSoundWithSoundName:)]) {
+        [self.delegate setAlarmSoundWithSoundName:sound];
+    }
+
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     [self playSound:(self.soundArray)[(NSUInteger) indexPath.row]];
-
 }
 
 - (void)playSound:(NSString *)alarmSound {

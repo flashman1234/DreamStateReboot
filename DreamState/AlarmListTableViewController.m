@@ -9,12 +9,12 @@
 #import "AlarmListTableViewController.h"
 #import "AlarmManager.h"
 #import "Alarm.h"
-
-NSString *const DSAlarmCellIdentifier = @"DSDaysCellIdentifier";
-
+#import "AlarmViewController.h"
+#import "DSCoreDataContextProvider.h"
+#import "AlarmHelper.h"
 
 @interface AlarmListTableViewController ()
-@property (nonatomic) NSArray *alarmArray;
+@property(nonatomic) NSArray *alarmArray;
 @end
 
 @implementation AlarmListTableViewController
@@ -23,8 +23,7 @@ NSString *const DSAlarmCellIdentifier = @"DSDaysCellIdentifier";
     [super viewDidLoad];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
     [self loadAlarmArray];
@@ -46,26 +45,48 @@ NSString *const DSAlarmCellIdentifier = @"DSDaysCellIdentifier";
     return [self.alarmArray count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellIdentifier = DSAlarmCellIdentifier;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlarmDetailsCell"];
     Alarm *alarm = (self.alarmArray)[(NSUInteger) indexPath.row];
 
-    cell.textLabel.text = alarm.time;
+    UILabel *timeLabel = (UILabel *)[cell viewWithTag:1];
+    timeLabel.text = alarm.time;
+    [timeLabel sizeToFit];
+    [timeLabel layoutIfNeeded];
 
-    cell.backgroundColor = [UIColor blackColor];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    [cell.textLabel setFont:[UIFont fontWithName:@"Solari" size:24]];
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
+    nameLabel.text = alarm.name;
+
+    UILabel *daysLabel = (UILabel *)[cell viewWithTag:3];
+    daysLabel.text = [AlarmHelper tidyDaysFromDayArray:[alarm.day allObjects]];
+
+    UISwitch *enabledSwitch = (UISwitch *)[cell viewWithTag:4];
+    enabledSwitch.on = [alarm.enabled boolValue];
+    [enabledSwitch addTarget:self action:@selector(updateSwitchAtIndexPath:) forControlEvents:UIControlEventTouchUpInside];
 
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showAlarmView" sender:nil];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 150;
+}
+
+- (void)updateSwitchAtIndexPath:(id)sender {
+    UISwitch *switchControl = sender;
+    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
+    NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
+
+    Alarm *alarm = (self.alarmArray)[(NSUInteger) (clickedButtonPath.row)];
+    [alarm setValue:@(switchControl.on) forKey:@"enabled"];
+    [[DSCoreDataContextProvider sharedInstance] saveContext];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -101,14 +122,20 @@ NSString *const DSAlarmCellIdentifier = @"DSDaysCellIdentifier";
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if (indexPath.length > 0) {
+        if ([[segue destinationViewController] isKindOfClass:[AlarmViewController class]]) {
+            Alarm *existingAlarm = (self.alarmArray)[(NSUInteger) indexPath.row];
+            ((AlarmViewController *) [segue destinationViewController]).existingAlarm = existingAlarm;
+        }
+    }
 }
-*/
+
 
 @end
