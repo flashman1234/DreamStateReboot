@@ -14,29 +14,34 @@
 		05116DD51A1A77C500C6052D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05116DD31A1A77C500C6052D /* LaunchScreen.xib */; };
 		05116DE11A1A77C500C6052D /* DreamStateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DE01A1A77C500C6052D /* DreamStateTests.m */; };
 		05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DEB1A1A7ABF00C6052D /* HomeViewController.m */; };
-		05116DF01A1A7AFB00C6052D /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DEF1A1A7AFB00C6052D /* RecordViewController.m */; };
 		05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF51A1A7B1E00C6052D /* InformationViewController.m */; };
 		05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */; };
 		0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */; };
-		0594EB671A1A871A009879D2 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB661A1A871A009879D2 /* AlarmViewController.m */; };
 		2CA7AE161A1E569A005BB92D /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE151A1E569A005BB92D /* Dream.m */; };
 		2CA7AE191A1E569A005BB92D /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE181A1E569A005BB92D /* Day.m */; };
 		2CA7AE1C1A1E569A005BB92D /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE1B1A1E569A005BB92D /* Alarm.m */; };
 		2CA7AE1F1A1E569A005BB92D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE1E1A1E569A005BB92D /* Settings.m */; };
-		2CE495891A1D0C7F00A8EAB6 /* AlarmListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE495881A1D0C7F00A8EAB6 /* AlarmListTableViewController.m */; };
+		2CA7AE591A226039005BB92D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA7AE581A226039005BB92D /* AVFoundation.framework */; };
+		2CA7AE5B1A2266E1005BB92D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */; };
 		2CE4958D1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */; };
 		2CF767811A1BC8A7000D909A /* Solari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CF767801A1BC8A7000D909A /* Solari.ttf */; };
-		2CF7678A1A1BD509000D909A /* AlarmDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767891A1BD509000D909A /* AlarmDaysViewController.m */; };
-		2CF7678D1A1BD515000D909A /* AlarmSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7678C1A1BD515000D909A /* AlarmSoundsViewController.m */; };
 		3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 934B92D3E7C78278CEAC0108 /* libPods.a */; };
+		E5A9C1006C1137592C99413F /* DreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C7CA7BE58ED3F5076B33 /* DreamManager.m */; };
 		E5A9C27D793352CFFAF24F6B /* Alarm bell 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */; };
+		E5A9C34EE23F48083AB9FC35 /* AlarmDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CA955D7397D4042D86F8 /* AlarmDaysViewController.m */; };
 		E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */; };
 		E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C376691449BF26ECCD32 /* DayManager.m */; };
 		E5A9C45FBD1EA47405B760B2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */; };
+		E5A9C54D2423BDE221B27C1C /* AlarmListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */; };
+		E5A9C6048B95131EA59E0CA5 /* AlarmSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */; };
+		E5A9C74EE33FE15506E46811 /* RecordingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C1FEA0C8BD8F66D2CA36 /* RecordingImageView.m */; };
+		E5A9C7A3B69EFD117E8881F0 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CB9259DFED5E4A3BC52B /* AlarmViewController.m */; };
 		E5A9C8FFDA692F42AFBC3235 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C91FE7DA6EB7F9560395 /* Podfile */; };
 		E5A9C9370AF5CF83290C8A75 /* Alarm bell 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */; };
 		E5A9CB260572F69D75EB3A80 /* UIView+BorderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */; };
+		E5A9CC5ACF7366B925AB4B54 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C70B5C2821B632CB3041 /* RecordViewController.m */; };
 		E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */; };
+		E5A9CE7FD8F73EB65CB616EF /* UITextFieldNoMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C844DD4E314D14F8E6E9 /* UITextFieldNoMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,15 +68,11 @@
 		05116DE01A1A77C500C6052D /* DreamStateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamStateTests.m; sourceTree = "<group>"; };
 		05116DEA1A1A7ABF00C6052D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		05116DEB1A1A7ABF00C6052D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		05116DEE1A1A7AFB00C6052D /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
-		05116DEF1A1A7AFB00C6052D /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		05116DF41A1A7B1E00C6052D /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
 		05116DF51A1A7B1E00C6052D /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		05116DF71A1A7E4A00C6052D /* ArchiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewController.h; sourceTree = "<group>"; };
 		05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
 		0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamState.xcdatamodel; sourceTree = "<group>"; };
-		0594EB651A1A871A009879D2 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
-		0594EB661A1A871A009879D2 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 		2CA7AE141A1E569A005BB92D /* Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dream.h; sourceTree = "<group>"; };
 		2CA7AE151A1E569A005BB92D /* Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dream.m; sourceTree = "<group>"; };
 		2CA7AE171A1E569A005BB92D /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
@@ -80,32 +81,44 @@
 		2CA7AE1B1A1E569A005BB92D /* Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarm.m; sourceTree = "<group>"; };
 		2CA7AE1D1A1E569A005BB92D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		2CA7AE1E1A1E569A005BB92D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
-		2CE495871A1D0C7F00A8EAB6 /* AlarmListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListTableViewController.h; sourceTree = "<group>"; };
-		2CE495881A1D0C7F00A8EAB6 /* AlarmListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableViewController.m; sourceTree = "<group>"; };
+		2CA7AE581A226039005BB92D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2CE4958B1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataContextProvider.h; sourceTree = "<group>"; };
 		2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCoreDataContextProvider.m; sourceTree = "<group>"; };
 		2CF767801A1BC8A7000D909A /* Solari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Solari.ttf; sourceTree = "<group>"; };
-		2CF767881A1BD509000D909A /* AlarmDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDaysViewController.h; sourceTree = "<group>"; };
-		2CF767891A1BD509000D909A /* AlarmDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDaysViewController.m; sourceTree = "<group>"; };
-		2CF7678B1A1BD515000D909A /* AlarmSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSoundsViewController.h; sourceTree = "<group>"; };
-		2CF7678C1A1BD515000D909A /* AlarmSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSoundsViewController.m; sourceTree = "<group>"; };
 		934B92D3E7C78278CEAC0108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3078A9231159C00E5982042 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmHelper.m; sourceTree = "<group>"; };
+		E5A9C1FEA0C8BD8F66D2CA36 /* RecordingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingImageView.m; sourceTree = "<group>"; };
+		E5A9C28093D71A08B3210468 /* AlarmSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSoundsViewController.h; sourceTree = "<group>"; };
 		E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 2.m4a"; sourceTree = "<group>"; };
 		E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderHelper.m"; sourceTree = "<group>"; };
 		E5A9C376691449BF26ECCD32 /* DayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayManager.m; sourceTree = "<group>"; };
 		E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E5A9C66AA6956B82AA884D2A /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmManager.h; sourceTree = "<group>"; };
+		E5A9C6DB739C1648692C5A3E /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		E5A9C70B5C2821B632CB3041 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		E5A9C769E1147BDC22CF5A3E /* RecordingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingImageView.h; sourceTree = "<group>"; };
+		E5A9C79A2D66E1E361A38C9D /* AlarmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDelegate.h; sourceTree = "<group>"; };
+		E5A9C7CA7BE58ED3F5076B33 /* DreamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamManager.m; sourceTree = "<group>"; };
+		E5A9C844DD4E314D14F8E6E9 /* UITextFieldNoMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldNoMenu.m; sourceTree = "<group>"; };
 		E5A9C84C2B7A4362BE94B3BC /* UIView+BorderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderHelper.h"; sourceTree = "<group>"; };
+		E5A9C85E179653886EBCE3EB /* DreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamManager.h; sourceTree = "<group>"; };
 		E5A9C899DF004D07A1D539B2 /* DayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayManager.h; sourceTree = "<group>"; };
 		E5A9C91FE7DA6EB7F9560395 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		E5A9C947F8934658211CA4F0 /* AlarmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDelegate.h; sourceTree = "<group>"; };
+		E5A9C9433725B31821BB085F /* AlarmListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListTableViewController.h; sourceTree = "<group>"; };
 		E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 1.m4a"; sourceTree = "<group>"; };
+		E5A9C9E239B3489EC9DC12CD /* AlarmDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDaysViewController.h; sourceTree = "<group>"; };
 		E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmHelper.h; sourceTree = "<group>"; };
+		E5A9CA955D7397D4042D86F8 /* AlarmDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDaysViewController.m; sourceTree = "<group>"; };
 		E5A9CB5308A67979325C31D1 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		E5A9CB9259DFED5E4A3BC52B /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
+		E5A9CC4585FC7B668B318BD5 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSoundsViewController.m; sourceTree = "<group>"; };
 		E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmManager.m; sourceTree = "<group>"; };
+		E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableViewController.m; sourceTree = "<group>"; };
+		E5A9CFF9B8ED8F2BC41E99D1 /* UITextFieldNoMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldNoMenu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA7AE5B1A2266E1005BB92D /* MediaPlayer.framework in Frameworks */,
+				2CA7AE591A226039005BB92D /* AVFoundation.framework in Frameworks */,
 				3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,21 +215,12 @@
 			children = (
 				05116DEA1A1A7ABF00C6052D /* HomeViewController.h */,
 				05116DEB1A1A7ABF00C6052D /* HomeViewController.m */,
-				05116DEE1A1A7AFB00C6052D /* RecordViewController.h */,
-				05116DEF1A1A7AFB00C6052D /* RecordViewController.m */,
 				05116DF41A1A7B1E00C6052D /* InformationViewController.h */,
 				05116DF51A1A7B1E00C6052D /* InformationViewController.m */,
 				05116DF71A1A7E4A00C6052D /* ArchiveTableViewController.h */,
 				05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */,
-				0594EB651A1A871A009879D2 /* AlarmViewController.h */,
-				0594EB661A1A871A009879D2 /* AlarmViewController.m */,
-				2CF767881A1BD509000D909A /* AlarmDaysViewController.h */,
-				2CF767891A1BD509000D909A /* AlarmDaysViewController.m */,
-				2CF7678B1A1BD515000D909A /* AlarmSoundsViewController.h */,
-				2CF7678C1A1BD515000D909A /* AlarmSoundsViewController.m */,
-				2CE495871A1D0C7F00A8EAB6 /* AlarmListTableViewController.h */,
-				2CE495881A1D0C7F00A8EAB6 /* AlarmListTableViewController.m */,
-				E5A9C947F8934658211CA4F0 /* AlarmDelegate.h */,
+				E5A9C0EDCD948E99F1FCE5B3 /* Recording */,
+				E5A9C6E2BA9F7CC21F139647 /* Alarm */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 		4708B8F512FAF2528CE46B46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */,
+				2CA7AE581A226039005BB92D /* AVFoundation.framework */,
 				934B92D3E7C78278CEAC0108 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -252,6 +260,19 @@
 				E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5A9C0EDCD948E99F1FCE5B3 /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9CC4585FC7B668B318BD5 /* RecordViewController.h */,
+				E5A9C70B5C2821B632CB3041 /* RecordViewController.m */,
+				E5A9C1FEA0C8BD8F66D2CA36 /* RecordingImageView.m */,
+				E5A9C769E1147BDC22CF5A3E /* RecordingImageView.h */,
+				E5A9C844DD4E314D14F8E6E9 /* UITextFieldNoMenu.m */,
+				E5A9CFF9B8ED8F2BC41E99D1 /* UITextFieldNoMenu.h */,
+			);
+			name = Recording;
 			sourceTree = "<group>";
 		};
 		E5A9C2D1EBF16D21AB30614F /* Sounds */ = {
@@ -272,6 +293,22 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		E5A9C6E2BA9F7CC21F139647 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9C79A2D66E1E361A38C9D /* AlarmDelegate.h */,
+				E5A9C6DB739C1648692C5A3E /* AlarmViewController.h */,
+				E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */,
+				E5A9CA955D7397D4042D86F8 /* AlarmDaysViewController.m */,
+				E5A9CB9259DFED5E4A3BC52B /* AlarmViewController.m */,
+				E5A9C9433725B31821BB085F /* AlarmListTableViewController.h */,
+				E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */,
+				E5A9C9E239B3489EC9DC12CD /* AlarmDaysViewController.h */,
+				E5A9C28093D71A08B3210468 /* AlarmSoundsViewController.h */,
+			);
+			name = Alarm;
+			sourceTree = "<group>";
+		};
 		E5A9C944910DC32684E270D5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +318,8 @@
 				E5A9C899DF004D07A1D539B2 /* DayManager.h */,
 				E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */,
 				E5A9CB5308A67979325C31D1 /* CoreDataManager.h */,
+				E5A9C7CA7BE58ED3F5076B33 /* DreamManager.m */,
+				E5A9C85E179653886EBCE3EB /* DreamManager.h */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -425,16 +464,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05116DC71A1A77C400C6052D /* AppDelegate.m in Sources */,
-				2CE495891A1D0C7F00A8EAB6 /* AlarmListTableViewController.m in Sources */,
 				2CA7AE1F1A1E569A005BB92D /* Settings.m in Sources */,
-				2CF7678A1A1BD509000D909A /* AlarmDaysViewController.m in Sources */,
 				05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */,
 				2CA7AE1C1A1E569A005BB92D /* Alarm.m in Sources */,
 				05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */,
 				0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */,
-				0594EB671A1A871A009879D2 /* AlarmViewController.m in Sources */,
-				2CF7678D1A1BD515000D909A /* AlarmSoundsViewController.m in Sources */,
-				05116DF01A1A7AFB00C6052D /* RecordViewController.m in Sources */,
 				05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */,
 				05116DC41A1A77C400C6052D /* main.m in Sources */,
 				E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */,
@@ -445,6 +479,14 @@
 				E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */,
 				E5A9C45FBD1EA47405B760B2 /* CoreDataManager.m in Sources */,
 				E5A9CB260572F69D75EB3A80 /* UIView+BorderHelper.m in Sources */,
+				E5A9C6048B95131EA59E0CA5 /* AlarmSoundsViewController.m in Sources */,
+				E5A9C34EE23F48083AB9FC35 /* AlarmDaysViewController.m in Sources */,
+				E5A9C7A3B69EFD117E8881F0 /* AlarmViewController.m in Sources */,
+				E5A9C54D2423BDE221B27C1C /* AlarmListTableViewController.m in Sources */,
+				E5A9CC5ACF7366B925AB4B54 /* RecordViewController.m in Sources */,
+				E5A9C74EE33FE15506E46811 /* RecordingImageView.m in Sources */,
+				E5A9CE7FD8F73EB65CB616EF /* UITextFieldNoMenu.m in Sources */,
+				E5A9C1006C1137592C99413F /* DreamManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

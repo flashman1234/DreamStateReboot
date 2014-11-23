@@ -11,7 +11,7 @@
 #import "Day.h"
 
 @interface HomeViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *alarmButton;
+@property(weak, nonatomic) IBOutlet UIButton *alarmButton;
 
 @end
 
