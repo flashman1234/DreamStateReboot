@@ -15,7 +15,6 @@
 		05116DE11A1A77C500C6052D /* DreamStateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DE01A1A77C500C6052D /* DreamStateTests.m */; };
 		05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DEB1A1A7ABF00C6052D /* HomeViewController.m */; };
 		05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF51A1A7B1E00C6052D /* InformationViewController.m */; };
-		05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */; };
 		0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */; };
 		2CA7AE161A1E569A005BB92D /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE151A1E569A005BB92D /* Dream.m */; };
 		2CA7AE191A1E569A005BB92D /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE181A1E569A005BB92D /* Day.m */; };
@@ -39,6 +38,7 @@
 		E5A9C8FFDA692F42AFBC3235 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C91FE7DA6EB7F9560395 /* Podfile */; };
 		E5A9C9370AF5CF83290C8A75 /* Alarm bell 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */; };
 		E5A9CB260572F69D75EB3A80 /* UIView+BorderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */; };
+		E5A9CBA229F25FC8F4BA3A3A /* ArchiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */; };
 		E5A9CC5ACF7366B925AB4B54 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C70B5C2821B632CB3041 /* RecordViewController.m */; };
 		E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */; };
 		E5A9CE7FD8F73EB65CB616EF /* UITextFieldNoMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C844DD4E314D14F8E6E9 /* UITextFieldNoMenu.m */; };
@@ -70,8 +70,6 @@
 		05116DEB1A1A7ABF00C6052D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		05116DF41A1A7B1E00C6052D /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
 		05116DF51A1A7B1E00C6052D /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
-		05116DF71A1A7E4A00C6052D /* ArchiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewController.h; sourceTree = "<group>"; };
-		05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
 		0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamState.xcdatamodel; sourceTree = "<group>"; };
 		2CA7AE141A1E569A005BB92D /* Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dream.h; sourceTree = "<group>"; };
 		2CA7AE151A1E569A005BB92D /* Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dream.m; sourceTree = "<group>"; };
@@ -95,6 +93,7 @@
 		E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 2.m4a"; sourceTree = "<group>"; };
 		E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderHelper.m"; sourceTree = "<group>"; };
 		E5A9C376691449BF26ECCD32 /* DayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayManager.m; sourceTree = "<group>"; };
+		E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
 		E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E5A9C66AA6956B82AA884D2A /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmManager.h; sourceTree = "<group>"; };
 		E5A9C6DB739C1648692C5A3E /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		E5A9CB5308A67979325C31D1 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		E5A9CB9259DFED5E4A3BC52B /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 		E5A9CC4585FC7B668B318BD5 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		E5A9CCD935896D0F5B355B30 /* ArchiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewController.h; sourceTree = "<group>"; };
 		E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSoundsViewController.m; sourceTree = "<group>"; };
 		E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmManager.m; sourceTree = "<group>"; };
 		E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableViewController.m; sourceTree = "<group>"; };
@@ -217,10 +217,9 @@
 				05116DEB1A1A7ABF00C6052D /* HomeViewController.m */,
 				05116DF41A1A7B1E00C6052D /* InformationViewController.h */,
 				05116DF51A1A7B1E00C6052D /* InformationViewController.m */,
-				05116DF71A1A7E4A00C6052D /* ArchiveTableViewController.h */,
-				05116DF81A1A7E4A00C6052D /* ArchiveTableViewController.m */,
 				E5A9C0EDCD948E99F1FCE5B3 /* Recording */,
 				E5A9C6E2BA9F7CC21F139647 /* Alarm */,
+				E5A9C6313073C72133624AAD /* Archive */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -291,6 +290,15 @@
 				E5A9C84C2B7A4362BE94B3BC /* UIView+BorderHelper.h */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		E5A9C6313073C72133624AAD /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */,
+				E5A9CCD935896D0F5B355B30 /* ArchiveTableViewController.h */,
+			);
+			name = Archive;
 			sourceTree = "<group>";
 		};
 		E5A9C6E2BA9F7CC21F139647 /* Alarm */ = {
@@ -467,7 +475,6 @@
 				2CA7AE1F1A1E569A005BB92D /* Settings.m in Sources */,
 				05116DF61A1A7B1E00C6052D /* InformationViewController.m in Sources */,
 				2CA7AE1C1A1E569A005BB92D /* Alarm.m in Sources */,
-				05116DF91A1A7E4A00C6052D /* ArchiveTableViewController.m in Sources */,
 				0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */,
 				05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */,
 				05116DC41A1A77C400C6052D /* main.m in Sources */,
@@ -487,6 +494,7 @@
 				E5A9C74EE33FE15506E46811 /* RecordingImageView.m in Sources */,
 				E5A9CE7FD8F73EB65CB616EF /* UITextFieldNoMenu.m in Sources */,
 				E5A9C1006C1137592C99413F /* DreamManager.m in Sources */,
+				E5A9CBA229F25FC8F4BA3A3A /* ArchiveTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

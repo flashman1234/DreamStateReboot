@@ -10,4 +10,6 @@
 
 @interface ArchiveTableViewController : UITableViewController
 
+@property (nonatomic, retain) NSMutableArray *dreamArray;
+
 @end

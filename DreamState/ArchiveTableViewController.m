@@ -7,6 +7,8 @@
 //
 
 #import "ArchiveTableViewController.h"
+#import "DreamManager.h"
+#import "Dream.h"
 
 @interface ArchiveTableViewController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadDreamArray];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -29,17 +37,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [self.dreamArray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"hello";
+
+    Dream *dream = (self.dreamArray)[(NSUInteger) indexPath.row];
+    cell.textLabel.text = dream.date;
 
     return cell;
 }
 
+
+- (void)loadDreamArray {
+    DreamManager *manager = [[DreamManager alloc] init];
+
+    self.dreamArray = [[manager getAllDreams] mutableCopy];
+}
 
 /*
 // Override to support conditional editing of the table view.

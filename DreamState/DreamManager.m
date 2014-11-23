@@ -16,11 +16,18 @@
     Dream *dream = [manager insertCoreDataObjectWithClassName:NSStringFromClass([Dream class])];
 
     return dream;
-
 }
 
 -(void)saveDream:(Dream *)dream {
     [[DSCoreDataContextProvider sharedInstance] saveContext];
+}
+
+- (NSArray *)getAllDreams {
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Dream class])];
+    NSError *error = nil;
+    NSArray *results = [[DSCoreDataContextProvider sharedInstance].managedObjectContext executeFetchRequest:req error:&error];
+
+    return results;
 }
 
 @end

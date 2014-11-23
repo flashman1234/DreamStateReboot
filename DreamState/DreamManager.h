@@ -13,5 +13,7 @@
 -(Dream *)createNewDream;
 -(void)saveDream:(Dream *)dream;
 
+- (NSArray *)getAllDreams;
+
 
 @end
