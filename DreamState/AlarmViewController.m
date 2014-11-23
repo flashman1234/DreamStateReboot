@@ -48,6 +48,8 @@
     self.alarmDaysNamesArray = [[dateFormatter weekdaySymbols] mutableCopy];
     [self.alarmDaysButton setTitle:@"Everyday" forState:UIControlStateNormal];
 
+    [self setAlarmTime:[NSDate date]];
+
     self.alarmSound = @"Alarm bell 1";
     [self.alarmSoundButton setTitle:@"Alarm bell 1" forState:UIControlStateNormal];
 }
@@ -67,14 +69,18 @@
 
     [self.alarmSoundButton setTitle:self.existingAlarm.sound forState:UIControlStateNormal];
 
+    [self setAlarmTime:alarmTime];
+
+    [self.alarmDaysButton setTitle:[AlarmHelper tidyDaysFromArrayOfDayNames:self.alarmDaysNamesArray] forState:UIControlStateNormal];
+}
+
+- (void)setAlarmTime:(NSDate *)alarmTime {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:alarmTime];
     NSInteger currentHour = components.hour;
     NSInteger currentMinutes = components.minute;
     [self.timePicker selectRow:currentHour inComponent:0 animated:YES];
     [self.timePicker selectRow:currentMinutes inComponent:1 animated:YES];
-
-    [self.alarmDaysButton setTitle:[AlarmHelper tidyDaysFromArrayOfDayNames:self.alarmDaysNamesArray] forState:UIControlStateNormal];
 }
 
 - (IBAction)saveAlarmButtonTouched:(id)sender {
