@@ -394,7 +394,7 @@
                                                 <constraint firstAttribute="width" constant="112" id="N2b-Bm-wUU"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="30"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAg-Wf-SIu">
@@ -403,16 +403,17 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHZ-Ri-Mkx">
                                             <rect key="frame" x="18" y="73" width="45" height="18"/>
                                             <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn2-Hi-K1Q">
                                             <rect key="frame" x="18" y="99" width="45" height="18"/>
                                             <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="wHZ-Ri-Mkx" firstAttribute="leading" secondItem="ubk-in-W8m" secondAttribute="trailing" constant="-112" id="6fL-S7-zr6"/>
                                         <constraint firstItem="Wn2-Hi-K1Q" firstAttribute="leading" secondItem="ubk-in-W8m" secondAttribute="trailing" constant="-112" id="6zK-sR-pyE"/>

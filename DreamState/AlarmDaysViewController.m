@@ -33,11 +33,33 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
 - (IBAction)addDaysButtonTouched:(id)sender {
 
+    NSArray *sortedDayArray = [self reorderSelectedDaysArray];
+
     if ([self.delegate respondsToSelector:@selector(setAlarmDaysWithDayNameArray:)]) {
-        [self.delegate setAlarmDaysWithDayNameArray:self.selectedDayArray];
+        [self.delegate setAlarmDaysWithDayNameArray:sortedDayArray];
     }
 
     [self.navigationController popViewControllerAnimated:NO];
+}
+
+- (NSArray *)reorderSelectedDaysArray {
+    NSMutableArray *dictArray = [[NSMutableArray alloc] init];
+
+    for (int i = 0; i < [self.selectedDayArray count]; i++) {
+        NSMutableDictionary *dict = [@{@"WeekDay" : self.selectedDayArray[(NSUInteger) i], @"theIndex" : @([self.weekDayArray indexOfObject:self.selectedDayArray[(NSUInteger) i]])} mutableCopy];
+        [dictArray addObject:dict];
+    }
+
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"theIndex" ascending:YES];
+    NSArray *descriptor = @[sortDescriptor];
+    NSArray *sortedArray = [dictArray sortedArrayUsingDescriptors:descriptor];
+
+    NSMutableArray *finalArray = [[NSMutableArray alloc] init];
+
+    for (NSDictionary *dictionary in sortedArray) {
+        [finalArray addObject:[dictionary valueForKey:@"WeekDay"]];
+    }
+    return sortedArray;
 }
 
 #pragma mark table view data source
