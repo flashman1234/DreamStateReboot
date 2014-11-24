@@ -22,6 +22,7 @@
 		2CA7AE591A226039005BB92D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA7AE581A226039005BB92D /* AVFoundation.framework */; };
 		2CA7AE5B1A2266E1005BB92D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */; };
 		2CD4493C1A235D38008E1400 /* InformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4493B1A235D38008E1400 /* InformationTableViewController.m */; };
+		2CD449421A23812C008E1400 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD449411A23812C008E1400 /* MessageUI.framework */; };
 		2CE4958D1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */; };
 		2CF767811A1BC8A7000D909A /* Solari.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CF767801A1BC8A7000D909A /* Solari.ttf */; };
 		3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 934B92D3E7C78278CEAC0108 /* libPods.a */; };
@@ -84,6 +85,7 @@
 		2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2CD4493A1A235D38008E1400 /* InformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewController.h; sourceTree = "<group>"; };
 		2CD4493B1A235D38008E1400 /* InformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewController.m; sourceTree = "<group>"; };
+		2CD449411A23812C008E1400 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		2CE4958B1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCoreDataContextProvider.h; sourceTree = "<group>"; };
 		2CE4958C1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCoreDataContextProvider.m; sourceTree = "<group>"; };
 		2CF767801A1BC8A7000D909A /* Solari.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Solari.ttf; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD449421A23812C008E1400 /* MessageUI.framework in Frameworks */,
 				2CA7AE5B1A2266E1005BB92D /* MediaPlayer.framework in Frameworks */,
 				2CA7AE591A226039005BB92D /* AVFoundation.framework in Frameworks */,
 				3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */,
@@ -253,6 +256,7 @@
 		4708B8F512FAF2528CE46B46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CD449411A23812C008E1400 /* MessageUI.framework */,
 				2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */,
 				2CA7AE581A226039005BB92D /* AVFoundation.framework */,
 				934B92D3E7C78278CEAC0108 /* libPods.a */,

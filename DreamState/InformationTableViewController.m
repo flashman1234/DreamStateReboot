@@ -16,12 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,24 +25,49 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 4;
+    if (section == 0) {
+        return 1;
+    }
+
+    return 3;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 5, tableView.bounds.size.width, 30)];
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, tableView.bounds.size.width - 10, 24)];
+    label.text = [self tableView:tableView titleForHeaderInSection:section];
+    [label setFont:[UIFont fontWithName:@"Solari" size:20]];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    [headerView addSubview:label];
+
+    return headerView;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InformationCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    cell.textLabel.text = @"hello";
-    
-    return cell;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+    if (section == 0)
+        return @"Record Settings";
+    else
+        return @"Other stuff";
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            [self performSegueWithIdentifier:@"aboutSegue" sender:self];
+        }
+        else if (indexPath.row == 1) {
+            [self performSegueWithIdentifier:@"termsAndConditionsSegue" sender:self];
+        }
+        else if (indexPath.row == 2) {
+            [self performSegueWithIdentifier:@"howToSegue" sender:self];
+        }
+    }
 }
 
 
