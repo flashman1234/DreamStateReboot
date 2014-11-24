@@ -8,12 +8,10 @@
 
 @implementation RecordingImageView
 
-
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        UIImage *myImage2 = [UIImage imageNamed:@"recording_image"];
-        self.myImage = myImage2;
+        self.myImage = [UIImage imageNamed:@"recording_image"];
     }
     return self;
 }

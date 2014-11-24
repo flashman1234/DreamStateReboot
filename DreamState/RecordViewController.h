@@ -45,6 +45,6 @@
 
 
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
-@property (nonatomic, retain) UITextFieldNoMenu *dreamNameTextField;
+//@property (nonatomic, retain) UITextFieldNoMenu *dreamNameTextField;
 
 @end
