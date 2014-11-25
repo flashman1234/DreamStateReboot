@@ -8,14 +8,13 @@
 
 #import "AlarmSoundsViewController.h"
 #import "SimpleAudioPlayer.h"
-#import "AlarmDelegate.h"
 
 NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
 
 @interface AlarmSoundsViewController ()
 @property(weak, nonatomic) IBOutlet UITableView *soundTableView;
 @property(strong) NSArray *soundArray;
-@property(nonatomic) int indexOfSoundPlaying;
+@property(nonatomic) NSInteger indexOfSoundPlaying;
 
 @end
 

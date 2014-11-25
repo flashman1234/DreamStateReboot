@@ -16,6 +16,6 @@
 
 @property (nonatomic, strong) NSArray *alarms;
 @property (nonatomic, strong) NSArray *notificationArray;
-@property int numberOfAlarms;
+@property NSInteger numberOfAlarms;
 
 @end

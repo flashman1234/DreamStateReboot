@@ -10,7 +10,7 @@
 
 - (NSDate *)addDays:(NSInteger)numberOfDays {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *todayComponents = [gregorian components:(NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:self];
+    NSDateComponents *todayComponents = [gregorian components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:self];
     NSInteger theDay = [todayComponents day];
     NSInteger theMonth = [todayComponents month];
     NSInteger theYear = [todayComponents year];

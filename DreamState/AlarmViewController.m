@@ -79,7 +79,7 @@
 
 - (void)setAlarmTime:(NSDate *)alarmTime {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:alarmTime];
+    NSDateComponents *components = [calendar components:NSCalendarUnitHour | NSCalendarUnitMinute fromDate:alarmTime];
     NSInteger currentHour = components.hour;
     NSInteger currentMinutes = components.minute;
     [self.timePicker selectRow:currentHour inComponent:0 animated:YES];

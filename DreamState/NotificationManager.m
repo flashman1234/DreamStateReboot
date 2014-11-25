@@ -60,19 +60,19 @@
     int numberOfNotificationsPerAlarm = totalNumberOfNotifications / self.numberOfAlarms;
 
     //get date and convert to components
-    NSDate *curentDate = [NSDate date];
+    NSDate *currentDate = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *compoNents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:curentDate]; //
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate]; //
 
     //cut out hours and minutes from the alarm time
     NSInteger alarmHour = [[alarm.time substringToIndex:2] integerValue];
     NSInteger alarmMinutes = [[alarm.time substringFromIndex:3] integerValue];
 
-    [compoNents setHour:alarmHour];
-    [compoNents setMinute:alarmMinutes];
+    [components setHour:alarmHour];
+    [components setMinute:alarmMinutes];
 
     //create alarm date
-    NSDate *alarmDate = [[NSCalendar currentCalendar] dateFromComponents:compoNents];
+    NSDate *alarmDate = [[NSCalendar currentCalendar] dateFromComponents:components];
 
     //no days were set, so this alarm will run everyday
     if (alarm.day.count == 0) {
@@ -85,8 +85,8 @@
 
             NSDate *finalAlarmDate = [[NSCalendar currentCalendar] dateByAddingComponents:dayComponent toDate:alarmDate options:0];
 
-            //if (finalAlarmDate > curentDate) {
-            if ([finalAlarmDate compare:curentDate] == NSOrderedDescending) {
+            //if (finalAlarmDate > currentDate) {
+            if ([finalAlarmDate compare:currentDate] == NSOrderedDescending) {
                 [self setNotification:finalAlarmDate alarm:alarm];
             }
         }
@@ -97,7 +97,6 @@
         int numberOfSetNotifications = 0;
 
         do {
-
             NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
             dayComponent.day = dayOffest;
 
@@ -107,8 +106,6 @@
             [weekday setDateFormat:@"EEEE"];
 
             NSString *possibleAlarmDay = [weekday stringFromDate:finalAlarmDate];
-
-            NSDateFormatter *df = [[NSDateFormatter alloc] init];
             NSString *stringFromDay = possibleAlarmDay;
 
             NSSet *days = [alarm.day valueForKey:@"day"];
@@ -116,7 +113,7 @@
             BOOL dayIsFound = [days containsObject:stringFromDay];
 
             if (dayIsFound) {
-                if ([finalAlarmDate compare:curentDate] == NSOrderedDescending) {
+                if ([finalAlarmDate compare:currentDate] == NSOrderedDescending) {
                     [self setNotification:finalAlarmDate alarm:alarm];
                     numberOfSetNotifications = numberOfSetNotifications + 1;
                 }
