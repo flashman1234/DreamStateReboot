@@ -12,6 +12,7 @@
 #import "AlarmViewController.h"
 #import "DSCoreDataContextProvider.h"
 #import "AlarmHelper.h"
+#import "NotificationManager.h"
 
 @interface AlarmListTableViewController ()
 @property(nonatomic) NSArray *alarmArray;
@@ -50,18 +51,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlarmDetailsCell"];
     Alarm *alarm = (self.alarmArray)[(NSUInteger) indexPath.row];
 
-    UILabel *timeLabel = (UILabel *)[cell viewWithTag:1];
+    UILabel *timeLabel = (UILabel *) [cell viewWithTag:1];
     timeLabel.text = alarm.time;
     [timeLabel sizeToFit];
     [timeLabel layoutIfNeeded];
 
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:2];
+    UILabel *nameLabel = (UILabel *) [cell viewWithTag:2];
     nameLabel.text = alarm.name;
 
-    UILabel *daysLabel = (UILabel *)[cell viewWithTag:3];
+    UILabel *daysLabel = (UILabel *) [cell viewWithTag:3];
     daysLabel.text = [AlarmHelper tidyDaysFromDayArray:[alarm.day allObjects]];
 
-    UISwitch *enabledSwitch = (UISwitch *)[cell viewWithTag:4];
+    UISwitch *enabledSwitch = (UISwitch *) [cell viewWithTag:4];
     enabledSwitch.on = [alarm.enabled boolValue];
     [enabledSwitch addTarget:self action:@selector(updateSwitchAtIndexPath:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -80,12 +81,19 @@
 
 - (void)updateSwitchAtIndexPath:(id)sender {
     UISwitch *switchControl = sender;
-    UITableViewCell *clickedCell = (UITableViewCell *)[[sender superview] superview];
+    UITableViewCell *clickedCell = (UITableViewCell *) [[sender superview] superview];
     NSIndexPath *clickedButtonPath = [self.tableView indexPathForCell:clickedCell];
 
     Alarm *alarm = (self.alarmArray)[(NSUInteger) (clickedButtonPath.row)];
     [alarm setValue:@(switchControl.on) forKey:@"enabled"];
     [[DSCoreDataContextProvider sharedInstance] saveContext];
+
+    [self updateNotifications];
+}
+
+- (void)updateNotifications {
+    NotificationManager *notificationLoader = [[NotificationManager alloc] init];
+    [notificationLoader loadNotifications];
 }
 
 /*

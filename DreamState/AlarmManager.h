@@ -11,6 +11,8 @@
 
 - (NSArray *)getAllAlarms;
 
+- (NSArray *)getAllActiveAlarms;
+
 - (void)saveAlarmWithName:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound;
 
 - (void)updateAlarm:(Alarm *)alarm name:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound;

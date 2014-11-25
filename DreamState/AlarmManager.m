@@ -20,6 +20,19 @@
     return results;
 }
 
+
+- (NSArray *)getAllActiveAlarms {
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Alarm class])];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"enabled == YES"];
+    [req setPredicate:predicate];
+
+    NSError *error = nil;
+    NSArray *results = [[DSCoreDataContextProvider sharedInstance].managedObjectContext executeFetchRequest:req error:&error];
+
+    return results;
+}
+
+
 - (void)saveAlarmWithName:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound {
     CoreDataManager *manager = [[CoreDataManager alloc] init];
     Alarm *alarm = [manager insertCoreDataObjectWithClassName:NSStringFromClass([Alarm class])];

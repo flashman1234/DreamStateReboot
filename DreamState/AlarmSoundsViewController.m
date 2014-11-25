@@ -15,6 +15,7 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
 @interface AlarmSoundsViewController ()
 @property(weak, nonatomic) IBOutlet UITableView *soundTableView;
 @property(strong) NSArray *soundArray;
+@property(nonatomic) int indexOfSoundPlaying;
 
 @end
 
@@ -23,6 +24,12 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.soundArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"alarmSoundsArray"];
+    self.indexOfSoundPlaying = -1;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [SimpleAudioPlayer stopAllPlayers];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -61,12 +68,23 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    [self playSound:(self.soundArray)[(NSUInteger) indexPath.row]];
+    if (indexPath.row == self.indexOfSoundPlaying)
+    {
+        [SimpleAudioPlayer stopAllPlayers];
+        self.indexOfSoundPlaying = -1;
+    }
+    else
+    {
+        [SimpleAudioPlayer stopAllPlayers];
+        [self playSound:(self.soundArray)[(NSUInteger) indexPath.row]];
+        self.indexOfSoundPlaying = indexPath.row;
+    }
 }
 
 - (void)playSound:(NSString *)alarmSound {
     NSString *alarmSoundFile = [NSString stringWithFormat:@"%@.m4a", alarmSound];
     [SimpleAudioPlayer playFile:alarmSoundFile];
+
 }
 
 

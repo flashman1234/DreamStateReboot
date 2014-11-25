@@ -28,6 +28,7 @@
 		3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 934B92D3E7C78278CEAC0108 /* libPods.a */; };
 		E5A9C1006C1137592C99413F /* DreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C7CA7BE58ED3F5076B33 /* DreamManager.m */; };
 		E5A9C27D793352CFFAF24F6B /* Alarm bell 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */; };
+		E5A9C2D3BE8BA29E73844BD0 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C0F56E7ADE323D21DB0A /* NotificationManager.m */; };
 		E5A9C34EE23F48083AB9FC35 /* AlarmDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CA955D7397D4042D86F8 /* AlarmDaysViewController.m */; };
 		E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */; };
 		E5A9C3C8619A4BC354C955CB /* TermsAndConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CEB6BD116DC4CB836546 /* TermsAndConditionsViewController.m */; };
@@ -92,6 +93,7 @@
 		934B92D3E7C78278CEAC0108 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3078A9231159C00E5982042 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E5A9C0F56E7ADE323D21DB0A /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 		E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmHelper.m; sourceTree = "<group>"; };
 		E5A9C1FEA0C8BD8F66D2CA36 /* RecordingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingImageView.m; sourceTree = "<group>"; };
 		E5A9C28093D71A08B3210468 /* AlarmSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSoundsViewController.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		E5A9C9E239B3489EC9DC12CD /* AlarmDaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDaysViewController.h; sourceTree = "<group>"; };
 		E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmHelper.h; sourceTree = "<group>"; };
 		E5A9CA955D7397D4042D86F8 /* AlarmDaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDaysViewController.m; sourceTree = "<group>"; };
+		E5A9CB310CBF7C63121C8225 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
 		E5A9CB5308A67979325C31D1 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		E5A9CB9259DFED5E4A3BC52B /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 		E5A9CC000EECDF0E57317B88 /* HowToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToViewController.m; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				E5A9CB5308A67979325C31D1 /* CoreDataManager.h */,
 				E5A9C7CA7BE58ED3F5076B33 /* DreamManager.m */,
 				E5A9C85E179653886EBCE3EB /* DreamManager.h */,
+				E5A9C0F56E7ADE323D21DB0A /* NotificationManager.m */,
+				E5A9CB310CBF7C63121C8225 /* NotificationManager.h */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				E5A9C96AD994619E8F54BC93 /* HowToViewController.m in Sources */,
 				E5A9CBA7B442205456C0B1BA /* AboutViewController.m in Sources */,
 				E5A9C3C8619A4BC354C955CB /* TermsAndConditionsViewController.m in Sources */,
+				E5A9C2D3BE8BA29E73844BD0 /* NotificationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,10 +27,10 @@
     {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        // This is the first launch ever
+    }
 
-        DayManager *dayManager = [[DayManager alloc] init];
-//        [dayManager loadInitialDays];
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
 
     return YES;
@@ -57,6 +57,38 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+
+//    appOpensFromAlarm = YES;
+//    NSDictionary *notDict = notification.userInfo;
+//    NSString *alarmSoundName = [notDict valueForKey:@"AlarmSound"];
+//
+//    NSString *alarmName = [notification.userInfo valueForKey:@"AlarmName"];
+//
+//    if (application.applicationState == UIApplicationStateInactive ) {
+//
+//        [[NSNotificationCenter defaultCenter] postNotificationName:localReceived object:self];
+//    }
+//
+//    if(application.applicationState == UIApplicationStateActive ) {
+//
+//        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+//        [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
+//
+//        //NSString *stringFromDate = [dateFormat stringFromDate:notification.fireDate];
+//
+//        [self playAlarmSound:alarmSoundName];
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                initWithTitle: NSLocalizedString(alarmName, nil)
+//                      message: NSLocalizedString(@"Would you like to record a dream?",nil)
+//                     delegate: self
+//            cancelButtonTitle: NSLocalizedString(@"No",nil)
+//            otherButtonTitles: NSLocalizedString(@"Yes",nil), nil];
+//        [alert show];
+//    }
 }
 
 
