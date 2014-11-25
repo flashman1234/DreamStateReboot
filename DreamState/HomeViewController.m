@@ -10,10 +10,12 @@
 #import "DSCoreDataContextProvider.h"
 #import "Day.h"
 #import "NSDate+DateModifier.h"
+#import "CSAnimationView.h"
 
 @interface HomeViewController ()
 @property(weak, nonatomic) IBOutlet UILabel *nextAlarmLabel;
 @property(weak, nonatomic) IBOutlet UILabel *nextAlarmTimeLabel;
+@property (weak, nonatomic) IBOutlet CSAnimationView *animationView;
 
 @end
 
@@ -65,6 +67,8 @@
         self.nextAlarmLabel.text = @"Add alarm";
         self.nextAlarmTimeLabel.text = @"";
     }
+
+    [self.animationView startCanvasAnimation];
 }
 
 

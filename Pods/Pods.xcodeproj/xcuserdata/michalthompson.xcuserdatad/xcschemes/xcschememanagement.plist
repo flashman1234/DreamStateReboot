@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Canvas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JVFloatLabeledTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EF0754DDAF149F8EF5EA00D</key>
+		<key>310E9A57AF182659B4D556DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6AB2B6AA8A7B518215B137C7</key>
+		<key>7AD3CB3C32AFFEAF535FAFA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70A4AA3F726E5359D0049020</key>
+		<key>7D2B0B206258878699D78C93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D294C86EB672C652B509E776</key>
+		<key>BBF32C765DBCA69B8F4CE52F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9FF1429DA2D77C8E53D891F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E886A096DA2F5BF9CF00EADF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
