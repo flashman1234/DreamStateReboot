@@ -38,6 +38,7 @@
 		E5A9C6048B95131EA59E0CA5 /* AlarmSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */; };
 		E5A9C74EE33FE15506E46811 /* RecordingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C1FEA0C8BD8F66D2CA36 /* RecordingImageView.m */; };
 		E5A9C7A3B69EFD117E8881F0 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CB9259DFED5E4A3BC52B /* AlarmViewController.m */; };
+		E5A9C81106C52F5700FA06B3 /* NSDate+DateModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CDFFF5C527069C6A3CA7 /* NSDate+DateModifier.m */; };
 		E5A9C8FFDA692F42AFBC3235 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C91FE7DA6EB7F9560395 /* Podfile */; };
 		E5A9C9370AF5CF83290C8A75 /* Alarm bell 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */; };
 		E5A9C96AD994619E8F54BC93 /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CC000EECDF0E57317B88 /* HowToViewController.m */; };
@@ -99,6 +100,7 @@
 		E5A9C28093D71A08B3210468 /* AlarmSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSoundsViewController.h; sourceTree = "<group>"; };
 		E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 2.m4a"; sourceTree = "<group>"; };
 		E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderHelper.m"; sourceTree = "<group>"; };
+		E5A9C364A803BFFAF70F80AB /* NSDate+DateModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateModifier.h"; sourceTree = "<group>"; };
 		E5A9C376691449BF26ECCD32 /* DayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayManager.m; sourceTree = "<group>"; };
 		E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
 		E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		E5A9CCD935896D0F5B355B30 /* ArchiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewController.h; sourceTree = "<group>"; };
 		E5A9CD07962D7AD7FEF84527 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSoundsViewController.m; sourceTree = "<group>"; };
+		E5A9CDFFF5C527069C6A3CA7 /* NSDate+DateModifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateModifier.m"; sourceTree = "<group>"; };
 		E5A9CE33CA1F2470F017650F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmManager.m; sourceTree = "<group>"; };
 		E5A9CEB6BD116DC4CB836546 /* TermsAndConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsViewController.m; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 			children = (
 				E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */,
 				E5A9C84C2B7A4362BE94B3BC /* UIView+BorderHelper.h */,
+				E5A9CDFFF5C527069C6A3CA7 /* NSDate+DateModifier.m */,
+				E5A9C364A803BFFAF70F80AB /* NSDate+DateModifier.h */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 				E5A9CBA7B442205456C0B1BA /* AboutViewController.m in Sources */,
 				E5A9C3C8619A4BC354C955CB /* TermsAndConditionsViewController.m in Sources */,
 				E5A9C2D3BE8BA29E73844BD0 /* NotificationManager.m in Sources */,
+				E5A9C81106C52F5700FA06B3 /* NSDate+DateModifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

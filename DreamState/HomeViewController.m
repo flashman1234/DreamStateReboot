@@ -9,9 +9,11 @@
 #import "HomeViewController.h"
 #import "DSCoreDataContextProvider.h"
 #import "Day.h"
+#import "NSDate+DateModifier.h"
 
 @interface HomeViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *nextAlarmLabel;
+@property(weak, nonatomic) IBOutlet UILabel *nextAlarmLabel;
+@property(weak, nonatomic) IBOutlet UILabel *nextAlarmTimeLabel;
 
 @end
 
@@ -21,94 +23,47 @@
     [super viewDidLoad];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self setAlarmDetails];
 }
 
 
--(void)setAlarmDetails{
+- (void)setAlarmDetails {
     NSArray *notificationsArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
 
     if (notificationsArray.count > 0) {
         UILocalNotification *firstNotification = notificationsArray[0];
 
+        //Time
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat: @"HH:mm"];
-        self.nextAlarmLabel.text = [dateFormat  stringFromDate:firstNotification.fireDate];
+        [dateFormat setDateFormat:@"HH:mm"];
+        self.nextAlarmTimeLabel.text = [dateFormat stringFromDate:firstNotification.fireDate];
 
-        [dateFormat setDateFormat: @"EEEE"];
-        NSString *dayText = [dateFormat  stringFromDate:firstNotification.fireDate];
+        //Day
+        [dateFormat setDateFormat:@"EEEE"];
+        NSString *dayText = [dateFormat stringFromDate:firstNotification.fireDate];
 
         NSDate *todayDate = [NSDate date];
-        NSString *today = [dateFormat  stringFromDate:todayDate];
-
-
-
+        NSString *today = [dateFormat stringFromDate:todayDate];
 
         if ([today isEqualToString:dayText]) {
             dayText = @"Today";
-            //dayText = [@"Today-" stringByAppendingString:today];
         }
 
-        NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDateComponents *todayComponents = [gregorian components:(NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:todayDate];
-        NSInteger theDay = [todayComponents day];
-        NSInteger theMonth = [todayComponents month];
-        NSInteger theYear = [todayComponents year];
-
-        // now build a NSDate object for yourDate using these components
-        NSDateComponents *components = [[NSDateComponents alloc] init];
-        [components setDay:theDay];
-        [components setMonth:theMonth];
-        [components setYear:theYear];
-        NSDate *thisDate = [gregorian dateFromComponents:components];
-
-        // now build a NSDate object for the next day
-        NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
-        [offsetComponents setDay:1];
-        NSDate *nextDate = [gregorian dateByAddingComponents:offsetComponents toDate:thisDate options:0];
-
-        NSString *tomorrow = [dateFormat  stringFromDate:nextDate];
+        NSString *tomorrow = [dateFormat stringFromDate:[todayDate addDays:1]];
 
         if ([tomorrow isEqualToString:dayText]) {
             dayText = @"Tomorrow";
-            //dayText = [@"Tomorrow-" stringByAppendingString:tomorrow];
         }
 
-//
-//
-//
-//
         self.nextAlarmLabel.text = dayText;
         [self.nextAlarmLabel layoutIfNeeded];
         [self.nextAlarmLabel updateConstraints];
-//        [nextAlarmTimeLabel setFont:[UIFont fontWithName:@"Solari" size:60]];
-//
-//        UIImageView *bellViewTemp = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blackalarmbell.png"]];
-//        bellView = bellViewTemp;
-//        bellView.tag = 99;
-//        [bellView setFrame:CGRectMake(200, 25, 50, 50)];
-//        [nextAlarmView addSubview:bellView];
-
     }
     else {
-//        [nextAlarmTimeLabel setFont:[UIFont fontWithName:@"Solari" size:40]];
         self.nextAlarmLabel.text = @"Add alarm";
-//        nextAlarmDayLabel.text = @"";
-//
-//
-//        for (UIView *v in nextAlarmView.subviews) {
-//            if ([v isKindOfClass:[UIImageView class]]) {
-//                [v removeFromSuperview];
-//            }
-//        }
-
-//        UIImageView *theBellView = (UIImageView *)[self.view viewWithTag:99];
-//
-//        [theBellView removeFromSuperview];
-//        theBellView = nil;
-
+        self.nextAlarmTimeLabel.text = @"";
     }
 }
 
