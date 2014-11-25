@@ -27,27 +27,14 @@
     [[NSUserDefaults standardUserDefaults] setObject:alarmSoundsArray forKey:@"alarmSoundsArray"];
 }
 
-+ (NSString *)tidyDaysFromDayArray:(NSArray *)dayArray {
-    NSString *tidyDay = [[NSString alloc] init];
 
++ (NSString *)orderedShortDayNamesFromDayArray:(NSArray *)dayArray {
     if ([dayArray count] == 7) {
         return @"Everyday";
     }
-
-    for (Day *day in dayArray) {
-
-        NSString *shortDay = [day.day substringToIndex:3];
-
-        tidyDay = [tidyDay stringByAppendingString:shortDay];
-        tidyDay = [tidyDay stringByAppendingString:@","];
-    }
-
-    if ([tidyDay length] > 0) {
-        tidyDay = [tidyDay substringToIndex:[tidyDay length] - 1];
-        return tidyDay;
-    }
     else {
-        return @"";
+        NSArray *dayNameArray = [self dayNameArrayFromDayArray:dayArray];
+        return [self orderedShortDayNamesFromArrayOfDayNames:dayNameArray];
     }
 }
 
@@ -60,43 +47,90 @@
     return dayNameArray;
 }
 
-+ (NSString *)tidyDaysFromArrayOfDayNames:(NSArray *)dayNameArray {
-    NSString *tidyDay = [[NSString alloc] init];
+
+//["Monday", "Friday", "Tuesday" etc]
++ (NSString *)orderedShortDayNamesFromArrayOfDayNames:(NSArray *)dayNameArray {
+    NSString *returnString = [[NSString alloc] init];
 
     if ([dayNameArray count] == 7) {
         return @"Everyday";
     }
-
-    for (NSString *dayName in dayNameArray) {
-
-        NSString *shortDay = [dayName substringToIndex:3];
-
-        tidyDay = [tidyDay stringByAppendingString:shortDay];
-        tidyDay = [tidyDay stringByAppendingString:@","];
-    }
-
-    if ([tidyDay length] > 0) {
-        tidyDay = [tidyDay substringToIndex:[tidyDay length] - 1];
-        return tidyDay;
-    }
     else {
-        return @"";
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        NSArray *weekDayArray = [[dateFormatter weekdaySymbols] mutableCopy];
+
+        NSMutableArray *dictArray = [[NSMutableArray alloc] init];
+
+        for (int i = 0; i < [dayNameArray count]; i++) {
+            NSMutableDictionary *dict = [@{@"WeekDay" : dayNameArray[(NSUInteger) i], @"theIndex" : @([weekDayArray indexOfObject:dayNameArray[(NSUInteger) i]])} mutableCopy];
+            [dictArray addObject:dict];
+        }
+
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"theIndex" ascending:YES];
+        NSArray *descriptor = @[sortDescriptor];
+        NSArray *sortedArray = [dictArray sortedArrayUsingDescriptors:descriptor];
+
+        NSMutableArray *orderedDayNameArray = [[NSMutableArray alloc] init];
+
+        for (NSDictionary *dictionary in sortedArray) {
+            [orderedDayNameArray addObject:[dictionary valueForKey:@"WeekDay"]];
+        }
+
+        for (NSString *dayName in orderedDayNameArray) {
+
+            NSString *shortDay = [dayName substringToIndex:3];
+            returnString = [returnString stringByAppendingString:shortDay];
+            returnString = [returnString stringByAppendingString:@","];
+        }
+
+        if ([returnString length] > 0) {
+            returnString = [returnString substringToIndex:[returnString length] - 1];
+            return returnString;
+        }
+        else {
+            return @"";
+        }
     }
 }
-
-
-+ (NSArray *)dayArrayFromString:(NSString *)dayString {
-
-    NSArray *shortDayArray = [dayString componentsSeparatedByString:@","];
-    NSMutableArray *longDayArray = [[NSMutableArray alloc] init];
-
-    for (NSString *shortDay in shortDayArray) {
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = @"EEEE";
-        [longDayArray addObject:[formatter dateFromString:shortDay]];
-    }
-
-    return longDayArray;
-}
+//
+//
+//+ (NSString *)tidyDaysFromArrayOfDayDictionary:(NSArray *)dayDictionaryArray {
+//    NSString *tidyDay = [[NSString alloc] init];
+//
+//    if ([dayDictionaryArray count] == 7) {
+//        return @"Everyday";
+//    }
+//
+//    for (NSDictionary *dayDict in dayDictionaryArray) {
+//
+//        NSString *shortDay = [dayDict[@"WeekDay"] substringToIndex:3];
+//
+//        tidyDay = [tidyDay stringByAppendingString:shortDay];
+//        tidyDay = [tidyDay stringByAppendingString:@","];
+//    }
+//
+//    if ([tidyDay length] > 0) {
+//        tidyDay = [tidyDay substringToIndex:[tidyDay length] - 1];
+//        return tidyDay;
+//    }
+//    else {
+//        return @"";
+//    }
+//}
+//
+//
+//+ (NSArray *)dayArrayFromString:(NSString *)dayString {
+//
+//    NSArray *shortDayArray = [dayString componentsSeparatedByString:@","];
+//    NSMutableArray *longDayArray = [[NSMutableArray alloc] init];
+//
+//    for (NSString *shortDay in shortDayArray) {
+//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//        formatter.dateFormat = @"EEEE";
+//        [longDayArray addObject:[formatter dateFromString:shortDay]];
+//    }
+//
+//    return longDayArray;
+//}
 
 @end

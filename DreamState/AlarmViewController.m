@@ -71,7 +71,10 @@
 
     [self setAlarmTime:alarmTime];
 
-    [self.alarmDaysButton setTitle:[AlarmHelper tidyDaysFromArrayOfDayNames:self.alarmDaysNamesArray] forState:UIControlStateNormal];
+
+
+
+    [self.alarmDaysButton setTitle:[AlarmHelper orderedShortDayNamesFromDayArray:[self.existingAlarm.day allObjects]] forState:UIControlStateNormal];
 }
 
 - (void)setAlarmTime:(NSDate *)alarmTime {
@@ -127,7 +130,7 @@
 - (void)setAlarmDaysWithDayNameArray:(NSArray *)dayNameArray {
     self.alarmDaysNamesArray = [dayNameArray mutableCopy];
 
-    NSString *string = [AlarmHelper tidyDaysFromArrayOfDayNames:dayNameArray];
+    NSString *string = [AlarmHelper orderedShortDayNamesFromArrayOfDayNames:dayNameArray];
     [self.alarmDaysButton setTitle:string forState:UIControlStateNormal];
     [self.alarmDaysButton.titleLabel layoutIfNeeded];
 }

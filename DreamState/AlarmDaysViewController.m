@@ -59,7 +59,7 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
     for (NSDictionary *dictionary in sortedArray) {
         [finalArray addObject:[dictionary valueForKey:@"WeekDay"]];
     }
-    return sortedArray;
+    return finalArray;
 }
 
 #pragma mark table view data source

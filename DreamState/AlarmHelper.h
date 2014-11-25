@@ -9,11 +9,13 @@
 @interface AlarmHelper : NSObject
 + (void)searchForAlarmSounds;
 
-+ (NSString *)tidyDaysFromDayArray:(NSArray *)dayArray;
++ (NSString *)orderedShortDayNamesFromDayArray:(NSArray *)dayArray;
 
 + (NSArray *)dayNameArrayFromDayArray:(NSArray *)dayArray;
 
-+ (NSString *)tidyDaysFromArrayOfDayNames:(NSArray *)dayNameArray;
++ (NSString *)orderedShortDayNamesFromArrayOfDayNames:(NSArray *)dayNameArray;
 
-+ (NSArray *)dayArrayFromString:(NSString *)dayString;
+//+ (NSArray *)dayArrayFromString:(NSString *)dayString;
+//
+//+ (NSString *)tidyDaysFromArrayOfDayDictionary:(NSArray *)dayDictionaryArray;
 @end

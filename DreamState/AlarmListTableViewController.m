@@ -60,7 +60,7 @@
     nameLabel.text = alarm.name;
 
     UILabel *daysLabel = (UILabel *) [cell viewWithTag:3];
-    daysLabel.text = [AlarmHelper tidyDaysFromDayArray:[alarm.day allObjects]];
+    daysLabel.text = [AlarmHelper orderedShortDayNamesFromDayArray:[alarm.day allObjects]];
 
     UISwitch *enabledSwitch = (UISwitch *) [cell viewWithTag:4];
     enabledSwitch.on = [alarm.enabled boolValue];
