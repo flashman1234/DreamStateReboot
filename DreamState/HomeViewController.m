@@ -8,7 +8,6 @@
 
 #import "HomeViewController.h"
 #import "DSCoreDataContextProvider.h"
-#import "Day.h"
 #import "NSDate+DateModifier.h"
 #import "CSAnimationView.h"
 

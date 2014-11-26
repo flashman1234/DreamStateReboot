@@ -44,7 +44,7 @@
                                 <rect key="frame" x="26" y="80" width="548" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add alarm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-hB-iQt">
-                                        <rect key="frame" x="50" y="15" width="448" height="26.5"/>
+                                        <rect key="frame" x="50" y="15" width="448" height="27"/>
                                         <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -67,6 +67,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vt2-Uu-3mi">
+                                        <rect key="frame" x="0.0" y="127" width="548" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cUA-Dh-gPX" firstAttribute="leading" secondItem="OWR-Dn-xJJ" secondAttribute="leading" constant="-6" id="0tm-dC-6MN"/>
@@ -75,9 +81,13 @@
                                     <constraint firstAttribute="trailing" secondItem="nmb-hB-iQt" secondAttribute="trailing" constant="50" id="IM4-Cc-Rfx"/>
                                     <constraint firstItem="G5D-pO-cRl" firstAttribute="leading" secondItem="OWR-Dn-xJJ" secondAttribute="leading" id="Q9l-0o-b9c"/>
                                     <constraint firstItem="nmb-hB-iQt" firstAttribute="leading" secondItem="OWR-Dn-xJJ" secondAttribute="leading" constant="50" id="QqN-jm-Mzp"/>
+                                    <constraint firstItem="vt2-Uu-3mi" firstAttribute="top" secondItem="G5D-pO-cRl" secondAttribute="bottom" constant="28" id="TEh-lF-Lmv"/>
+                                    <constraint firstAttribute="centerX" secondItem="vt2-Uu-3mi" secondAttribute="centerX" id="UNS-DP-Gs4"/>
                                     <constraint firstAttribute="trailing" secondItem="G5D-pO-cRl" secondAttribute="trailing" id="Wx8-ML-Teb"/>
+                                    <constraint firstItem="vt2-Uu-3mi" firstAttribute="leading" secondItem="OWR-Dn-xJJ" secondAttribute="leading" id="YaP-fu-VHb"/>
                                     <constraint firstItem="nmb-hB-iQt" firstAttribute="top" secondItem="OWR-Dn-xJJ" secondAttribute="top" constant="15" id="aKW-en-FKh"/>
                                     <constraint firstAttribute="height" constant="200" id="iZf-aR-WCi"/>
+                                    <constraint firstAttribute="trailing" secondItem="vt2-Uu-3mi" secondAttribute="trailing" id="kvd-ny-dCT"/>
                                     <constraint firstAttribute="bottom" secondItem="cUA-Dh-gPX" secondAttribute="bottom" id="o6x-cM-6vK"/>
                                     <constraint firstAttribute="trailing" secondItem="cUA-Dh-gPX" secondAttribute="trailing" id="yUa-Wj-Xyu"/>
                                 </constraints>
@@ -91,6 +101,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-CW-ksS">
+                                <rect key="frame" x="26" y="8" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -101,6 +117,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="OWR-Dn-xJJ" secondAttribute="trailing" constant="10" id="HyB-c6-GP9"/>
                             <constraint firstItem="2Cx-TE-D46" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="20" id="cBy-h3-P7A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Cx-TE-D46" secondAttribute="trailing" constant="241" id="gso-tB-pGJ"/>
+                            <constraint firstItem="wOE-CW-ksS" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="hdE-mj-Xyz"/>
+                            <constraint firstItem="wOE-CW-ksS" firstAttribute="leading" secondItem="2Cx-TE-D46" secondAttribute="leading" id="zV5-fN-quk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -635,7 +653,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1032" y="858"/>
+            <point key="canvasLocation" x="-1224" y="602"/>
         </scene>
         <!--Home-->
         <scene sceneID="2Hz-Iq-3Hi">
