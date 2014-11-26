@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-EZAudio.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JVFloatLabeledTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-TPKeyboardAvoiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ZLSinusWaveView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>310E9A57AF182659B4D556DA</key>
+		<key>07E93A98AB6922E08C2098C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AD3CB3C32AFFEAF535FAFA4</key>
+		<key>33F91CD063824C0487656B6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D2B0B206258878699D78C93</key>
+		<key>366945A0F62E1162546C4EE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBF32C765DBCA69B8F4CE52F</key>
+		<key>41BA781F7D7DF2A470FB781C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9FF1429DA2D77C8E53D891F</key>
+		<key>505934B0D8ACFAC8ED205D03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E886A096DA2F5BF9CF00EADF</key>
+		<key>7A12EB5FFE7E6E2248AFCF1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92C3ED82E6E1854B5520B670</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A08057E8D7CE79E7262E749D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

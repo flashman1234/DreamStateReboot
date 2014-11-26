@@ -18,7 +18,6 @@
 @property(nonatomic) BOOL isRecording;
 @property(weak, nonatomic) IBOutlet RecordingImageView *recordingImageView;
 @property(weak, nonatomic) IBOutlet UITextFieldNoMenu *dreamNameTextField;
-@property(nonatomic) BOOL loadedFromAlarm;
 @end
 
 @implementation RecordViewController
@@ -42,9 +41,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSTimer *levelTimerTemp = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
 
-    self.levelTimer = levelTimerTemp;
+//    self.levelTimer = levelTimerTemp;
     self.dreamNameTextField.rightViewMode = UITextFieldViewModeAlways;
     self.dreamNameTextField.text = self.dream.name;
     self.dreamNameTextField.delegate = self;
@@ -99,20 +98,20 @@
 
 - (void)playDream {
 //
-//    self.mediaPlayer = [[MPMoviePlayerController alloc] initWithContentURL: fileURL];
-//    mediaPlayer.view.tag = 100;
+//    self.audioPlot = [[MPMoviePlayerController alloc] initWithContentURL: fileURL];
+//    audioPlot.view.tag = 100;
 ////
 ////    NSString *fileType = [[fileURL absoluteString] substringFromIndex:[[fileURL absoluteString] length] - 3];
 ////    if ([fileType isEqualToString:@"mov"]) {
-////        [mediaPlayer.view setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
+////        [audioPlot.view setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
 ////    }
 //
-//    self.mediaPlayer.controlStyle = MPMovieControlStyleEmbedded;
-//    [mediaPlayer.view setFrame: CGRectMake(0, 30, self.view.bounds.size.width, 50)];
+//    self.audioPlot.controlStyle = MPMovieControlStyleEmbedded;
+//    [audioPlot.view setFrame: CGRectMake(0, 30, self.view.bounds.size.width, 50)];
 //
-//    [self.view addSubview:mediaPlayer.view];
-//    mediaPlayer.shouldAutoplay = NO;
-//    [mediaPlayer prepareToPlay];
+//    [self.view addSubview:audioPlot.view];
+//    audioPlot.shouldAutoplay = NO;
+//    [audioPlot prepareToPlay];
 //    [self addTextField];
 
 }
@@ -180,7 +179,7 @@
     NSString *dreamTimeAsString = [dreamTimeFormatter stringFromDate:[NSDate date]];
 
     self.dream.name = [dreamDateAsString stringByAppendingString:@""];
-    self.dream.fileUrl = [self.fileURL path];
+    self.dream.fileUrl = self.fileName;
     self.dream.date = dreamDateAsString;
     self.dream.mediaType = @"Audio";
     self.dream.dateCreated = [NSDate date];
@@ -203,23 +202,6 @@
 - (void)getUserDefaults {
     self.userDefaults = [NSUserDefaults standardUserDefaults];
     self.autoRecord = [self.userDefaults boolForKey:@"AutoRecord"];
-
-
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//    NSEntityDescription *entity = [NSEntityDescription
-//            entityForName:@"Settings" inManagedObjectContext:managedObjectContext];
-//    [fetchRequest setEntity:entity];
-//    NSError *error;
-//
-//
-//    NSArray *settings = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-//
-//    Settings *set = [settings objectAtIndex:0];
-//
-//    autoRecord = set.autoRecord.boolValue;
-
-
-
 }
 
 
@@ -233,10 +215,14 @@
     documentDirectory = documentDirectoryPaths[0];
 
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
+    [formatter setDateFormat:@"ddMMyyyyHHmmss"];
     NSString *theFileName = [NSString stringWithFormat:@"%@.%@", [formatter stringFromDate:[NSDate date]], fileType];
     NSString *fullFilePath = [documentDirectory stringByAppendingPathComponent:theFileName];
+//    NSString *fullFilePath = theFileName;
+    NSLog(@"fullFilePath = %@", fullFilePath);
     // fileURLAsString = fullFilePath;
+
+    self.fileName = theFileName;
     return fullFilePath;
 }
 

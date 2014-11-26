@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Canvas 1
 #define COCOAPODS_VERSION_PATCH_Canvas 2
 
+// EZAudio
+#define COCOAPODS_POD_AVAILABLE_EZAudio
+#define COCOAPODS_VERSION_MAJOR_EZAudio 0
+#define COCOAPODS_VERSION_MINOR_EZAudio 0
+#define COCOAPODS_VERSION_PATCH_EZAudio 6
+
 // JVFloatLabeledTextField
 #define COCOAPODS_POD_AVAILABLE_JVFloatLabeledTextField
 #define COCOAPODS_VERSION_MAJOR_JVFloatLabeledTextField 0
@@ -29,6 +35,12 @@
 #define COCOAPODS_VERSION_MAJOR_TPKeyboardAvoiding 1
 #define COCOAPODS_VERSION_MINOR_TPKeyboardAvoiding 2
 #define COCOAPODS_VERSION_PATCH_TPKeyboardAvoiding 4
+
+// ZLSinusWaveView
+#define COCOAPODS_POD_AVAILABLE_ZLSinusWaveView
+#define COCOAPODS_VERSION_MAJOR_ZLSinusWaveView 0
+#define COCOAPODS_VERSION_MINOR_ZLSinusWaveView 0
+#define COCOAPODS_VERSION_PATCH_ZLSinusWaveView 2
 
 // pop
 #define COCOAPODS_POD_AVAILABLE_pop

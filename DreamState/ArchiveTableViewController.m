@@ -9,6 +9,7 @@
 #import "ArchiveTableViewController.h"
 #import "DreamManager.h"
 #import "Dream.h"
+#import "SelectedDreamViewController.h"
 
 @interface ArchiveTableViewController ()
 
@@ -42,19 +43,43 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArchiveCell"];
     Dream *dream = (self.dreamArray)[(NSUInteger) indexPath.row];
-    cell.textLabel.text = dream.date;
+
+    UILabel *timeLabel = (UILabel *) [cell viewWithTag:1];
+    timeLabel.text = dream.time;
+    [timeLabel sizeToFit];
+    [timeLabel layoutIfNeeded];
+
+    UILabel *nameLabel = (UILabel *) [cell viewWithTag:2];
+    nameLabel.text = dream.name;
 
     return cell;
 }
-
 
 - (void)loadDreamArray {
     DreamManager *manager = [[DreamManager alloc] init];
 
     self.dreamArray = [[manager getAllDreams] mutableCopy];
+}
+
+
+#pragma mark - Navigation
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showSelectedDreamView" sender:nil];
+}
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if (indexPath.length > 0) {
+        if ([[segue destinationViewController] isKindOfClass:[SelectedDreamViewController class]]) {
+            Dream *selectedDream = (self.dreamArray)[(NSUInteger) indexPath.row];
+            ((SelectedDreamViewController *) [segue destinationViewController]).selectedDream = selectedDream;
+        }
+    }
 }
 
 /*
