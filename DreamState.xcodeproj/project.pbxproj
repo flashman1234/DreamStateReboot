@@ -33,6 +33,7 @@
 		E5A9C34EE23F48083AB9FC35 /* AlarmDaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CA955D7397D4042D86F8 /* AlarmDaysViewController.m */; };
 		E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */; };
 		E5A9C3C8619A4BC354C955CB /* TermsAndConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CEB6BD116DC4CB836546 /* TermsAndConditionsViewController.m */; };
+		E5A9C3E212942FE149BC6C5F /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE441C8F65A52EEC4DA6 /* DSNavigationBar.m */; };
 		E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C376691449BF26ECCD32 /* DayManager.m */; };
 		E5A9C45FBD1EA47405B760B2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */; };
 		E5A9C54D2423BDE221B27C1C /* AlarmListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */; };
@@ -132,9 +133,11 @@
 		E5A9CC4585FC7B668B318BD5 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		E5A9CCD935896D0F5B355B30 /* ArchiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveTableViewController.h; sourceTree = "<group>"; };
 		E5A9CD07962D7AD7FEF84527 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		E5A9CD62BEAE42C945655E02 /* DSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNavigationBar.h; sourceTree = "<group>"; };
 		E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSoundsViewController.m; sourceTree = "<group>"; };
 		E5A9CDFFF5C527069C6A3CA7 /* NSDate+DateModifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateModifier.m"; sourceTree = "<group>"; };
 		E5A9CE33CA1F2470F017650F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		E5A9CE441C8F65A52EEC4DA6 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationBar.m; sourceTree = "<group>"; };
 		E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmManager.m; sourceTree = "<group>"; };
 		E5A9CEB6BD116DC4CB836546 /* TermsAndConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsViewController.m; sourceTree = "<group>"; };
 		E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableViewController.m; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 				E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */,
 				E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */,
 				E5A9C4EFE406D8D0BF9CD893 /* Categories */,
+				E5A9CE35A39920CF2D8B1A17 /* OtherStuff */,
 			);
 			path = DreamState;
 			sourceTree = "<group>";
@@ -374,6 +378,15 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		E5A9CE35A39920CF2D8B1A17 /* OtherStuff */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9CE441C8F65A52EEC4DA6 /* DSNavigationBar.m */,
+				E5A9CD62BEAE42C945655E02 /* DSNavigationBar.h */,
+			);
+			path = OtherStuff;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,6 +556,7 @@
 				E5A9C3C8619A4BC354C955CB /* TermsAndConditionsViewController.m in Sources */,
 				E5A9C2D3BE8BA29E73844BD0 /* NotificationManager.m in Sources */,
 				E5A9C81106C52F5700FA06B3 /* NSDate+DateModifier.m in Sources */,
+				E5A9C3E212942FE149BC6C5F /* DSNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
