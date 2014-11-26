@@ -48,6 +48,7 @@
 		E5A9CBA229F25FC8F4BA3A3A /* ArchiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */; };
 		E5A9CBA7B442205456C0B1BA /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE33CA1F2470F017650F /* AboutViewController.m */; };
 		E5A9CC5ACF7366B925AB4B54 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C70B5C2821B632CB3041 /* RecordViewController.m */; };
+		E5A9CD230B634EBB288D1674 /* navcontrollertest.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C3E4A82FFFEB863C8669 /* navcontrollertest.m */; };
 		E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */; };
 		E5A9CE7FD8F73EB65CB616EF /* UITextFieldNoMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C844DD4E314D14F8E6E9 /* UITextFieldNoMenu.m */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderHelper.m"; sourceTree = "<group>"; };
 		E5A9C364A803BFFAF70F80AB /* NSDate+DateModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateModifier.h"; sourceTree = "<group>"; };
 		E5A9C376691449BF26ECCD32 /* DayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayManager.m; sourceTree = "<group>"; };
+		E5A9C3E4A82FFFEB863C8669 /* navcontrollertest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navcontrollertest.m; sourceTree = "<group>"; };
 		E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
 		E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E5A9C66AA6956B82AA884D2A /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmManager.h; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		E5A9CE33CA1F2470F017650F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		E5A9CE441C8F65A52EEC4DA6 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationBar.m; sourceTree = "<group>"; };
 		E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmManager.m; sourceTree = "<group>"; };
+		E5A9CE9D9E1A34D80CA8D4FE /* navcontrollertest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navcontrollertest.h; sourceTree = "<group>"; };
 		E5A9CEB6BD116DC4CB836546 /* TermsAndConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsViewController.m; sourceTree = "<group>"; };
 		E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableViewController.m; sourceTree = "<group>"; };
 		E5A9CFF9B8ED8F2BC41E99D1 /* UITextFieldNoMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldNoMenu.h; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 			children = (
 				E5A9CE441C8F65A52EEC4DA6 /* DSNavigationBar.m */,
 				E5A9CD62BEAE42C945655E02 /* DSNavigationBar.h */,
+				E5A9C3E4A82FFFEB863C8669 /* navcontrollertest.m */,
+				E5A9CE9D9E1A34D80CA8D4FE /* navcontrollertest.h */,
 			);
 			path = OtherStuff;
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 				E5A9C2D3BE8BA29E73844BD0 /* NotificationManager.m in Sources */,
 				E5A9C81106C52F5700FA06B3 /* NSDate+DateModifier.m in Sources */,
 				E5A9C3E212942FE149BC6C5F /* DSNavigationBar.m in Sources */,
+				E5A9CD230B634EBB288D1674 /* navcontrollertest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

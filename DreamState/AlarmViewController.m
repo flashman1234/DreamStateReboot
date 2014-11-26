@@ -21,6 +21,7 @@
 @property(weak, nonatomic) IBOutlet UIPickerView *timePicker;
 @property(weak, nonatomic) IBOutlet UIButton *alarmSoundButton;
 @property(weak, nonatomic) IBOutlet UITextField *alarmNameTextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
 
 @property(nonatomic) NSMutableArray *alarmDaysNamesArray;
 @property(nonatomic) NSString *alarmSound;
@@ -31,6 +32,9 @@
 @implementation AlarmViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.okButton setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
+
 
     if (self.existingAlarm) {
         [self loadExistingAlarm];

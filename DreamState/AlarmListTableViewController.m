@@ -15,6 +15,7 @@
 #import "NotificationManager.h"
 
 @interface AlarmListTableViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 @property(nonatomic) NSArray *alarmArray;
 @end
 
@@ -22,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
+    [self.addButton setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

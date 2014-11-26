@@ -11,12 +11,14 @@
 #import "EZAudioPlotGL.h"
 #import "EZAudio.h"
 #import "ZLSinusWaveView.h"
+#import "CSAnimationView.h"
 
 @interface SelectedDreamViewController ()
 @property(weak, nonatomic) IBOutlet ZLSinusWaveView *audioPlot;
 @property(weak, nonatomic) IBOutlet UIButton *playButton;
 @property(nonatomic, strong) EZAudioFile *audioFile;
 @property(nonatomic, weak) IBOutlet UISlider *framePositionSlider;
+@property (weak, nonatomic) IBOutlet UIView *sliderAnimationView;
 @property(nonatomic, assign) BOOL eof;
 @end
 
@@ -127,6 +129,8 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 }
 
 - (IBAction)playButtonTouched:(id)sender {
+
+    [self.sliderAnimationView startCanvasAnimation];
 
     if (![[EZOutput sharedOutput] isPlaying]) {
         if (self.eof) {

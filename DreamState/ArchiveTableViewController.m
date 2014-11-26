@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,13 +48,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ArchiveCell"];
     Dream *dream = (self.dreamArray)[(NSUInteger) indexPath.row];
 
-    UILabel *timeLabel = (UILabel *) [cell viewWithTag:1];
+    UILabel *nameLabel = (UILabel *) [cell viewWithTag:1];
+    nameLabel.text = dream.name;
+
+    UILabel *timeLabel = (UILabel *) [cell viewWithTag:2];
     timeLabel.text = dream.time;
     [timeLabel sizeToFit];
     [timeLabel layoutIfNeeded];
-
-    UILabel *nameLabel = (UILabel *) [cell viewWithTag:2];
-    nameLabel.text = dream.name;
 
     return cell;
 }
@@ -78,6 +80,8 @@
         if ([[segue destinationViewController] isKindOfClass:[SelectedDreamViewController class]]) {
             Dream *selectedDream = (self.dreamArray)[(NSUInteger) indexPath.row];
             ((SelectedDreamViewController *) [segue destinationViewController]).selectedDream = selectedDream;
+
+            self.navigationController.navigationBar.backItem.title = @"something";
         }
     }
 }
