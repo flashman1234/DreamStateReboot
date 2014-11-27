@@ -17,6 +17,15 @@
 		0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */; };
 		2CA3175A1A25D63600A1832A /* SelectedDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA317591A25D63600A1832A /* SelectedDreamViewController.m */; };
 		2CA317631A271FD600A1832A /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA317621A271FD600A1832A /* AcknowledgementsViewController.m */; };
+		2CA3176D1A27321100A1832A /* A Mind of Its Own.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317641A27321100A1832A /* A Mind of Its Own.m4a */; };
+		2CA3176E1A27321100A1832A /* Antique.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317651A27321100A1832A /* Antique.m4a */; };
+		2CA3176F1A27321100A1832A /* Bells.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317661A27321100A1832A /* Bells.m4a */; };
+		2CA317701A27321100A1832A /* Birds.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317671A27321100A1832A /* Birds.m4a */; };
+		2CA317711A27321100A1832A /* Blurred Atmospheres.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317681A27321100A1832A /* Blurred Atmospheres.m4a */; };
+		2CA317721A27321100A1832A /* Candy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317691A27321100A1832A /* Candy.m4a */; };
+		2CA317731A27321100A1832A /* Hard as Nails.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176A1A27321100A1832A /* Hard as Nails.m4a */; };
+		2CA317741A27321100A1832A /* High Action.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176B1A27321100A1832A /* High Action.m4a */; };
+		2CA317751A27321100A1832A /* Piano beat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176C1A27321100A1832A /* Piano beat.m4a */; };
 		2CA7AE161A1E569A005BB92D /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE151A1E569A005BB92D /* Dream.m */; };
 		2CA7AE191A1E569A005BB92D /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE181A1E569A005BB92D /* Day.m */; };
 		2CA7AE1C1A1E569A005BB92D /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE1B1A1E569A005BB92D /* Alarm.m */; };
@@ -82,6 +91,15 @@
 		2CA317591A25D63600A1832A /* SelectedDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedDreamViewController.m; sourceTree = "<group>"; };
 		2CA317611A271FD600A1832A /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
 		2CA317621A271FD600A1832A /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
+		2CA317641A27321100A1832A /* A Mind of Its Own.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A Mind of Its Own.m4a"; sourceTree = "<group>"; };
+		2CA317651A27321100A1832A /* Antique.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Antique.m4a; sourceTree = "<group>"; };
+		2CA317661A27321100A1832A /* Bells.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bells.m4a; sourceTree = "<group>"; };
+		2CA317671A27321100A1832A /* Birds.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Birds.m4a; sourceTree = "<group>"; };
+		2CA317681A27321100A1832A /* Blurred Atmospheres.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blurred Atmospheres.m4a"; sourceTree = "<group>"; };
+		2CA317691A27321100A1832A /* Candy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Candy.m4a; sourceTree = "<group>"; };
+		2CA3176A1A27321100A1832A /* Hard as Nails.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hard as Nails.m4a"; sourceTree = "<group>"; };
+		2CA3176B1A27321100A1832A /* High Action.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "High Action.m4a"; sourceTree = "<group>"; };
+		2CA3176C1A27321100A1832A /* Piano beat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piano beat.m4a"; sourceTree = "<group>"; };
 		2CA7AE141A1E569A005BB92D /* Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dream.h; sourceTree = "<group>"; };
 		2CA7AE151A1E569A005BB92D /* Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dream.m; sourceTree = "<group>"; };
 		2CA7AE171A1E569A005BB92D /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
@@ -322,6 +340,15 @@
 		E5A9C2D1EBF16D21AB30614F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				2CA317641A27321100A1832A /* A Mind of Its Own.m4a */,
+				2CA317651A27321100A1832A /* Antique.m4a */,
+				2CA317661A27321100A1832A /* Bells.m4a */,
+				2CA317671A27321100A1832A /* Birds.m4a */,
+				2CA317681A27321100A1832A /* Blurred Atmospheres.m4a */,
+				2CA317691A27321100A1832A /* Candy.m4a */,
+				2CA3176A1A27321100A1832A /* Hard as Nails.m4a */,
+				2CA3176B1A27321100A1832A /* High Action.m4a */,
+				2CA3176C1A27321100A1832A /* Piano beat.m4a */,
 				E5A9C9D882AF677F5A6E178F /* Alarm bell 1.m4a */,
 				E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */,
 			);
@@ -475,12 +502,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF767811A1BC8A7000D909A /* Solari.ttf in Resources */,
+				2CA317751A27321100A1832A /* Piano beat.m4a in Resources */,
 				05116DD01A1A77C400C6052D /* Main.storyboard in Resources */,
+				2CA317701A27321100A1832A /* Birds.m4a in Resources */,
+				2CA3176E1A27321100A1832A /* Antique.m4a in Resources */,
 				05116DD51A1A77C500C6052D /* LaunchScreen.xib in Resources */,
+				2CA317741A27321100A1832A /* High Action.m4a in Resources */,
 				05116DD21A1A77C500C6052D /* Images.xcassets in Resources */,
 				E5A9C27D793352CFFAF24F6B /* Alarm bell 1.m4a in Resources */,
 				E5A9C9370AF5CF83290C8A75 /* Alarm bell 2.m4a in Resources */,
 				E5A9C8FFDA692F42AFBC3235 /* Podfile in Resources */,
+				2CA317721A27321100A1832A /* Candy.m4a in Resources */,
+				2CA3176D1A27321100A1832A /* A Mind of Its Own.m4a in Resources */,
+				2CA317731A27321100A1832A /* Hard as Nails.m4a in Resources */,
+				2CA317711A27321100A1832A /* Blurred Atmospheres.m4a in Resources */,
+				2CA3176F1A27321100A1832A /* Bells.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
