@@ -62,7 +62,7 @@
 - (void)loadDreamArray {
     DreamManager *manager = [[DreamManager alloc] init];
 
-    self.dreamArray = [[manager getAllDreams] mutableCopy];
+    self.dreamArray = [[manager getAllDreamsWithMostRecentFirst] mutableCopy];
 }
 
 

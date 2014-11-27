@@ -16,26 +16,28 @@
 @interface RecordViewController ()
 @property(nonatomic) BOOL autoRecord;
 @property(nonatomic) BOOL isRecording;
+@property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property(weak, nonatomic) IBOutlet RecordingImageView *recordingImageView;
 @property(weak, nonatomic) IBOutlet UITextFieldNoMenu *dreamNameTextField;
 @end
 
 @implementation RecordViewController
 
-- (IBAction)segmentControlTouched:(UISegmentedControl *)sender {
-
-    switch (sender.selectedSegmentIndex) {
-        case 0:
-            [self startRecordingAudio];
-            break;
-        case 1:
-            if (self.isRecording) {
-                [self stopRecordingAudio];
-            }
-            break;
-        default:
-            break;
+- (IBAction)recordButtonTouched:(id)sender {
+    if (self.isRecording) {
+        [self stopRecordingAudio];
+        [self.recordButton setBackgroundImage:[UIImage imageNamed:@"recordIcon"] forState:UIControlStateNormal];
+        [self.recordButton setNeedsLayout];
+        [self.recordButton setNeedsDisplay];
     }
+    else
+    {
+        [self startRecordingAudio];
+        [self.recordButton setBackgroundImage:[UIImage imageNamed:@"stopIcon"] forState:UIControlStateNormal];
+        [self.recordButton setNeedsLayout];
+        [self.recordButton setNeedsDisplay];
+    }
+
 }
 
 - (void)viewDidLoad {
@@ -43,7 +45,6 @@
 
     [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
 
-//    self.levelTimer = levelTimerTemp;
     self.dreamNameTextField.rightViewMode = UITextFieldViewModeAlways;
     self.dreamNameTextField.text = self.dream.name;
     self.dreamNameTextField.delegate = self;
@@ -189,6 +190,7 @@
 
 - (void)stopRecordingAudio {
     self.dreamNameTextField.hidden = NO;
+    [self.dreamNameTextField becomeFirstResponder];
     self.isRecording = NO;
     [self.aVAudioRecorder stop];
     [self playDream];

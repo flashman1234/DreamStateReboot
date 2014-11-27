@@ -68,9 +68,9 @@
     else {
         self.nextAlarmLabel.text = @"Add alarm";
         self.nextAlarmTimeLabel.text = @"";
+        [self.animationView startCanvasAnimation];
     }
 
-    [self.animationView startCanvasAnimation];
 }
 
 

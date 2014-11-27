@@ -30,4 +30,17 @@
     return results;
 }
 
+- (NSArray *)getAllDreamsWithMostRecentFirst {
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Dream class])];
+
+    NSSortDescriptor *dateSort = [[NSSortDescriptor alloc] initWithKey:@"dateCreated" ascending:NO];
+    [req setSortDescriptors:@[dateSort]];
+
+    NSError *error = nil;
+    NSArray *results = [[DSCoreDataContextProvider sharedInstance].managedObjectContext executeFetchRequest:req error:&error];
+
+
+    return results;
+}
+
 @end

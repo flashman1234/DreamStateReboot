@@ -16,4 +16,5 @@
 - (NSArray *)getAllDreams;
 
 
+- (NSArray *)getAllDreamsWithMostRecentFirst;
 @end
