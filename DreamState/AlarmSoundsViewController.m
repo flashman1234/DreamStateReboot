@@ -49,9 +49,25 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
     cell.textLabel.textColor = [UIColor whiteColor];
     [cell.textLabel setFont:[UIFont fontWithName:@"Solari" size:24]];
 
-    cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    UIButton *accessoryButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [accessoryButton setBackgroundImage:[UIImage imageNamed:@"playIcon"] forState:UIControlStateNormal];
+    CGRect frame = CGRectMake(0.0, 0.0, 28, 28);
+    accessoryButton.frame = frame;
+    [accessoryButton addTarget:self action:@selector(playButtonTapped:event:) forControlEvents:UIControlEventTouchUpInside];
 
+    cell.accessoryView = accessoryButton;
     return cell;
+}
+
+- (void)playButtonTapped:(id)playButtonTapped event:(id)event {
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.soundTableView];
+    NSIndexPath *indexPath = [self.soundTableView indexPathForRowAtPoint: currentTouchPosition];
+    if (indexPath != nil)
+    {
+        [self tableView: self.soundTableView accessoryButtonTappedForRowWithIndexPath: indexPath];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,22 +83,33 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIButton *button = (UIButton *)cell.accessoryView;
+
+
     if (indexPath.row == self.indexOfSoundPlaying)
     {
+        [button setBackgroundImage:[UIImage imageNamed:@"playIcon"] forState:UIControlStateNormal];
         [SimpleAudioPlayer stopAllPlayers];
         self.indexOfSoundPlaying = -1;
     }
     else
     {
         [SimpleAudioPlayer stopAllPlayers];
-        [self playSound:(self.soundArray)[(NSUInteger) indexPath.row]];
+        [self playSound:(self.soundArray)[(NSUInteger) indexPath.row] withAceesoryButton:button];
         self.indexOfSoundPlaying = indexPath.row;
+        [button setBackgroundImage:[UIImage imageNamed:@"pauseIcon"] forState:UIControlStateNormal];
+
     }
 }
 
-- (void)playSound:(NSString *)alarmSound {
+- (void)playSound:(NSString *)alarmSound withAceesoryButton:(UIButton *)accessoryButton {
     NSString *alarmSoundFile = [NSString stringWithFormat:@"%@.m4a", alarmSound];
-    [SimpleAudioPlayer playFile:alarmSoundFile];
+    [SimpleAudioPlayer playFile:alarmSoundFile withCompletionBlock:^(BOOL b) {
+        [accessoryButton setBackgroundImage:[UIImage imageNamed:@"playIcon"] forState:UIControlStateNormal];
+
+    }];
 
 }
 
