@@ -20,7 +20,7 @@
                 NSShadowAttributeName : [NSShadow new]
         }];
 
-        self.tintColor =  [UIColor whiteColor];
+        self.tintColor = [UIColor whiteColor];
     }
 
     return self;

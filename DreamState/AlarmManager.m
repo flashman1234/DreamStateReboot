@@ -20,7 +20,6 @@
     return results;
 }
 
-
 - (NSArray *)getAllActiveAlarms {
     NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Alarm class])];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"enabled == YES"];
@@ -32,7 +31,6 @@
     return results;
 }
 
-
 - (void)saveAlarmWithName:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound {
     CoreDataManager *manager = [[CoreDataManager alloc] init];
     Alarm *alarm = [manager insertCoreDataObjectWithClassName:NSStringFromClass([Alarm class])];
@@ -41,7 +39,6 @@
 }
 
 - (void)updateAlarm:(Alarm *)alarm name:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound {
-
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"HH:mm"]; //24hr time format
     NSString *timeString = [outputFormatter stringFromDate:date];

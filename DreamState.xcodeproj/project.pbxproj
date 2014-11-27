@@ -26,6 +26,7 @@
 		2CA317731A27321100A1832A /* Hard as Nails.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176A1A27321100A1832A /* Hard as Nails.m4a */; };
 		2CA317741A27321100A1832A /* High Action.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176B1A27321100A1832A /* High Action.m4a */; };
 		2CA317751A27321100A1832A /* Piano beat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176C1A27321100A1832A /* Piano beat.m4a */; };
+		2CA3177B1A277A8D00A1832A /* DayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3177A1A277A8D00A1832A /* DayHelper.m */; };
 		2CA7AE161A1E569A005BB92D /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE151A1E569A005BB92D /* Dream.m */; };
 		2CA7AE191A1E569A005BB92D /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE181A1E569A005BB92D /* Day.m */; };
 		2CA7AE1C1A1E569A005BB92D /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE1B1A1E569A005BB92D /* Alarm.m */; };
@@ -100,6 +101,8 @@
 		2CA3176A1A27321100A1832A /* Hard as Nails.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hard as Nails.m4a"; sourceTree = "<group>"; };
 		2CA3176B1A27321100A1832A /* High Action.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "High Action.m4a"; sourceTree = "<group>"; };
 		2CA3176C1A27321100A1832A /* Piano beat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piano beat.m4a"; sourceTree = "<group>"; };
+		2CA317791A277A8D00A1832A /* DayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayHelper.h; sourceTree = "<group>"; };
+		2CA3177A1A277A8D00A1832A /* DayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayHelper.m; sourceTree = "<group>"; };
 		2CA7AE141A1E569A005BB92D /* Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dream.h; sourceTree = "<group>"; };
 		2CA7AE151A1E569A005BB92D /* Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dream.m; sourceTree = "<group>"; };
 		2CA7AE171A1E569A005BB92D /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
@@ -221,10 +224,9 @@
 				05116DD31A1A77C500C6052D /* LaunchScreen.xib */,
 				05116DC11A1A77C400C6052D /* Supporting Files */,
 				E5A9C2D1EBF16D21AB30614F /* Sounds */,
-				E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */,
-				E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */,
 				E5A9C4EFE406D8D0BF9CD893 /* Categories */,
 				E5A9CE35A39920CF2D8B1A17 /* OtherStuff */,
+				E5A9CDFF8EDEBD7551B256B8 /* Helpers */,
 			);
 			path = DreamState;
 			sourceTree = "<group>";
@@ -410,6 +412,17 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		E5A9CDFF8EDEBD7551B256B8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */,
+				E5A9C9F44B9854643F207CD9 /* AlarmHelper.h */,
+				2CA317791A277A8D00A1832A /* DayHelper.h */,
+				2CA3177A1A277A8D00A1832A /* DayHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		E5A9CE35A39920CF2D8B1A17 /* OtherStuff */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +597,7 @@
 				E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */,
 				E5A9C45FBD1EA47405B760B2 /* CoreDataManager.m in Sources */,
 				E5A9CB260572F69D75EB3A80 /* UIView+BorderHelper.m in Sources */,
+				2CA3177B1A277A8D00A1832A /* DayHelper.m in Sources */,
 				E5A9C6048B95131EA59E0CA5 /* AlarmSoundsViewController.m in Sources */,
 				E5A9C34EE23F48083AB9FC35 /* AlarmDaysViewController.m in Sources */,
 				E5A9C7A3B69EFD117E8881F0 /* AlarmViewController.m in Sources */,

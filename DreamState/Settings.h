@@ -12,6 +12,6 @@
 
 @interface Settings : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * autoRecord;
+@property(nonatomic, retain) NSNumber *autoRecord;
 
 @end

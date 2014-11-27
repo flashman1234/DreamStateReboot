@@ -155,7 +155,7 @@
                                         </connections>
                                     </pickerView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Alarm name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-aQ-XBZ">
-                                        <rect key="frame" x="30" y="192" width="541" height="40"/>
+                                        <rect key="frame" x="30" y="182" width="541" height="40"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="m5I-XL-uda"/>
@@ -165,7 +165,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOA-zF-cgx">
-                                        <rect key="frame" x="252" y="313" width="98" height="28"/>
+                                        <rect key="frame" x="252" y="283" width="98" height="28"/>
                                         <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="15"/>
                                         <state key="normal" title="Alarm Tone:">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -176,7 +176,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-8D-mx5">
-                                        <rect key="frame" x="0.0" y="277" width="601" height="28"/>
+                                        <rect key="frame" x="0.0" y="247" width="601" height="28"/>
                                         <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="15"/>
                                         <state key="normal" title="Days:">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,7 +190,7 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="bOA-zF-cgx" secondAttribute="centerX" constant="-1" id="2Hx-s0-yeF"/>
                                     <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" constant="30" id="2Ry-8v-jRD"/>
-                                    <constraint firstItem="hXR-8D-mx5" firstAttribute="top" secondItem="Vgh-aQ-XBZ" secondAttribute="bottom" constant="45" id="7tr-lR-Z3u"/>
+                                    <constraint firstItem="hXR-8D-mx5" firstAttribute="top" secondItem="Vgh-aQ-XBZ" secondAttribute="bottom" constant="25" id="7tr-lR-Z3u"/>
                                     <constraint firstItem="38u-Kx-ThO" firstAttribute="centerX" secondItem="PFP-Xk-MmP" secondAttribute="centerX" id="GrV-hC-hxh"/>
                                     <constraint firstItem="hXR-8D-mx5" firstAttribute="centerX" secondItem="bOA-zF-cgx" secondAttribute="centerX" id="NUW-k9-vR0"/>
                                     <constraint firstAttribute="centerX" secondItem="hXR-8D-mx5" secondAttribute="centerX" id="QLm-RH-Y07"/>
@@ -200,7 +200,7 @@
                                     <constraint firstAttribute="trailing" secondItem="hXR-8D-mx5" secondAttribute="trailing" id="kKk-YN-BsR"/>
                                     <constraint firstAttribute="trailing" secondItem="Vgh-aQ-XBZ" secondAttribute="trailing" constant="30" id="oP9-O5-0pu"/>
                                     <constraint firstItem="38u-Kx-ThO" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" constant="50" id="oXx-d9-Tyr"/>
-                                    <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="top" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="30" id="ofg-sL-7om"/>
+                                    <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="top" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="20" id="ofg-sL-7om"/>
                                     <constraint firstAttribute="bottom" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="374" id="rCr-3A-hO5"/>
                                     <constraint firstAttribute="trailing" secondItem="38u-Kx-ThO" secondAttribute="trailing" constant="50" id="rd9-aL-fcS"/>
                                 </constraints>
@@ -420,7 +420,27 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjJ-te-Px3" customClass="ZLSinusWaveView">
                                 <rect key="frame" x="16" y="0.0" width="568" height="400"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tjb-bd-LAd">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="PyZ-wU-JDe"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="dreamnameChanged:" destination="qRh-3M-Bh8" eventType="valueChanged" id="2gj-Xx-Qb9"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Tjb-bd-LAd" firstAttribute="top" secondItem="LjJ-te-Px3" secondAttribute="top" id="2W2-R3-wDP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tjb-bd-LAd" secondAttribute="trailing" id="Ud3-9O-6sb"/>
+                                    <constraint firstItem="Tjb-bd-LAd" firstAttribute="leading" secondItem="LjJ-te-Px3" secondAttribute="leading" id="m3o-so-lHy"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JW1-eH-2qx" customClass="CSAnimationView">
                                 <rect key="frame" x="16" y="450" width="568" height="50"/>
@@ -445,9 +465,13 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="shake"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F23-Cz-CLL">
-                                <rect key="frame" x="24" y="400" width="30" height="30"/>
-                                <state key="normal" title="Play">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F23-Cz-CLL">
+                                <rect key="frame" x="24" y="376" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bfb-gq-cNh"/>
+                                    <constraint firstAttribute="width" constant="60" id="lGp-ry-f7Z"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="playIcon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -460,18 +484,21 @@
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="LjJ-te-Px3" secondAttribute="bottom" constant="136" id="C7q-ax-eiV"/>
                             <constraint firstItem="JW1-eH-2qx" firstAttribute="leading" secondItem="LjJ-te-Px3" secondAttribute="leading" id="E0t-6L-7WK"/>
-                            <constraint firstItem="JW1-eH-2qx" firstAttribute="top" secondItem="F23-Cz-CLL" secondAttribute="bottom" constant="20" id="Ehd-CC-rT9"/>
+                            <constraint firstItem="JW1-eH-2qx" firstAttribute="top" secondItem="F23-Cz-CLL" secondAttribute="bottom" constant="14" id="Ehd-CC-rT9"/>
                             <constraint firstItem="LjJ-te-Px3" firstAttribute="top" secondItem="dJr-HJ-9lc" secondAttribute="topMargin" id="Hbu-b7-zrm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LjJ-te-Px3" secondAttribute="trailing" id="it9-CA-Is0"/>
-                            <constraint firstItem="Oru-9M-O98" firstAttribute="top" secondItem="F23-Cz-CLL" secondAttribute="bottom" constant="57" id="m43-C0-nTp"/>
+                            <constraint firstItem="Oru-9M-O98" firstAttribute="top" secondItem="F23-Cz-CLL" secondAttribute="bottom" constant="51" id="m43-C0-nTp"/>
                             <constraint firstItem="LjJ-te-Px3" firstAttribute="leading" secondItem="dJr-HJ-9lc" secondAttribute="leadingMargin" id="m9C-Or-XP9"/>
                             <constraint firstItem="JW1-eH-2qx" firstAttribute="trailing" secondItem="LjJ-te-Px3" secondAttribute="trailing" id="qWA-6U-cBC"/>
                             <constraint firstItem="F23-Cz-CLL" firstAttribute="leading" secondItem="dJr-HJ-9lc" secondAttribute="leadingMargin" constant="8" id="unQ-AL-6ey"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dream" id="DtD-Tl-Khr"/>
+                    <navigationItem key="navigationItem" id="DtD-Tl-Khr">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="audioPlot" destination="LjJ-te-Px3" id="eCL-ya-8un"/>
+                        <outlet property="dreamNameTextField" destination="Tjb-bd-LAd" id="Uz5-2Q-gQU"/>
                         <outlet property="framePositionSlider" destination="m1t-rV-nM8" id="eUB-FT-Dq5"/>
                         <outlet property="playButton" destination="F23-Cz-CLL" id="hST-1Z-Bhg"/>
                         <outlet property="sliderAnimationView" destination="JW1-eH-2qx" id="DVe-dx-yFz"/>
@@ -479,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mT-TO-ead" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="1568"/>
+            <point key="canvasLocation" x="1654" y="1568"/>
         </scene>
         <!--Information-->
         <scene sceneID="pw2-TW-wjn">
@@ -512,25 +539,6 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="3Q2-5Z-dxg">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" rowHeight="50" id="Ku3-RN-hT1">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ku3-RN-hT1" id="Khi-eb-6wl">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn7-bd-MmW">
-                                                    <rect key="frame" x="35" y="11" width="125" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="27f-zv-CCC">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutCell" rowHeight="50" id="yfR-2g-8SZ">
@@ -561,21 +569,6 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="howToCell" rowHeight="50" id="mol-ug-k38">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mol-ug-k38" id="2gM-PM-WH3">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dream State help" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2py-2K-ef3">
-                                                    <rect key="frame" x="32" y="11" width="218" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="howToCell" rowHeight="50" id="U4H-62-xaC">
@@ -615,10 +608,10 @@
             </objects>
             <point key="canvasLocation" x="183" y="2349"/>
         </scene>
-        <!--Terms And Conditions View Controller-->
+        <!--T and C-->
         <scene sceneID="scf-Vq-XRc">
             <objects>
-                <viewController id="6xw-Ni-gRy" customClass="TermsAndConditionsViewController" sceneMemberID="viewController">
+                <viewController title="T and C" id="6xw-Ni-gRy" customClass="TermsAndConditionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FT7-jd-ceg"/>
                         <viewControllerLayoutGuide type="bottom" id="vEw-wD-6PT"/>
@@ -649,10 +642,10 @@
             </objects>
             <point key="canvasLocation" x="1230" y="2249"/>
         </scene>
-        <!--About View Controller-->
+        <!--About-->
         <scene sceneID="zNZ-PJ-CaW">
             <objects>
-                <viewController id="Ogk-98-kvT" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController title="About" id="Ogk-98-kvT" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lLe-IG-eP3"/>
                         <viewControllerLayoutGuide type="bottom" id="wTP-tO-ybh"/>
@@ -1137,9 +1130,14 @@ Generated by CocoaPods - http://cocoapods.org
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEa-vu-ECm" customClass="RecordingImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="426"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-Fg-4fd" customClass="UITextFieldNoMenu">
-                                        <rect key="frame" x="55" y="40" width="490" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Dream name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-Fg-4fd" customClass="UITextFieldNoMenu">
+                                        <rect key="frame" x="55" y="40" width="490" height="40"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Uil-1X-ACd"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -1308,7 +1306,8 @@ Generated by CocoaPods - http://cocoapods.org
         <image name="dsTabIcon1" width="30" height="30"/>
         <image name="dsTabIcon2" width="30" height="30"/>
         <image name="dsTabIcon3" width="30" height="30"/>
-        <image name="dsTabIcon4" width="60" height="60"/>
+        <image name="dsTabIcon4" width="30" height="30"/>
+        <image name="playIcon" width="86" height="86"/>
         <image name="recordIcon" width="86" height="86"/>
     </resources>
 </document>

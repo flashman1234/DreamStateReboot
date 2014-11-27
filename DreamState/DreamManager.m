@@ -18,7 +18,7 @@
     return dream;
 }
 
--(void)saveDream:(Dream *)dream {
+- (void)saveDream:(Dream *)dream {
     [[DSCoreDataContextProvider sharedInstance] saveContext];
 }
 
@@ -38,7 +38,6 @@
 
     NSError *error = nil;
     NSArray *results = [[DSCoreDataContextProvider sharedInstance].managedObjectContext executeFetchRequest:req error:&error];
-
 
     return results;
 }

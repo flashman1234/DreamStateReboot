@@ -8,6 +8,7 @@
 
 #import "AlarmDaysViewController.h"
 #import "AlarmDelegate.h"
+#import "DayHelper.h"
 
 NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
@@ -15,7 +16,7 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
 @property(nonatomic) NSMutableArray *weekDayArray;
 @property(weak, nonatomic) IBOutlet UITableView *dayTableView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
+@property(weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
 
 @end
 
@@ -36,33 +37,13 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
 - (IBAction)addDaysButtonTouched:(id)sender {
 
-    NSArray *sortedDayArray = [self reorderSelectedDaysArray];
+    NSArray *sortedDayArray = [DayHelper reorderSelectedDaysArray:self.selectedDayArray];
 
     if ([self.delegate respondsToSelector:@selector(setAlarmDaysWithDayNameArray:)]) {
         [self.delegate setAlarmDaysWithDayNameArray:sortedDayArray];
     }
 
     [self.navigationController popViewControllerAnimated:NO];
-}
-
-- (NSArray *)reorderSelectedDaysArray {
-    NSMutableArray *dictArray = [[NSMutableArray alloc] init];
-
-    for (int i = 0; i < [self.selectedDayArray count]; i++) {
-        NSMutableDictionary *dict = [@{@"WeekDay" : self.selectedDayArray[(NSUInteger) i], @"theIndex" : @([self.weekDayArray indexOfObject:self.selectedDayArray[(NSUInteger) i]])} mutableCopy];
-        [dictArray addObject:dict];
-    }
-
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"theIndex" ascending:YES];
-    NSArray *descriptor = @[sortDescriptor];
-    NSArray *sortedArray = [dictArray sortedArrayUsingDescriptors:descriptor];
-
-    NSMutableArray *finalArray = [[NSMutableArray alloc] init];
-
-    for (NSDictionary *dictionary in sortedArray) {
-        [finalArray addObject:[dictionary valueForKey:@"WeekDay"]];
-    }
-    return finalArray;
 }
 
 #pragma mark table view data source
@@ -111,16 +92,5 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
         [self.selectedDayArray removeObject:dayAsString];
     }
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

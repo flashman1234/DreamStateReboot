@@ -16,7 +16,7 @@
 @interface RecordViewController ()
 @property(nonatomic) BOOL autoRecord;
 @property(nonatomic) BOOL isRecording;
-@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property(weak, nonatomic) IBOutlet UIButton *recordButton;
 @property(weak, nonatomic) IBOutlet RecordingImageView *recordingImageView;
 @property(weak, nonatomic) IBOutlet UITextFieldNoMenu *dreamNameTextField;
 @end
@@ -30,21 +30,17 @@
         [self.recordButton setNeedsLayout];
         [self.recordButton setNeedsDisplay];
     }
-    else
-    {
+    else {
         [self startRecordingAudio];
         [self.recordButton setBackgroundImage:[UIImage imageNamed:@"stopIcon"] forState:UIControlStateNormal];
         [self.recordButton setNeedsLayout];
         [self.recordButton setNeedsDisplay];
     }
-
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
-
     self.dreamNameTextField.rightViewMode = UITextFieldViewModeAlways;
     self.dreamNameTextField.text = self.dream.name;
     self.dreamNameTextField.delegate = self;
@@ -61,7 +57,6 @@
     self.dream.name = self.dreamNameTextField.text;
     DreamManager *manager = [[DreamManager alloc] init];
     [manager saveDream:self.dream];
-
     [theTextField resignFirstResponder];
     [self.tabBarController setSelectedIndex:2];
     return YES;
@@ -98,22 +93,6 @@
 #pragma mark - Record and play video
 
 - (void)playDream {
-//
-//    self.audioPlot = [[MPMoviePlayerController alloc] initWithContentURL: fileURL];
-//    audioPlot.view.tag = 100;
-////
-////    NSString *fileType = [[fileURL absoluteString] substringFromIndex:[[fileURL absoluteString] length] - 3];
-////    if ([fileType isEqualToString:@"mov"]) {
-////        [audioPlot.view setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
-////    }
-//
-//    self.audioPlot.controlStyle = MPMovieControlStyleEmbedded;
-//    [audioPlot.view setFrame: CGRectMake(0, 30, self.view.bounds.size.width, 50)];
-//
-//    [self.view addSubview:audioPlot.view];
-//    audioPlot.shouldAutoplay = NO;
-//    [audioPlot prepareToPlay];
-//    [self addTextField];
 
 }
 
@@ -196,16 +175,12 @@
     [self playDream];
 }
 
-
 #pragma mark - view methods
-
-
 
 - (void)getUserDefaults {
     self.userDefaults = [NSUserDefaults standardUserDefaults];
     self.autoRecord = [self.userDefaults boolForKey:@"AutoRecord"];
 }
-
 
 #pragma mark - file handlers
 
@@ -220,24 +195,10 @@
     [formatter setDateFormat:@"ddMMyyyyHHmmss"];
     NSString *theFileName = [NSString stringWithFormat:@"%@.%@", [formatter stringFromDate:[NSDate date]], fileType];
     NSString *fullFilePath = [documentDirectory stringByAppendingPathComponent:theFileName];
-//    NSString *fullFilePath = theFileName;
     NSLog(@"fullFilePath = %@", fullFilePath);
-    // fileURLAsString = fullFilePath;
 
     self.fileName = theFileName;
     return fullFilePath;
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

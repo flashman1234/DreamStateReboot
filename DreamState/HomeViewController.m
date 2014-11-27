@@ -8,14 +8,13 @@
 
 #import "HomeViewController.h"
 #import "DSCoreDataContextProvider.h"
-#import "Day.h"
 #import "NSDate+DateModifier.h"
 #import "CSAnimationView.h"
 
 @interface HomeViewController ()
 @property(weak, nonatomic) IBOutlet UILabel *nextAlarmLabel;
 @property(weak, nonatomic) IBOutlet UILabel *nextAlarmTimeLabel;
-@property (weak, nonatomic) IBOutlet CSAnimationView *animationView;
+@property(weak, nonatomic) IBOutlet CSAnimationView *animationView;
 
 @end
 
@@ -29,9 +28,7 @@
     [super viewWillAppear:animated];
     [self setAlarmDetails];
     [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
-
 }
-
 
 - (void)setAlarmDetails {
     NSArray *notificationsArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
@@ -70,18 +67,5 @@
         self.nextAlarmTimeLabel.text = @"";
         [self.animationView startCanvasAnimation];
     }
-
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

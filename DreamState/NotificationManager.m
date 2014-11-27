@@ -12,9 +12,7 @@
 
 
 - (void)loadNotifications {
-
     AlarmManager *manager = [[AlarmManager alloc] init];
-
     self.alarms = [manager getAllActiveAlarms];
 
     //delete any existing notifications for this alarm
@@ -28,11 +26,9 @@
     }
 
     self.notificationArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
-
 }
 
 - (void)setNotification:(NSDate *)finalAlarmDate alarm:(Alarm *)alarm {
-    //create notification
     UILocalNotification *notification = [[UILocalNotification alloc] init];
 
     notification.fireDate = finalAlarmDate;
@@ -40,23 +36,16 @@
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
 
-    //NSString *stringFromDate = [dateFormat stringFromDate:notification.fireDate];
-
     notification.alertBody = @"Would you like to record a dream?";
-
     NSDictionary *userInfoDict = @{@"AlarmName" : alarm.name, @"AlarmSound" : alarm.sound};
-
     notification.userInfo = userInfoDict;
-
     notification.soundName = [alarm.sound stringByAppendingString:@".m4a"];
-//    notification.soundName = UILocalNotificationDefaultSoundName;
 
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 - (void)createNotificationForAlarm:(Alarm *)alarm {
-
-    int totalNumberOfNotifications = 5;
+    int totalNumberOfNotifications = 100;
     int numberOfNotificationsPerAlarm = totalNumberOfNotifications / self.numberOfAlarms;
 
     //get date and convert to components
@@ -78,27 +67,23 @@
     if (alarm.day.count == 0) {
 
         for (int i = 0; i <= numberOfNotificationsPerAlarm; i++) {
-
-            //increase day by increment
             NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
             dayComponent.day = i;
 
             NSDate *finalAlarmDate = [[NSCalendar currentCalendar] dateByAddingComponents:dayComponent toDate:alarmDate options:0];
 
-            //if (finalAlarmDate > currentDate) {
             if ([finalAlarmDate compare:currentDate] == NSOrderedDescending) {
                 [self setNotification:finalAlarmDate alarm:alarm];
             }
         }
     }
     else {
-
-        int dayOffest = 0;
+        int dayOffset = 0;
         int numberOfSetNotifications = 0;
 
         do {
             NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
-            dayComponent.day = dayOffest;
+            dayComponent.day = dayOffset;
 
             NSDate *finalAlarmDate = [[NSCalendar currentCalendar] dateByAddingComponents:dayComponent toDate:alarmDate options:0];
 
@@ -119,12 +104,10 @@
                 }
             }
 
-            dayOffest = dayOffest + 1;
+            dayOffset = dayOffset + 1;
 
         } while (numberOfSetNotifications < numberOfNotificationsPerAlarm);
-
     }
-
 }
 
 @end

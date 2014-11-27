@@ -10,6 +10,4 @@
 
 -(NSArray *)getAllDays;
 
-
-//- (void)loadInitialDays;
 @end

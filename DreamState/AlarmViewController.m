@@ -15,21 +15,20 @@
 
 #define kRowsInPicker 100
 
-
 @interface AlarmViewController ()
 @property(weak, nonatomic) IBOutlet UIButton *alarmDaysButton;
 @property(weak, nonatomic) IBOutlet UIPickerView *timePicker;
 @property(weak, nonatomic) IBOutlet UIButton *alarmSoundButton;
 @property(weak, nonatomic) IBOutlet UITextField *alarmNameTextField;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
+@property(weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
 
 @property(nonatomic) NSMutableArray *alarmDaysNamesArray;
 @property(nonatomic) NSString *alarmSound;
 @property(nonatomic) NSString *alarmName;
-
 @end
 
 @implementation AlarmViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -37,8 +36,7 @@
     [self.okButton setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
 
     UIColor *color = [UIColor whiteColor];
-    self.alarmNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Alarm name" attributes:@{NSForegroundColorAttributeName: color}];
-
+    self.alarmNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Alarm name" attributes:@{NSForegroundColorAttributeName : color}];
 
     if (self.existingAlarm) {
         [self loadExistingAlarm];
@@ -72,16 +70,9 @@
 
     self.alarmDaysNamesArray = [[AlarmHelper dayNameArrayFromDayArray:[self.existingAlarm.day allObjects]] mutableCopy];
 
-    //ui
     self.alarmNameTextField.text = self.alarmName;
-
     [self.alarmSoundButton setTitle:self.existingAlarm.sound forState:UIControlStateNormal];
-
     [self setAlarmTime:alarmTime];
-
-
-
-
     [self.alarmDaysButton setTitle:[AlarmHelper orderedShortDayNamesFromDayArray:[self.existingAlarm.day allObjects]] forState:UIControlStateNormal];
 }
 
@@ -95,7 +86,6 @@
 }
 
 - (IBAction)saveAlarmButtonTouched:(id)sender {
-
     NSDateComponents *components = [[NSDateComponents alloc] init];
     components.hour = [self.timePicker selectedRowInComponent:0];
     components.minute = [self.timePicker selectedRowInComponent:1];
@@ -103,16 +93,14 @@
 
     AlarmManager *alarmManager = [[AlarmManager alloc] init];
 
-    if (self.existingAlarm)
-    {
+    if (self.existingAlarm) {
         [alarmManager updateAlarm:self.existingAlarm
                              name:self.alarmNameTextField.text
                              date:pickerDate
                  fullNameDayArray:self.alarmDaysNamesArray
                             sound:self.alarmSound];
     }
-    else
-    {
+    else {
         [alarmManager saveAlarmWithName:self.alarmNameTextField.text
                                    date:pickerDate
                        fullNameDayArray:self.alarmDaysNamesArray
@@ -124,7 +112,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue destinationViewController] isKindOfClass:[AlarmDaysViewController class]]) {
         ((AlarmDaysViewController *) [segue destinationViewController]).delegate = self;
@@ -170,11 +157,9 @@
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
-
     UILabel *tView = (UILabel *) view;
     if (!tView) {
         tView = [[UILabel alloc] init];
-
         [tView setTextAlignment:NSTextAlignmentCenter];
         [tView setFont:[UIFont fontWithName:@"Solari" size:50]];
         tView.textColor = [UIColor whiteColor];

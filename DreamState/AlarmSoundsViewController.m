@@ -31,6 +31,8 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
     [SimpleAudioPlayer stopAllPlayers];
 }
 
+#pragma mark - Table view data source
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.soundArray count];
 }
@@ -44,7 +46,6 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
     }
 
     cell.textLabel.text = (self.soundArray)[(NSUInteger) indexPath.row];
-
     cell.backgroundColor = [UIColor blackColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     [cell.textLabel setFont:[UIFont fontWithName:@"Solari" size:24]];
@@ -59,16 +60,7 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
     return cell;
 }
 
-- (void)playButtonTapped:(id)playButtonTapped event:(id)event {
-    NSSet *touches = [event allTouches];
-    UITouch *touch = [touches anyObject];
-    CGPoint currentTouchPosition = [touch locationInView:self.soundTableView];
-    NSIndexPath *indexPath = [self.soundTableView indexPathForRowAtPoint: currentTouchPosition];
-    if (indexPath != nil)
-    {
-        [self tableView: self.soundTableView accessoryButtonTappedForRowWithIndexPath: indexPath];
-    }
-}
+#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *thisCell = [tableView cellForRowAtIndexPath:indexPath];
@@ -83,24 +75,33 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    UIButton *button = (UIButton *)cell.accessoryView;
+    UIButton *button = (UIButton *) cell.accessoryView;
 
 
-    if (indexPath.row == self.indexOfSoundPlaying)
-    {
+    if (indexPath.row == self.indexOfSoundPlaying) {
         [button setBackgroundImage:[UIImage imageNamed:@"playIcon"] forState:UIControlStateNormal];
         [SimpleAudioPlayer stopAllPlayers];
         self.indexOfSoundPlaying = -1;
     }
-    else
-    {
+    else {
         [SimpleAudioPlayer stopAllPlayers];
         [self playSound:(self.soundArray)[(NSUInteger) indexPath.row] withAceesoryButton:button];
         self.indexOfSoundPlaying = indexPath.row;
         [button setBackgroundImage:[UIImage imageNamed:@"pauseIcon"] forState:UIControlStateNormal];
 
+    }
+}
+
+#pragma mark actions
+
+- (void)playButtonTapped:(id)playButtonTapped event:(id)event {
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:self.soundTableView];
+    NSIndexPath *indexPath = [self.soundTableView indexPathForRowAtPoint:currentTouchPosition];
+    if (indexPath != nil) {
+        [self tableView:self.soundTableView accessoryButtonTappedForRowWithIndexPath:indexPath];
     }
 }
 
@@ -110,18 +111,6 @@ NSString *const DSSoundsCellIdentifier = @"DSSoundsCellIdentifier";
         [accessoryButton setBackgroundImage:[UIImage imageNamed:@"playIcon"] forState:UIControlStateNormal];
 
     }];
-
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

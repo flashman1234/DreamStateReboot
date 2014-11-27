@@ -12,7 +12,7 @@
 
 @class Dream;
 
-@interface SelectedDreamViewController : UIViewController <EZAudioFileDelegate, EZOutputDataSource>
+@interface SelectedDreamViewController : UIViewController <EZAudioFileDelegate, EZOutputDataSource, UITextFieldDelegate>
 
 @property (nonatomic) Dream *selectedDream;
 @end
