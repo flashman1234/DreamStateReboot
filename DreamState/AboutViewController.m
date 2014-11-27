@@ -9,21 +9,33 @@
 @interface AboutViewController ()
 @property(weak, nonatomic) IBOutlet UIButton *emailButton;
 @property(nonatomic, strong) MFMailComposeViewController *mc;
+@property(weak, nonatomic) IBOutlet UILabel *aboutLabel;
+@property(weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
 @implementation AboutViewController
 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    NSString *s = @"Half of our lives we spend in dream state, and its not necessarily the less interesting part.\n\nMost of us forget their dreams immediately after waking up, and most of us are too lazy to write or operate some recording-tool while still struggling to cope with their new waking state surroundings. \n\nThats a pity, as many great inventions, narratives, songs, or just thoughts were born there but never made it cross the state-line.\n\nAnd thats why we created this App here.\n\nIt's an alarm clock which can automatically start recording audio, allowing you to record and archive your dreams while they are still vivid.\n\nDream State was created by Michal Thompson and Hannes Niepold\n\n Thanks to 8th Mode Music for supplying the 'A Mind of its Own', 'Blurred Atmospheres', 'Hard as Nails', and 'High Action' alarm sounds.";
+
+    self.aboutLabel.text = s;
+    [self.aboutLabel sizeToFit];
+}
+
 - (IBAction)emailButtonTouched:(id)sender {
     NSString *emailTitle = @"DreamState";
     NSString *messageBody = @"";
-    NSArray *toRecipents = @[@"admin@dreamstate.squareknife.com"];
+    NSArray *toRecipient = @[@"admin@dreamstate.squareknife.com"];
 
     self.mc = [[MFMailComposeViewController alloc] init];
     self.mc.mailComposeDelegate = self;
     [self.mc setSubject:emailTitle];
     [self.mc setMessageBody:messageBody isHTML:NO];
-    [self.mc setToRecipients:toRecipents];
+    [self.mc setToRecipients:toRecipient];
 
     [self presentViewController:self.mc animated:YES completion:NULL];
 }

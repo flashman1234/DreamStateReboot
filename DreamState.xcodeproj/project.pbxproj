@@ -16,6 +16,7 @@
 		05116DEC1A1A7ABF00C6052D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05116DEB1A1A7ABF00C6052D /* HomeViewController.m */; };
 		0594EB641A1A851D009879D2 /* DreamState.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0594EB621A1A851D009879D2 /* DreamState.xcdatamodeld */; };
 		2CA3175A1A25D63600A1832A /* SelectedDreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA317591A25D63600A1832A /* SelectedDreamViewController.m */; };
+		2CA317631A271FD600A1832A /* AcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA317621A271FD600A1832A /* AcknowledgementsViewController.m */; };
 		2CA7AE161A1E569A005BB92D /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE151A1E569A005BB92D /* Dream.m */; };
 		2CA7AE191A1E569A005BB92D /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE181A1E569A005BB92D /* Day.m */; };
 		2CA7AE1C1A1E569A005BB92D /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE1B1A1E569A005BB92D /* Alarm.m */; };
@@ -79,6 +80,8 @@
 		0594EB631A1A851D009879D2 /* DreamState.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamState.xcdatamodel; sourceTree = "<group>"; };
 		2CA317581A25D63600A1832A /* SelectedDreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedDreamViewController.h; sourceTree = "<group>"; };
 		2CA317591A25D63600A1832A /* SelectedDreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedDreamViewController.m; sourceTree = "<group>"; };
+		2CA317611A271FD600A1832A /* AcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcknowledgementsViewController.h; sourceTree = "<group>"; };
+		2CA317621A271FD600A1832A /* AcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcknowledgementsViewController.m; sourceTree = "<group>"; };
 		2CA7AE141A1E569A005BB92D /* Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dream.h; sourceTree = "<group>"; };
 		2CA7AE151A1E569A005BB92D /* Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dream.m; sourceTree = "<group>"; };
 		2CA7AE171A1E569A005BB92D /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				E5A9CC429E776CF3BED3C055 /* TermsAndConditionsViewController.h */,
 				2CD4493A1A235D38008E1400 /* InformationTableViewController.h */,
 				2CD4493B1A235D38008E1400 /* InformationTableViewController.m */,
+				2CA317611A271FD600A1832A /* AcknowledgementsViewController.h */,
+				2CA317621A271FD600A1832A /* AcknowledgementsViewController.m */,
 			);
 			name = Information;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				05116DC41A1A77C400C6052D /* main.m in Sources */,
 				E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */,
 				2CA7AE191A1E569A005BB92D /* Day.m in Sources */,
+				2CA317631A271FD600A1832A /* AcknowledgementsViewController.m in Sources */,
 				2CE4958D1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m in Sources */,
 				2CA7AE161A1E569A005BB92D /* Dream.m in Sources */,
 				E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */,

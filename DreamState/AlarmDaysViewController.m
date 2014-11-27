@@ -15,6 +15,7 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
 
 @property(nonatomic) NSMutableArray *weekDayArray;
 @property(weak, nonatomic) IBOutlet UITableView *dayTableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
 
 @end
 
@@ -26,6 +27,8 @@ NSString *const DSDaysCellIdentifier = @"DSDaysCellIdentifier";
     if (!self.selectedDayArray) {
         self.selectedDayArray = [[NSMutableArray alloc] init];
     }
+
+    [self.okButton setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     self.weekDayArray = [[dateFormatter weekdaySymbols] mutableCopy];

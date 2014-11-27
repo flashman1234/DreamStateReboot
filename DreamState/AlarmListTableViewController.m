@@ -15,7 +15,7 @@
 #import "NotificationManager.h"
 
 @interface AlarmListTableViewController ()
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
+@property(weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 @property(nonatomic) NSArray *alarmArray;
 @end
 
@@ -31,7 +31,14 @@
     [super viewWillAppear:animated];
 
     [self loadAlarmArray];
-    [self.tableView reloadData];
+
+    if ([self.alarmArray count] == 0) {
+        [self performSegueWithIdentifier:@"showAlarmView" sender:nil];
+    }
+    else {
+        [self.tableView reloadData];
+    }
+
 }
 
 - (void)loadAlarmArray {

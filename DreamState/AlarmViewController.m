@@ -33,7 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
     [self.okButton setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
+
+    UIColor *color = [UIColor whiteColor];
+    self.alarmNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Alarm name" attributes:@{NSForegroundColorAttributeName: color}];
 
 
     if (self.existingAlarm) {
