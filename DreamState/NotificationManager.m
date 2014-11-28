@@ -39,7 +39,11 @@
     notification.alertBody = @"Would you like to record a dream?";
     NSDictionary *userInfoDict = @{@"AlarmName" : alarm.name, @"AlarmSound" : alarm.sound};
     notification.userInfo = userInfoDict;
-    notification.soundName = [alarm.sound stringByAppendingString:@".m4a"];
+//    notification.soundName = [alarm.sound stringByAppendingString:@".m4a"];
+//    notification.soundName = UILocalNotificationDefaultSoundName;
+    notification.soundName = @"Candy.m4a";
+
+    NSLog(@"notification.soundName = %@", notification.soundName);
 
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
@@ -64,7 +68,7 @@
     NSDate *alarmDate = [[NSCalendar currentCalendar] dateFromComponents:components];
 
     //no days were set, so this alarm will run everyday
-    if (alarm.day.count == 0) {
+    if (alarm.day.count == 0 || alarm.day.count == 7) {
 
         for (int i = 0; i <= numberOfNotificationsPerAlarm; i++) {
             NSDateComponents *dayComponent = [[NSDateComponents alloc] init];

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Michal Thompson. All rights reserved.
 //
 
+#import <SimpleAudioPlayer/SimpleAudioPlayer.h>
 #import "AppDelegate.h"
 #import "AlarmHelper.h"
 #import "DayManager.h"
@@ -58,34 +59,40 @@
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 
 //    appOpensFromAlarm = YES;
-//    NSDictionary *notDict = notification.userInfo;
-//    NSString *alarmSoundName = [notDict valueForKey:@"AlarmSound"];
-//
-//    NSString *alarmName = [notification.userInfo valueForKey:@"AlarmName"];
-//
-//    if (application.applicationState == UIApplicationStateInactive ) {
-//
+    NSDictionary *notDict = notification.userInfo;
+    NSString *alarmSoundName = [notDict valueForKey:@"AlarmSound"];
+
+    NSString *alarmName = [notification.userInfo valueForKey:@"AlarmName"];
+
+    if (application.applicationState == UIApplicationStateInactive ) {
+
 //        [[NSNotificationCenter defaultCenter] postNotificationName:localReceived object:self];
-//    }
-//
-//    if(application.applicationState == UIApplicationStateActive ) {
-//
-//        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-//        [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
-//
-//        //NSString *stringFromDate = [dateFormat stringFromDate:notification.fireDate];
-//
-//        [self playAlarmSound:alarmSoundName];
-//        UIAlertView *alert = [[UIAlertView alloc]
-//                initWithTitle: NSLocalizedString(alarmName, nil)
-//                      message: NSLocalizedString(@"Would you like to record a dream?",nil)
-//                     delegate: self
-//            cancelButtonTitle: NSLocalizedString(@"No",nil)
-//            otherButtonTitles: NSLocalizedString(@"Yes",nil), nil];
-//        [alert show];
-//    }
+    }
+
+    if(application.applicationState == UIApplicationStateActive ) {
+
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
+
+        //NSString *stringFromDate = [dateFormat stringFromDate:notification.fireDate];
+
+        [self playAlarmSound:alarmSoundName];
+        UIAlertView *alert = [[UIAlertView alloc]
+                initWithTitle: NSLocalizedString(alarmName, nil)
+                      message: NSLocalizedString(@"Would you like to record a dream?",nil)
+                     delegate: self
+            cancelButtonTitle: NSLocalizedString(@"No",nil)
+            otherButtonTitles: NSLocalizedString(@"Yes",nil), nil];
+        [alert show];
+    }
 }
 
+- (void)playAlarmSound:(NSString *)alarmSound {
+    NSString *alarmSoundFile = [NSString stringWithFormat:@"%@.m4a", alarmSound];
+    [SimpleAudioPlayer playFile:alarmSoundFile withCompletionBlock:^(BOOL b) {
+
+    }];
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

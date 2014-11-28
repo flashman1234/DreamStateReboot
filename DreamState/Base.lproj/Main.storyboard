@@ -54,7 +54,7 @@
                                 <rect key="frame" x="26" y="80" width="548" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add alarm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-hB-iQt">
-                                        <rect key="frame" x="50" y="15" width="448" height="27"/>
+                                        <rect key="frame" x="50" y="15" width="448" height="26.5"/>
                                         <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
