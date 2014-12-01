@@ -8,27 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "EZMicrophone.h"
 
 
 @class Dream;
-@class AVAudioRecorder;
 @class UITextFieldNoMenu;
-@class RecordingImageView;
+@class EZMicrophone;
+@class EZRecorder;
 
-@class MPMoviePlayerController;
-
-@interface RecordViewController : UIViewController <UITextFieldDelegate>
-
-- (void)levelTimerCallback:(NSTimer *)timer;
+@interface RecordViewController : UIViewController <UITextFieldDelegate, EZMicrophoneDelegate>
 
 @property(nonatomic, retain) NSUserDefaults *userDefaults;
-@property(nonatomic, retain) NSDictionary *recordSettings;
 @property(nonatomic, retain) Dream *dream;
-@property(nonatomic, retain) AVAudioRecorder *aVAudioRecorder;
 @property(nonatomic, retain) NSURL *fileURL;
 @property(nonatomic, retain) NSString *fileName;
-@property(nonatomic, retain) MPMoviePlayerController *mediaPlayer;
-@property double lowPassResults;
-@property(nonatomic, retain) UISegmentedControl *segmentedControl;
+
+@property (nonatomic,strong) EZMicrophone *microphone;
+@property (nonatomic,strong) EZRecorder *recorder;
+
+
+
+
 
 @end

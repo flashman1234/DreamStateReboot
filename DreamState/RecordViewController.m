@@ -12,12 +12,14 @@
 #import "UITextFieldNoMenu.h"
 #import "RecordingImageView.h"
 #import "DreamManager.h"
+#import "ZLSinusWaveView.h"
+#import "EZRecorder.h"
 
 @interface RecordViewController ()
 @property(nonatomic) BOOL autoRecord;
 @property(nonatomic) BOOL isRecording;
 @property(weak, nonatomic) IBOutlet UIButton *recordButton;
-@property(weak, nonatomic) IBOutlet RecordingImageView *recordingImageView;
+@property(weak, nonatomic) IBOutlet ZLSinusWaveView *audioPlot;
 @property(weak, nonatomic) IBOutlet UITextFieldNoMenu *dreamNameTextField;
 @end
 
@@ -40,7 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(levelTimerCallback:) userInfo:nil repeats:YES];
     self.dreamNameTextField.rightViewMode = UITextFieldViewModeAlways;
     self.dreamNameTextField.text = self.dream.name;
     self.dreamNameTextField.delegate = self;
@@ -49,8 +50,23 @@
 - (void)viewWillAppear:(BOOL)animated {
     [self getUserDefaults];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-    self.segmentedControl.selectedSegmentIndex = -1;
     [super viewWillAppear:animated];
+
+    self.microphone = [EZMicrophone microphoneWithDelegate:self];
+
+    /*
+   Customizing the audio plot's look
+   */
+    // Background color
+    self.audioPlot.backgroundColor = [UIColor blackColor];
+    // Waveform color
+    self.audioPlot.color = [UIColor whiteColor];
+    // Plot type
+    self.audioPlot.plotType = EZPlotTypeRolling;
+    // Fill
+    self.audioPlot.shouldFill = YES;
+    // Mirror
+    self.audioPlot.shouldMirror = YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
@@ -64,7 +80,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     if (self.autoRecord) {
-        self.segmentedControl.selectedSegmentIndex = 0;
         [self startRecordingAudio];
     }
     else {
@@ -77,11 +92,11 @@
         [self stopRecordingAudio];
     }
 
-    if (self.mediaPlayer) {
-        [self.mediaPlayer stop];
-        [self.mediaPlayer.view removeFromSuperview];
-        self.mediaPlayer = nil;
-    }
+//    if (self.mediaPlayer) {
+//        [self.mediaPlayer stop];
+//        [self.mediaPlayer.view removeFromSuperview];
+//        self.mediaPlayer = nil;
+//    }
 
     self.isRecording = NO;
 }
@@ -90,58 +105,19 @@
     [iTextField selectAll:self];
 }
 
-#pragma mark - Record and play video
-
-- (void)playDream {
-
-}
-
-- (void)levelTimerCallback:(NSTimer *)timer {
-    if (self.isRecording) {
-        [self.aVAudioRecorder updateMeters];
-
-        const double ALPHA = 0.05;
-        double peakPowerForChannel = pow(10, (0.05 * [self.aVAudioRecorder peakPowerForChannel:0]));
-        self.lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * self.lowPassResults;
-        self.recordingImageView.passedInValue = (CGFloat) self.lowPassResults;
-        [self.recordingImageView setNeedsDisplay];
-        [self.recordingImageView updateConstraints];
-        [self.recordingImageView layoutIfNeeded];
-    }
-}
+#pragma mark - Record and play audio
 
 - (void)startRecordingAudio {
-    if (self.mediaPlayer) {
-        [self.mediaPlayer stop];
-        [self.mediaPlayer.view removeFromSuperview];
-    }
-
     self.dreamNameTextField.hidden = YES;
     self.isRecording = YES;
     self.fileURL = [NSURL fileURLWithPath:[self createFileName:@"caf"]];
 
-    self.recordSettings = @{AVFormatIDKey : @(kAudioFormatAppleIMA4),
-            AVSampleRateKey : @16000,
-            AVNumberOfChannelsKey : @1,
-            AVLinearPCMBitDepthKey : @16,
-            AVLinearPCMIsBigEndianKey : @NO,
-            AVLinearPCMIsFloatKey : @NO};
-    NSError *error = nil;
+    [self.microphone startFetchingAudio];
 
-    self.aVAudioRecorder = [[AVAudioRecorder alloc]
-            initWithURL:self.fileURL
-               settings:self.recordSettings
-                  error:&error];
-    if (error) {
-        NSLog(@"[AVAudioRecorder alloc] error: %@", [error localizedDescription]);
-    }
-    else {
-        self.aVAudioRecorder.meteringEnabled = YES;
-        [self.aVAudioRecorder prepareToRecord];
-        [self.aVAudioRecorder record];
-
-        [self createDreamObjectAndSave];
-    }
+    self.recorder = [EZRecorder recorderWithDestinationURL:self.fileURL
+                                              sourceFormat:self.microphone.audioStreamBasicDescription
+                                       destinationFileType:EZRecorderFileTypeM4A];
+    [self createDreamObjectAndSave];
 }
 
 - (void)createDreamObjectAndSave {
@@ -171,8 +147,9 @@
     self.dreamNameTextField.hidden = NO;
     [self.dreamNameTextField becomeFirstResponder];
     self.isRecording = NO;
-    [self.aVAudioRecorder stop];
-    [self playDream];
+
+    [self.microphone stopFetchingAudio];
+    [self.recorder closeAudioFile];
 }
 
 #pragma mark - view methods
@@ -199,6 +176,37 @@
 
     self.fileName = theFileName;
     return fullFilePath;
+}
+
+
+#pragma mark - EZMicrophoneDelegate
+#warning Thread Safety
+
+// Note that any callback that provides streamed audio data (like streaming microphone input) happens on a separate audio thread that should not be blocked. When we feed audio data into any of the UI components we need to explicity create a GCD block on the main thread to properly get the UI to work.
+- (void)microphone:(EZMicrophone *)microphone
+  hasAudioReceived:(float **)buffer
+      withBufferSize:(UInt32)bufferSize
+withNumberOfChannels:(UInt32)numberOfChannels {
+    // Getting audio data as an array of float buffer arrays. What does that mean? Because the audio is coming in as a stereo signal the data is split into a left and right channel. So buffer[0] corresponds to the float* data for the left channel while buffer[1] corresponds to the float* data for the right channel.
+
+    // See the Thread Safety warning above, but in a nutshell these callbacks happen on a separate audio thread. We wrap any UI updating in a GCD block on the main thread to avoid blocking that audio flow.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // All the audio plot needs is the buffer data (float*) and the size. Internally the audio plot will handle all the drawing related code, history management, and freeing its own resources. Hence, one badass line of code gets you a pretty plot :)
+        [self.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
+    });
+}
+
+- (void)microphone:(EZMicrophone *)microphone
+     hasBufferList:(AudioBufferList *)bufferList
+      withBufferSize:(UInt32)bufferSize
+withNumberOfChannels:(UInt32)numberOfChannels {
+
+    // Getting audio data as a buffer list that can be directly fed into the EZRecorder. This is happening on the audio thread - any UI updating needs a GCD main queue block. This will keep appending data to the tail of the audio file.
+    if (self.isRecording) {
+        [self.recorder appendDataFromBufferList:bufferList
+                                 withBufferSize:bufferSize];
+    }
+
 }
 
 @end
