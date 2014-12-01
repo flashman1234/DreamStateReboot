@@ -12,6 +12,7 @@
 #import "AlarmSoundsViewController.h"
 #import "Alarm.h"
 #import "AlarmHelper.h"
+#import "NotificationManager.h"
 
 #define kRowsInPicker 100
 
@@ -98,7 +99,8 @@
                              name:self.alarmNameTextField.text
                              date:pickerDate
                  fullNameDayArray:self.alarmDaysNamesArray
-                            sound:self.alarmSound];
+                            sound:self.alarmSound
+                          enabled:[self.existingAlarm.enabled boolValue]];
     }
     else {
         [alarmManager saveAlarmWithName:self.alarmNameTextField.text
@@ -106,6 +108,9 @@
                        fullNameDayArray:self.alarmDaysNamesArray
                                   sound:self.alarmSound];
     }
+
+    NotificationManager *notificationLoader = [[NotificationManager alloc] init];
+    [notificationLoader loadNotifications];
 
     [self.navigationController popViewControllerAnimated:NO];
 }

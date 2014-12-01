@@ -35,10 +35,10 @@
     CoreDataManager *manager = [[CoreDataManager alloc] init];
     Alarm *alarm = [manager insertCoreDataObjectWithClassName:NSStringFromClass([Alarm class])];
 
-    [self updateAlarm:alarm name:name date:date fullNameDayArray:fullNameDayArray sound:sound];
+    [self updateAlarm:alarm name:name date:date fullNameDayArray:fullNameDayArray sound:sound enabled:YES];
 }
 
-- (void)updateAlarm:(Alarm *)alarm name:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound {
+- (void)updateAlarm:(Alarm *)alarm name:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound enabled:(BOOL)enabled {
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"HH:mm"]; //24hr time format
     NSString *timeString = [outputFormatter stringFromDate:date];
@@ -58,6 +58,7 @@
     }
 
     alarm.sound = sound;
+    alarm.enabled = @(enabled);
 
     [[DSCoreDataContextProvider sharedInstance] saveContext];
 }

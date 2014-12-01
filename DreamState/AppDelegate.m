@@ -21,7 +21,7 @@
     [AlarmHelper searchForAlarmSounds];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
-    [self performSelectorInBackground:@selector(updateNotifications) withObject:nil];
+    [self updateNotifications];
 
 // move this to separate file.
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];

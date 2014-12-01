@@ -4,6 +4,7 @@
 //
 
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 #import "NotificationManager.h"
 #import "Alarm.h"
 #import "AlarmManager.h"
@@ -31,7 +32,12 @@
 
     self.muteChecker = [[MuteChecker alloc] initWithCompletionBlk:^(NSTimeInterval lapse, BOOL muted) {
         if (muted) {
-            NSLog(@"SOUND IS MUTED");
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Device is muted!"
+                                                         message:@"Alarms will only play a sound if the device is not muted."
+                                                        delegate:self
+                                               cancelButtonTitle:@"ok"
+                                               otherButtonTitles:nil];
+            [av show];
         }
     }];
 
