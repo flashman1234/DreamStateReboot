@@ -10,6 +10,7 @@
 #import "DSCoreDataContextProvider.h"
 #import "NSDate+DateModifier.h"
 #import "CSAnimationView.h"
+#import "AlarmListTableViewController.h"
 
 @interface HomeViewController ()
 @property(weak, nonatomic) IBOutlet UILabel *nextAlarmLabel;
@@ -68,4 +69,14 @@
         [self.animationView startCanvasAnimation];
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+
+    if ([[segue destinationViewController] isKindOfClass:[AlarmListTableViewController class]]) {
+        ((AlarmListTableViewController *) [segue destinationViewController]).shownFromHome = YES;
+    }
+}
+
+
 @end

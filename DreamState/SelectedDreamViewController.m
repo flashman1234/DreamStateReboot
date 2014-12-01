@@ -126,6 +126,8 @@ withNumberOfChannels:(UInt32)numberOfChannels {
         if (_eof) {
             [[EZOutput sharedOutput] stopPlayback];
             [EZOutput sharedOutput].outputDataSource = nil;
+            [self.playButton setBackgroundImage:[UIImage imageNamed:@"playIcon"] forState:UIControlStateNormal];
+
         }
     }
 }

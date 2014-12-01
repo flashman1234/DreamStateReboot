@@ -30,6 +30,18 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 
+    // Remember to configure your audio session
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSError *err = NULL;
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
+    if( err ){
+        NSLog(@"There was an error creating the audio session");
+    }
+    [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:NULL];
+    if( err ){
+        NSLog(@"There was an error sending the audio to the speakers");
+    }
+
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }

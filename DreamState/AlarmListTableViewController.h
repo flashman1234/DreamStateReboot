@@ -10,4 +10,6 @@
 
 @interface AlarmListTableViewController : UITableViewController
 
+@property (nonatomic) BOOL shownFromHome;
+
 @end

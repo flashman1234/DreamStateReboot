@@ -32,7 +32,8 @@
 
     [self loadAlarmArray];
 
-    if ([self.alarmArray count] == 0) {
+    if ([self.alarmArray count] == 0 && self.shownFromHome) {
+        self.shownFromHome = NO;
         [self performSegueWithIdentifier:@"showAlarmView" sender:nil];
     }
     else {
