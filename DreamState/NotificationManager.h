@@ -7,6 +7,7 @@
 #import <UIKit/UIKit.h>
 
 @class Alarm;
+@class MuteChecker;
 
 
 @interface NotificationManager : NSObject
@@ -19,4 +20,5 @@
 @property(nonatomic, strong) NSArray *notificationArray;
 @property NSInteger numberOfAlarms;
 
+@property(nonatomic, strong) MuteChecker *muteChecker;
 @end

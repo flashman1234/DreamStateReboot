@@ -3,9 +3,11 @@
 // Copyright (c) 2014 Michal Thompson. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
 #import "NotificationManager.h"
 #import "Alarm.h"
 #import "AlarmManager.h"
+#import "MuteChecker.h"
 
 
 @implementation NotificationManager
@@ -26,6 +28,14 @@
     }
 
     self.notificationArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
+
+    self.muteChecker = [[MuteChecker alloc] initWithCompletionBlk:^(NSTimeInterval lapse, BOOL muted) {
+        if (muted) {
+            NSLog(@"SOUND IS MUTED");
+        }
+    }];
+
+    [self.muteChecker check];
 }
 
 - (void)setNotification:(NSDate *)finalAlarmDate alarm:(Alarm *)alarm {
@@ -40,9 +50,6 @@
     NSDictionary *userInfoDict = @{@"AlarmName" : alarm.name, @"AlarmSound" : alarm.sound};
     notification.userInfo = userInfoDict;
     notification.soundName = [alarm.sound stringByAppendingString:@".m4a"];
-//    notification.soundName = @"Candy.m4a";
-
-    NSLog(@"notification.soundName = %@", notification.soundName);
 
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
