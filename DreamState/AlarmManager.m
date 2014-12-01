@@ -63,4 +63,7 @@
     [[DSCoreDataContextProvider sharedInstance] saveContext];
 }
 
+- (void)deleteAlarm:(Alarm *)alarm {
+    [[DSCoreDataContextProvider sharedInstance].managedObjectContext deleteObject:alarm];
+}
 @end

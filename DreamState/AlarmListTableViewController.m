@@ -25,6 +25,7 @@
     [super viewDidLoad];
     [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
     [self.addButton setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Solari" size:20.0]} forState:UIControlStateNormal];
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -87,6 +88,23 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 150;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Alarm *existingAlarm = [self.alarmArray objectAtIndex:indexPath.row];
+
+    if (existingAlarm) {
+        AlarmManager *alarmManager = [[AlarmManager alloc] init];
+        [alarmManager deleteAlarm:existingAlarm];
+    }
+
+    [self loadAlarmArray];
+
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationFade];
+
+    [self updateNotifications];
 }
 
 #pragma mark - updates

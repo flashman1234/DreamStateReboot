@@ -17,4 +17,5 @@
 
 - (void)updateAlarm:(Alarm *)alarm name:(NSString *)name date:(NSDate *)date fullNameDayArray:(NSArray *)fullNameDayArray sound:(NSString *)sound enabled:(BOOL)enabled;
 
+- (void)deleteAlarm:(Alarm *)alarm;
 @end
