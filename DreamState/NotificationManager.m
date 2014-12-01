@@ -39,9 +39,8 @@
     notification.alertBody = @"Would you like to record a dream?";
     NSDictionary *userInfoDict = @{@"AlarmName" : alarm.name, @"AlarmSound" : alarm.sound};
     notification.userInfo = userInfoDict;
-//    notification.soundName = [alarm.sound stringByAppendingString:@".m4a"];
-//    notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.soundName = @"Candy.m4a";
+    notification.soundName = [alarm.sound stringByAppendingString:@".m4a"];
+//    notification.soundName = @"Candy.m4a";
 
     NSLog(@"notification.soundName = %@", notification.soundName);
 

@@ -9,7 +9,7 @@
 #import <SimpleAudioPlayer/SimpleAudioPlayer.h>
 #import "AppDelegate.h"
 #import "AlarmHelper.h"
-#import "DayManager.h"
+#import "NotificationManager.h"
 
 @interface AppDelegate ()
 
@@ -20,17 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AlarmHelper searchForAlarmSounds];
 
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
-    {
-        // app already launched
-    }
-    else
-    {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+    [self performSelectorInBackground:@selector(updateNotifications) withObject:nil];
 
-    // Remember to configure your audio session
+// move this to separate file.
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *err = NULL;
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
@@ -50,6 +42,13 @@
     _tabBarController.delegate = self;
 
     return YES;
+}
+
+
+
+- (void)updateNotifications {
+    NotificationManager *notificationLoader = [[NotificationManager alloc] init];
+    [notificationLoader loadNotifications];
 }
 
 #pragma mark tab bar delegate

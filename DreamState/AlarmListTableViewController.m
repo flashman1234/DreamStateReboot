@@ -100,7 +100,7 @@
     [alarm setValue:@(switchControl.on) forKey:@"enabled"];
     [[DSCoreDataContextProvider sharedInstance] saveContext];
 
-    [self updateNotifications];
+    [self performSelectorInBackground:@selector(updateNotifications) withObject:nil];
 }
 
 - (void)updateNotifications {
