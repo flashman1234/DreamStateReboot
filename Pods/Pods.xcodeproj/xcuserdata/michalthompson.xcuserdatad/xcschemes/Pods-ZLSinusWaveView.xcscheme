@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "505934B0D8ACFAC8ED205D03"
+               BlueprintIdentifier = "096A95C1CE7E98F972241446"
                BuildableName = "libPods-ZLSinusWaveView.a"
                BlueprintName = "Pods-ZLSinusWaveView"
                ReferencedContainer = "container:Pods.xcodeproj">

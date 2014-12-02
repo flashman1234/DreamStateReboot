@@ -5,6 +5,7 @@ PODS:
   - pop (1.0.7)
   - SimpleAudioPlayer (0.1.2)
   - TPKeyboardAvoiding (1.2.4)
+  - UIAlertController+Blocks (0.4)
   - ZLSinusWaveView (0.0.2):
     - EZAudio
 
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - pop (~> 1.0.7)
   - SimpleAudioPlayer (~> 0.1)
   - TPKeyboardAvoiding (~> 1.2.4)
+  - UIAlertController+Blocks
   - ZLSinusWaveView
 
 SPEC CHECKSUMS:
@@ -24,6 +26,7 @@ SPEC CHECKSUMS:
   pop: 2f14a1ea61339767af9e66741b418c831b3844df
   SimpleAudioPlayer: d73a7be79c4f96a06b2f0be9d073284fb270dd9d
   TPKeyboardAvoiding: 925e1e1912597d1a4956697eec3bd9656552153c
+  UIAlertController+Blocks: e9580fc6b1db86534c61c6822799753228a10bf2
   ZLSinusWaveView: bc2308650fbaa35f11702faae5d06c66111798f3
 
 COCOAPODS: 0.34.4

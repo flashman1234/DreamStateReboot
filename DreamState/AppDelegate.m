@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "AlarmHelper.h"
 #import "NotificationManager.h"
+#import "UIAlertController+Blocks.h"
 
 @interface AppDelegate ()
 
@@ -27,24 +28,23 @@
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     NSError *err = NULL;
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
-    if( err ){
+    if (err) {
         NSLog(@"There was an error creating the audio session");
     }
     [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:NULL];
-    if( err ){
+    if (err) {
         NSLog(@"There was an error sending the audio to the speakers");
     }
 
-    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
-        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
     }
 
-    UITabBarController *_tabBarController = (UITabBarController *)_window.rootViewController;
+    UITabBarController *_tabBarController = (UITabBarController *) _window.rootViewController;
     _tabBarController.delegate = self;
 
     return YES;
 }
-
 
 
 - (void)updateNotifications {
@@ -56,8 +56,7 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
 
-    if ([tabBarController.viewControllers[tabBarController.selectedIndex] isKindOfClass:[UINavigationController class]])
-    {
+    if ([tabBarController.viewControllers[tabBarController.selectedIndex] isKindOfClass:[UINavigationController class]]) {
         UINavigationController *x = tabBarController.viewControllers[tabBarController.selectedIndex];
 
         [x popToRootViewControllerAnimated:NO];
@@ -66,46 +65,50 @@
     return YES;
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 
-
--(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-
-//    appOpensFromAlarm = YES;
+   // eh... move this to a new class....
     NSDictionary *notDict = notification.userInfo;
     NSString *alarmSoundName = [notDict valueForKey:@"AlarmSound"];
 
     NSString *alarmName = [notification.userInfo valueForKey:@"AlarmName"];
 
-    if (application.applicationState == UIApplicationStateInactive ) {
-
-//        [[NSNotificationCenter defaultCenter] postNotificationName:localReceived object:self];
+    if (application.applicationState == UIApplicationStateInactive) {
+        UITabBarController *_tabBarController = (UITabBarController *) _window.rootViewController;
+        [_tabBarController setSelectedIndex:1];
     }
 
-    if(application.applicationState == UIApplicationStateActive ) {
-
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat: @"yyyy-MM-dd HH:mm:ss zzz"];
-
-        //NSString *stringFromDate = [dateFormat stringFromDate:notification.fireDate];
+    if (application.applicationState == UIApplicationStateActive) {
 
         [self playAlarmSound:alarmSoundName];
-        UIAlertView *alert = [[UIAlertView alloc]
-                initWithTitle: NSLocalizedString(alarmName, nil)
-                      message: NSLocalizedString(@"Would you like to record a dream?",nil)
-                     delegate: self
-            cancelButtonTitle: NSLocalizedString(@"No",nil)
-            otherButtonTitles: NSLocalizedString(@"Yes",nil), nil];
-        [alert show];
+        [UIApplication sharedApplication].keyWindow.rootViewController;
+
+        [UIAlertController showAlertInViewController:[UIApplication sharedApplication].keyWindow.rootViewController
+                                           withTitle:alarmName
+                                             message:@"Would you like to record a dream?"
+                                   cancelButtonTitle:@"NO"
+                              destructiveButtonTitle:@"YES"
+                                   otherButtonTitles:nil
+                                            tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex) {
+
+                                                [SimpleAudioPlayer stopAllPlayers];
+
+                                                if (buttonIndex == UIAlertControllerBlocksCancelButtonIndex) {
+                                                    NSLog(@"Cancel Tapped");
+                                                } else if (buttonIndex == UIAlertControllerBlocksDestructiveButtonIndex) {
+                                                    NSLog(@"Delete Tapped");
+                                                    UITabBarController *_tabBarController = (UITabBarController *) _window.rootViewController;
+                                                    [_tabBarController setSelectedIndex:1];
+                                                }
+                                            }];
     }
 }
 
 - (void)playAlarmSound:(NSString *)alarmSound {
     NSString *alarmSoundFile = [NSString stringWithFormat:@"%@.m4a", alarmSound];
-    [SimpleAudioPlayer playFile:alarmSoundFile withCompletionBlock:^(BOOL b) {
-
-    }];
+    [SimpleAudioPlayer stopAllPlayers];
+    [SimpleAudioPlayer playFile:alarmSoundFile withCompletionBlock:nil];
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

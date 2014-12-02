@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_TPKeyboardAvoiding 2
 #define COCOAPODS_VERSION_PATCH_TPKeyboardAvoiding 4
 
+// UIAlertController+Blocks
+#define COCOAPODS_POD_AVAILABLE_UIAlertController_Blocks
+#define COCOAPODS_VERSION_MAJOR_UIAlertController_Blocks 0
+#define COCOAPODS_VERSION_MINOR_UIAlertController_Blocks 4
+#define COCOAPODS_VERSION_PATCH_UIAlertController_Blocks 0
+
 // ZLSinusWaveView
 #define COCOAPODS_POD_AVAILABLE_ZLSinusWaveView
 #define COCOAPODS_VERSION_MAJOR_ZLSinusWaveView 0

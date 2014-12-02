@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-UIAlertController+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ZLSinusWaveView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07E93A98AB6922E08C2098C0</key>
+		<key>096A95C1CE7E98F972241446</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33F91CD063824C0487656B6E</key>
+		<key>1A6CDD8C9342D3F37A2C05E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>366945A0F62E1162546C4EE2</key>
+		<key>1C32B0C23CDE31A400B76CB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41BA781F7D7DF2A470FB781C</key>
+		<key>1C401137CAE6A8B7F68BC37A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>505934B0D8ACFAC8ED205D03</key>
+		<key>690F8DAB1A1D39461FE99319</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A12EB5FFE7E6E2248AFCF1D</key>
+		<key>8BDB3EB8F8AD74647E4AC877</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92C3ED82E6E1854B5520B670</key>
+		<key>94AC33AD330A7774B5DB1269</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A08057E8D7CE79E7262E749D</key>
+		<key>971EC17040020DA5FD15BC5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBCBA49A227019F17A51DAE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,5 +1,5 @@
 #include "Pods-EZAudio.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/EZAudio" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Canvas" "${PODS_ROOT}/Headers/Public/EZAudio" "${PODS_ROOT}/Headers/Public/JVFloatLabeledTextField" "${PODS_ROOT}/Headers/Public/SimpleAudioPlayer" "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/ZLSinusWaveView" "${PODS_ROOT}/Headers/Public/pop"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/EZAudio" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Canvas" "${PODS_ROOT}/Headers/Public/EZAudio" "${PODS_ROOT}/Headers/Public/JVFloatLabeledTextField" "${PODS_ROOT}/Headers/Public/SimpleAudioPlayer" "${PODS_ROOT}/Headers/Public/TPKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/UIAlertController+Blocks" "${PODS_ROOT}/Headers/Public/ZLSinusWaveView" "${PODS_ROOT}/Headers/Public/pop"
 OTHER_LDFLAGS = ${PODS_EZAUDIO_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
