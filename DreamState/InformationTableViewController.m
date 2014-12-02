@@ -34,11 +34,11 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 
     return @"";
-
-    if (section == 0)
-        return @"Record Settings";
-    else
-        return @"Other stuff";
+//
+//    if (section == 0)
+//        return @"Record Settings";
+//    else
+//        return @"Other stuff";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

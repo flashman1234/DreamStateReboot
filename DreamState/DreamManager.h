@@ -10,10 +10,10 @@
 
 @interface DreamManager : NSObject
 
--(Dream *)createNewDream;
--(void)saveDream:(Dream *)dream;
+- (Dream *)createNewDream;
 
-- (NSArray *)getAllDreams;
+- (void)saveDream;
 
 - (NSArray *)getAllDreamsWithMostRecentFirst;
+
 @end

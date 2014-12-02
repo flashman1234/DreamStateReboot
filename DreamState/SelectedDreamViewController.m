@@ -81,7 +81,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
     self.selectedDream.name = self.dreamNameTextField.text;
     DreamManager *manager = [[DreamManager alloc] init];
-    [manager saveDream:self.selectedDream];
+    [manager saveDream];
     [self.dreamNameTextField resignFirstResponder];
     return YES;
 }

@@ -92,7 +92,7 @@
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    Alarm *existingAlarm = [self.alarmArray objectAtIndex:indexPath.row];
+    Alarm *existingAlarm = (self.alarmArray)[(NSUInteger) indexPath.row];
 
     if (existingAlarm) {
         AlarmManager *alarmManager = [[AlarmManager alloc] init];

@@ -13,7 +13,6 @@
 
 @implementation NotificationManager
 
-
 - (void)loadNotifications {
     AlarmManager *manager = [[AlarmManager alloc] init];
     self.alarms = [manager getAllActiveAlarms];
@@ -27,8 +26,6 @@
     for (Alarm *alarm in self.alarms) {
         [self createNotificationForAlarm:alarm];
     }
-
-    self.notificationArray = [[UIApplication sharedApplication] scheduledLocalNotifications];
 
     self.muteChecker = [[MuteChecker alloc] initWithCompletionBlk:^(NSTimeInterval lapse, BOOL muted) {
         if (muted) {

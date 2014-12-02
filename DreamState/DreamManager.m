@@ -18,16 +18,8 @@
     return dream;
 }
 
-- (void)saveDream:(Dream *)dream {
+- (void)saveDream {
     [[DSCoreDataContextProvider sharedInstance] saveContext];
-}
-
-- (NSArray *)getAllDreams {
-    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Dream class])];
-    NSError *error = nil;
-    NSArray *results = [[DSCoreDataContextProvider sharedInstance].managedObjectContext executeFetchRequest:req error:&error];
-
-    return results;
 }
 
 - (NSArray *)getAllDreamsWithMostRecentFirst {

@@ -92,45 +92,5 @@
         }
     }
 }
-//
-//
-//+ (NSString *)tidyDaysFromArrayOfDayDictionary:(NSArray *)dayDictionaryArray {
-//    NSString *tidyDay = [[NSString alloc] init];
-//
-//    if ([dayDictionaryArray count] == 7) {
-//        return @"Everyday";
-//    }
-//
-//    for (NSDictionary *dayDict in dayDictionaryArray) {
-//
-//        NSString *shortDay = [dayDict[@"WeekDay"] substringToIndex:3];
-//
-//        tidyDay = [tidyDay stringByAppendingString:shortDay];
-//        tidyDay = [tidyDay stringByAppendingString:@","];
-//    }
-//
-//    if ([tidyDay length] > 0) {
-//        tidyDay = [tidyDay substringToIndex:[tidyDay length] - 1];
-//        return tidyDay;
-//    }
-//    else {
-//        return @"";
-//    }
-//}
-//
-//
-//+ (NSArray *)dayArrayFromString:(NSString *)dayString {
-//
-//    NSArray *shortDayArray = [dayString componentsSeparatedByString:@","];
-//    NSMutableArray *longDayArray = [[NSMutableArray alloc] init];
-//
-//    for (NSString *shortDay in shortDayArray) {
-//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//        formatter.dateFormat = @"EEEE";
-//        [longDayArray addObject:[formatter dateFromString:shortDay]];
-//    }
-//
-//    return longDayArray;
-//}
 
 @end

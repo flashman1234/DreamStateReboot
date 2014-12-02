@@ -362,7 +362,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7u-Cy-W3N">
-                                            <rect key="frame" x="8" y="21" width="197" height="27"/>
+                                            <rect key="frame" x="8" y="21" width="197" height="26.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="197" id="tTD-xG-ZGw"/>
                                             </constraints>
@@ -371,7 +371,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKw-8U-L9z">
-                                            <rect key="frame" x="473" y="21" width="119" height="27"/>
+                                            <rect key="frame" x="473" y="21" width="119" height="26.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="119" id="UCc-ET-o2q"/>
                                             </constraints>
@@ -385,6 +385,7 @@
                                         <constraint firstItem="g7u-Cy-W3N" firstAttribute="baseline" secondItem="nKw-8U-L9z" secondAttribute="baseline" id="80T-za-NQ3"/>
                                         <constraint firstItem="g7u-Cy-W3N" firstAttribute="leading" secondItem="EaM-wd-wS2" secondAttribute="leadingMargin" id="BTo-aY-qen"/>
                                         <constraint firstItem="nKw-8U-L9z" firstAttribute="trailing" secondItem="EaM-wd-wS2" secondAttribute="trailingMargin" id="Sav-M4-d4S"/>
+                                        <constraint firstItem="nKw-8U-L9z" firstAttribute="top" secondItem="EaM-wd-wS2" secondAttribute="topMargin" constant="13" id="fjz-yG-LaW"/>
                                         <constraint firstItem="g7u-Cy-W3N" firstAttribute="top" secondItem="EaM-wd-wS2" secondAttribute="topMargin" constant="13" id="mg7-xf-eQi"/>
                                     </constraints>
                                 </tableViewCellContentView>

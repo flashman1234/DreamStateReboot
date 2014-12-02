@@ -12,13 +12,12 @@
 
 @interface NotificationManager : NSObject
 
+@property(nonatomic, strong) NSArray *alarms;
+@property NSInteger numberOfAlarms;
+@property(nonatomic, strong) MuteChecker *muteChecker;
+
 - (void)loadNotifications;
 
 - (void)createNotificationForAlarm:(Alarm *)alarm;
 
-@property(nonatomic, strong) NSArray *alarms;
-@property(nonatomic, strong) NSArray *notificationArray;
-@property NSInteger numberOfAlarms;
-
-@property(nonatomic, strong) MuteChecker *muteChecker;
 @end

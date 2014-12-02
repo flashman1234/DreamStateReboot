@@ -15,7 +15,4 @@
 
 + (NSString *)orderedShortDayNamesFromArrayOfDayNames:(NSArray *)dayNameArray;
 
-//+ (NSArray *)dayArrayFromString:(NSString *)dayString;
-//
-//+ (NSString *)tidyDaysFromArrayOfDayDictionary:(NSArray *)dayDictionaryArray;
 @end

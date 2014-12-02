@@ -8,7 +8,6 @@
 #import "DSCoreDataContextProvider.h"
 #import "Day.h"
 #import "CoreDataManager.h"
-#import <CoreData/CoreData.h>
 
 @implementation AlarmManager
 
@@ -66,4 +65,5 @@
 - (void)deleteAlarm:(Alarm *)alarm {
     [[DSCoreDataContextProvider sharedInstance].managedObjectContext deleteObject:alarm];
 }
+
 @end

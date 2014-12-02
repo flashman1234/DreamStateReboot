@@ -48,7 +48,6 @@
 		E5A9C37C57ACB270072DA1B4 /* AlarmHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C10CC87D8BB22B694F7A /* AlarmHelper.m */; };
 		E5A9C3C8619A4BC354C955CB /* TermsAndConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CEB6BD116DC4CB836546 /* TermsAndConditionsViewController.m */; };
 		E5A9C3E212942FE149BC6C5F /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CE441C8F65A52EEC4DA6 /* DSNavigationBar.m */; };
-		E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C376691449BF26ECCD32 /* DayManager.m */; };
 		E5A9C45FBD1EA47405B760B2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */; };
 		E5A9C54D2423BDE221B27C1C /* AlarmListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CED3CFA6D49664A3C192 /* AlarmListTableViewController.m */; };
 		E5A9C6048B95131EA59E0CA5 /* AlarmSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9CDDC77D265FE1E550806 /* AlarmSoundsViewController.m */; };
@@ -137,7 +136,6 @@
 		E5A9C286753E54B5F0388861 /* Alarm bell 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file.m4a; path = "Alarm bell 2.m4a"; sourceTree = "<group>"; };
 		E5A9C2D1656DC9F4CCD163BE /* UIView+BorderHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderHelper.m"; sourceTree = "<group>"; };
 		E5A9C364A803BFFAF70F80AB /* NSDate+DateModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateModifier.h"; sourceTree = "<group>"; };
-		E5A9C376691449BF26ECCD32 /* DayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayManager.m; sourceTree = "<group>"; };
 		E5A9C53B8622512AC99E43E9 /* ArchiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveTableViewController.m; sourceTree = "<group>"; };
 		E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		E5A9C66AA6956B82AA884D2A /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmManager.h; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 		E5A9C844DD4E314D14F8E6E9 /* UITextFieldNoMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldNoMenu.m; sourceTree = "<group>"; };
 		E5A9C84C2B7A4362BE94B3BC /* UIView+BorderHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderHelper.h"; sourceTree = "<group>"; };
 		E5A9C85E179653886EBCE3EB /* DreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamManager.h; sourceTree = "<group>"; };
-		E5A9C899DF004D07A1D539B2 /* DayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayManager.h; sourceTree = "<group>"; };
 		E5A9C90BEA761A8B114D69A9 /* HowToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToViewController.h; sourceTree = "<group>"; };
 		E5A9C91FE7DA6EB7F9560395 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E5A9C9433725B31821BB085F /* AlarmListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListTableViewController.h; sourceTree = "<group>"; };
@@ -223,7 +220,7 @@
 		05116DC01A1A77C400C6052D /* DreamState */ = {
 			isa = PBXGroup;
 			children = (
-				2CA3177F1A2CD94900A1832A /* shark */,
+				2CA3177F1A2CD94900A1832A /* MuteChecker */,
 				2CA3177C1A2CD2B100A1832A /* DreamState.entitlements */,
 				E5A9C944910DC32684E270D5 /* Managers */,
 				2CE4958A1A1D0F7300A8EAB6 /* Model */,
@@ -282,14 +279,14 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		2CA3177F1A2CD94900A1832A /* shark */ = {
+		2CA3177F1A2CD94900A1832A /* MuteChecker */ = {
 			isa = PBXGroup;
 			children = (
 				2CA317831A2CDA1000A1832A /* MuteChecker.caf */,
 				2CA317841A2CDA1000A1832A /* MuteChecker.h */,
 				2CA317851A2CDA1000A1832A /* MuteChecker.m */,
 			);
-			name = shark;
+			name = MuteChecker;
 			sourceTree = "<group>";
 		};
 		2CE4958A1A1D0F7300A8EAB6 /* Model */ = {
@@ -422,8 +419,6 @@
 			children = (
 				E5A9CE56094F8B5D37A1AD7D /* AlarmManager.m */,
 				E5A9C66AA6956B82AA884D2A /* AlarmManager.h */,
-				E5A9C376691449BF26ECCD32 /* DayManager.m */,
-				E5A9C899DF004D07A1D539B2 /* DayManager.h */,
 				E5A9C559ED5CD42E599CD083 /* CoreDataManager.m */,
 				E5A9CB5308A67979325C31D1 /* CoreDataManager.h */,
 				E5A9C7CA7BE58ED3F5076B33 /* DreamManager.m */,
@@ -623,7 +618,6 @@
 				2CE4958D1A1D0F9600A8EAB6 /* DSCoreDataContextProvider.m in Sources */,
 				2CA7AE161A1E569A005BB92D /* Dream.m in Sources */,
 				E5A9CE66ED92FE37BBAFFEC0 /* AlarmManager.m in Sources */,
-				E5A9C41C05C2E54F28186B4F /* DayManager.m in Sources */,
 				2CA317871A2CDA1000A1832A /* MuteChecker.m in Sources */,
 				E5A9C45FBD1EA47405B760B2 /* CoreDataManager.m in Sources */,
 				E5A9CB260572F69D75EB3A80 /* UIView+BorderHelper.m in Sources */,

@@ -10,7 +10,6 @@
 #import "RecordViewController.h"
 #import "Dream.h"
 #import "UITextFieldNoMenu.h"
-#import "RecordingImageView.h"
 #import "DreamManager.h"
 #import "ZLSinusWaveView.h"
 #import "EZRecorder.h"
@@ -53,26 +52,23 @@
     [super viewWillAppear:animated];
 
     self.microphone = [EZMicrophone microphoneWithDelegate:self];
+    [self customizeAudioPlot];
+}
 
-    /*
-   Customizing the audio plot's look
-   */
-    // Background color
+- (void)customizeAudioPlot {
     self.audioPlot.backgroundColor = [UIColor blackColor];
-    // Waveform color
     self.audioPlot.color = [UIColor whiteColor];
-    // Plot type
     self.audioPlot.plotType = EZPlotTypeRolling;
-    // Fill
     self.audioPlot.shouldFill = YES;
-    // Mirror
     self.audioPlot.shouldMirror = YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
-    self.dream.name = self.dreamNameTextField.text;
-    DreamManager *manager = [[DreamManager alloc] init];
-    [manager saveDream:self.dream];
+    if (self.dreamNameTextField.text.length > 0) {
+        self.dream.name = self.dreamNameTextField.text;
+        DreamManager *manager = [[DreamManager alloc] init];
+        [manager saveDream];
+    }
     [theTextField resignFirstResponder];
     [self.tabBarController setSelectedIndex:2];
     return YES;
@@ -89,14 +85,10 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     if (self.isRecording) {
-        [self stopRecordingAudio];
+        [self.microphone stopFetchingAudio];
+        [self.recorder closeAudioFile];
+        [self.recordButton setBackgroundImage:[UIImage imageNamed:@"recordIcon"] forState:UIControlStateNormal];
     }
-
-//    if (self.mediaPlayer) {
-//        [self.mediaPlayer stop];
-//        [self.mediaPlayer.view removeFromSuperview];
-//        self.mediaPlayer = nil;
-//    }
 
     self.isRecording = NO;
 }
@@ -140,7 +132,7 @@
     self.dream.mediaType = @"Audio";
     self.dream.dateCreated = [NSDate date];
     self.dream.time = dreamTimeAsString;
-    [manager saveDream:self.dream];
+    [manager saveDream];
 }
 
 - (void)stopRecordingAudio {
@@ -152,8 +144,7 @@
     [self.recorder closeAudioFile];
 }
 
-#pragma mark - view methods
-
+//Not needed for now, but for when settings are added
 - (void)getUserDefaults {
     self.userDefaults = [NSUserDefaults standardUserDefaults];
     self.autoRecord = [self.userDefaults boolForKey:@"AutoRecord"];
@@ -206,7 +197,6 @@ withNumberOfChannels:(UInt32)numberOfChannels {
         [self.recorder appendDataFromBufferList:bufferList
                                  withBufferSize:bufferSize];
     }
-
 }
 
 @end

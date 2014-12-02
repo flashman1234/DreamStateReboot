@@ -11,4 +11,5 @@
 @interface DayHelper : NSObject
 
 + (NSArray *)reorderSelectedDaysArray:(NSArray *)dayArray;
+
 @end
