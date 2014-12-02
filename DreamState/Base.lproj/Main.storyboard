@@ -91,15 +91,6 @@
                                     <constraint firstAttribute="bottom" secondItem="cUA-Dh-gPX" secondAttribute="bottom" id="o6x-cM-6vK"/>
                                     <constraint firstAttribute="trailing" secondItem="cUA-Dh-gPX" secondAttribute="trailing" id="yUa-Wj-Xyu"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="pop"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,7 +157,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOA-zF-cgx">
-                                        <rect key="frame" x="252" y="283" width="98" height="28"/>
+                                        <rect key="frame" x="30" y="283" width="541" height="28"/>
                                         <fontDescription key="fontDescription" name="Solari" family="Solari" pointSize="15"/>
                                         <state key="normal" title="Alarm Tone:">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,11 +180,11 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="bOA-zF-cgx" secondAttribute="centerX" constant="-1" id="2Hx-s0-yeF"/>
                                     <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" constant="30" id="2Ry-8v-jRD"/>
                                     <constraint firstItem="hXR-8D-mx5" firstAttribute="top" secondItem="Vgh-aQ-XBZ" secondAttribute="bottom" constant="25" id="7tr-lR-Z3u"/>
                                     <constraint firstItem="38u-Kx-ThO" firstAttribute="centerX" secondItem="PFP-Xk-MmP" secondAttribute="centerX" id="GrV-hC-hxh"/>
                                     <constraint firstItem="hXR-8D-mx5" firstAttribute="centerX" secondItem="bOA-zF-cgx" secondAttribute="centerX" id="NUW-k9-vR0"/>
+                                    <constraint firstItem="bOA-zF-cgx" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" constant="30" id="NfZ-lb-Cru"/>
                                     <constraint firstAttribute="centerX" secondItem="hXR-8D-mx5" secondAttribute="centerX" id="QLm-RH-Y07"/>
                                     <constraint firstItem="hXR-8D-mx5" firstAttribute="leading" secondItem="PFP-Xk-MmP" secondAttribute="leading" id="RVD-fB-Lmv"/>
                                     <constraint firstItem="bOA-zF-cgx" firstAttribute="top" secondItem="hXR-8D-mx5" secondAttribute="bottom" constant="8" id="azw-aG-URc"/>
@@ -204,6 +195,7 @@
                                     <constraint firstItem="Vgh-aQ-XBZ" firstAttribute="top" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="20" id="ofg-sL-7om"/>
                                     <constraint firstAttribute="bottom" secondItem="38u-Kx-ThO" secondAttribute="bottom" constant="374" id="rCr-3A-hO5"/>
                                     <constraint firstAttribute="trailing" secondItem="38u-Kx-ThO" secondAttribute="trailing" constant="50" id="rd9-aL-fcS"/>
+                                    <constraint firstAttribute="trailing" secondItem="bOA-zF-cgx" secondAttribute="trailing" constant="30" id="z6v-9Q-4gh"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">

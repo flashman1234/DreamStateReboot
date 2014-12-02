@@ -137,7 +137,7 @@
 
 - (void)setAlarmSoundWithSoundName:(NSString *)soundName {
     self.alarmSound = soundName;
-    self.alarmSoundButton.titleLabel.text = soundName;
+    [self.alarmSoundButton setTitle:soundName forState:UIControlStateNormal];
 }
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {

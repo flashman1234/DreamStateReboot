@@ -81,7 +81,6 @@
     if (application.applicationState == UIApplicationStateActive) {
 
         [self playAlarmSound:alarmSoundName];
-        [UIApplication sharedApplication].keyWindow.rootViewController;
 
         [UIAlertController showAlertInViewController:[UIApplication sharedApplication].keyWindow.rootViewController
                                            withTitle:alarmName

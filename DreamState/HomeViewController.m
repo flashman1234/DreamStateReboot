@@ -65,6 +65,9 @@
     else {
         self.nextAlarmLabel.text = @"Add alarm";
         self.nextAlarmTimeLabel.text = @"";
+        self.animationView.delay = 0.5;
+        self.animationView.duration = 0.5;
+        self.animationView.type = CSAnimationTypeShake;
         [self.animationView startCanvasAnimation];
     }
 }
