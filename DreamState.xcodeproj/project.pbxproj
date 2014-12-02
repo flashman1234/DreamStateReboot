@@ -27,7 +27,6 @@
 		2CA317741A27321100A1832A /* High Action.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176B1A27321100A1832A /* High Action.m4a */; };
 		2CA317751A27321100A1832A /* Piano beat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3176C1A27321100A1832A /* Piano beat.m4a */; };
 		2CA3177B1A277A8D00A1832A /* DayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3177A1A277A8D00A1832A /* DayHelper.m */; };
-		2CA3177E1A2CD2B100A1832A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA3177D1A2CD2B100A1832A /* AudioToolbox.framework */; };
 		2CA317861A2CDA1000A1832A /* MuteChecker.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA317831A2CDA1000A1832A /* MuteChecker.caf */; };
 		2CA317871A2CDA1000A1832A /* MuteChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA317851A2CDA1000A1832A /* MuteChecker.m */; };
 		2CA7AE161A1E569A005BB92D /* Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA7AE151A1E569A005BB92D /* Dream.m */; };
@@ -106,7 +105,6 @@
 		2CA317791A277A8D00A1832A /* DayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayHelper.h; sourceTree = "<group>"; };
 		2CA3177A1A277A8D00A1832A /* DayHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayHelper.m; sourceTree = "<group>"; };
 		2CA3177C1A2CD2B100A1832A /* DreamState.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DreamState.entitlements; sourceTree = "<group>"; };
-		2CA3177D1A2CD2B100A1832A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2CA317831A2CDA1000A1832A /* MuteChecker.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MuteChecker.caf; sourceTree = "<group>"; };
 		2CA317841A2CDA1000A1832A /* MuteChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuteChecker.h; sourceTree = "<group>"; };
 		2CA317851A2CDA1000A1832A /* MuteChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuteChecker.m; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			files = (
 				2CD449421A23812C008E1400 /* MessageUI.framework in Frameworks */,
 				2CA7AE5B1A2266E1005BB92D /* MediaPlayer.framework in Frameworks */,
-				2CA3177E1A2CD2B100A1832A /* AudioToolbox.framework in Frameworks */,
 				2CA7AE591A226039005BB92D /* AVFoundation.framework in Frameworks */,
 				3639A9E251EAAF73E2CF8D2E /* libPods.a in Frameworks */,
 			);
@@ -310,7 +307,6 @@
 		4708B8F512FAF2528CE46B46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CA3177D1A2CD2B100A1832A /* AudioToolbox.framework */,
 				2CD449411A23812C008E1400 /* MessageUI.framework */,
 				2CA7AE5A1A2266E1005BB92D /* MediaPlayer.framework */,
 				2CA7AE581A226039005BB92D /* AVFoundation.framework */,
@@ -503,7 +499,7 @@
 						DevelopmentTeam = P77C4FL3B5;
 						SystemCapabilities = {
 							com.apple.InterAppAudio = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -761,7 +757,6 @@
 			baseConfigurationReference = A3078A9231159C00E5982042 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DreamState/DreamState.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DreamState/Info.plist;
@@ -778,7 +773,6 @@
 			baseConfigurationReference = E3EEC742DF7729E2F8795969 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DreamState/DreamState.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DreamState/Info.plist;

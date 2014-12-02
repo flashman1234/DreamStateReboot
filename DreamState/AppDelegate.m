@@ -11,6 +11,7 @@
 #import "AlarmHelper.h"
 #import "NotificationManager.h"
 #import "UIAlertController+Blocks.h"
+#import "EZOutput.h"
 
 @interface AppDelegate ()
 
@@ -55,10 +56,12 @@
 #pragma mark tab bar delegate
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
-
     if ([tabBarController.viewControllers[tabBarController.selectedIndex] isKindOfClass:[UINavigationController class]]) {
         UINavigationController *x = tabBarController.viewControllers[tabBarController.selectedIndex];
 
+        //if the ezaudio is playing, then stop it, otherwise it keeps on playing and/or memory issues kick in...
+        [[EZOutput sharedOutput] stopPlayback];
+        [EZOutput sharedOutput].outputDataSource = nil;
         [x popToRootViewControllerAnimated:NO];
     }
 

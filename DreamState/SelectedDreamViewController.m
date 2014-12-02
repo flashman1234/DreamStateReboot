@@ -53,8 +53,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [EZOutput sharedOutput].outputDataSource = nil;
     [[EZOutput sharedOutput] stopPlayback];
+    [EZOutput sharedOutput].outputDataSource = nil;
 }
 
 - (void)openFileWithFilePathURL:(NSURL *)filePathURL {
@@ -107,9 +107,13 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 
 - (void)audioFile:(EZAudioFile *)audioFile
   updatedPosition:(SInt64)framePosition {
+
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (!self.framePositionSlider.touchInside) {
-            self.framePositionSlider.value = (float) framePosition;
+        if (self.framePositionSlider)
+        {
+            if (!self.framePositionSlider.touchInside) {
+                self.framePositionSlider.value = (float) framePosition;
+            }
         }
     });
 }
